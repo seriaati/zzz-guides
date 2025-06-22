@@ -1,0 +1,128 @@
+character:
+  name: Yixuan
+  rarity: 5
+description: |
+  Yixuan is an S rank Agent with the Auric Ink Ether 
+  attribute who belongs to the Rupture Specialty and 
+  who is part of the Yunkui Summit faction.
+weapons:
+  - name: Qingming Birdcage
+    description: |
+      BIS W-Engine, has a HP% Main Stat in-combat Crit Rate, 
+      gives stacking Ether DMG% and Ether Sheer DMG% for EX Special & Ultimate, 
+      her two highest damaging abilities
+  - name: Any S Rank Crit Rate W-Engine
+    description: |
+      Any Crit Rate Main Stat and high Base ATK W-Engine will
+      be good due to Yixuan's passive ATK stat conversion, even with
+      no passive from the W-Engine itself
+  - name: Radiowave Journey
+    description: |
+      Best A Rank option due to having a HP% main stat but requires
+      the Battle Pass, when using a Chain Attack or Ultimate gain a
+      Sheer Force Stat boost which can stack up to 3 times
+relics:
+  four_pieces:
+    - name: Yunkui Tales
+      description: |
+        The best and currently only option for Yixuan. taibe made for her kit
+
+        Its 2-Pc bonus gives HP% which is desired for Yixuan and its 4-Pc
+        effect gives a stacking Crit Rate bonus up to 12% from simply
+        using her most important skills. and on top of that at max stacks it
+        gives you a Sheer DMG bonus
+  two_pieces:
+    - name: Branch & Blade Song / Woodpecker Electro
+      description: |
+        The two best 2-Pc options for Yixuan. always being a damage
+        increase but your pick will depend on if you have her signature or
+        not
+  extra_sections:
+    - title: Sheer Damage and Crit Rate VS Crit DMG
+    - description: |
+        Sheer Damage completely ignores OEF so PEN isnt on
+        Yixuan.
+
+        Yixuan with her signature only needs 68% CR to reach CR
+        in combat.
+
+        Generally use 2-Pc Woodpecker to balance Crit Ratio especially
+        without Signature Engine.
+stat:
+  main_stats:
+    - stat_priority: CR%/CDMG%
+      pos: 4
+    - stat_priority: Ether DMG% > HP%
+      pos: 5
+    - stat_priority: HP%
+      pos: 6
+  sub_stats: |
+    CR% > CDMG% > HP% > ATK% > Flat HP
+    (Note: Flat HP is only slightly worse than ATK% for Sheer Force conversion.)
+  baseline_stats: |
+    HP with main engine: 18,000
+    HP without Main engine: 15,000
+    CR%: 68-88%
+    CD%: 120-140%+
+    (Crit Stats dependent on Engine and Disc 5)
+skill_priority:
+  priorities:
+    - core,chain
+    - special
+    - basic
+  description: |
+    Ultimate and EX Special are the most important but all skills can
+    be upgraded to take advantage of Crit stats and Skill's scaling.
+    Assist is low Priority.
+skills:
+  - title: "EX Special Attack: Cloud-Shaper"
+    description: |
+      Continuously charge up, channeling energy around enemies to deal DMG over
+      time, up to a max of 2s, dealing massive Auric Ink DMG.
+
+      At the moment the skill is activated, a Perfect Dodge can be triggered.
+      After the Perfect Dodge, enter the Vital View state.
+    explanation: |
+      Best used during the stun window after using your Ultimate due to
+      dealing 30% extra DMG to stunned enemies.
+mindscapes:
+  - num: 1
+    description: |
+      Provide 10% Combat Crit Rate while allowing her to start the fight with full
+      Talisman bar. In addition to follow up attack whenever another agent deal damage
+      to an enemy target with 6 sec CD
+  - num: 2
+    description: |
+      Ultimate/EX Special now ignore 15% Ether res and Casting Ult on a stunned target
+      extend their stun duration for 3 sec. After Casting Talisman Ult gain 1 cast of
+      special EX that deal 1200% Sheer Force
+  - num: 4
+    description: |
+      Activating any Ultimate will grant you stacks, up to two, increasing the damage of
+      your next EX Special by 30%
+  - num: 6
+    description: |
+      Casting Ult allows you to bypass the resource cost of Talisman Ult with a cooldown
+      of 30 sec, further more increase Yixuan Sheer Force by 20% during her
+      Meditation(AA) state
+team:
+  teams:
+    - name: Team 1
+      characters:
+        - name: Yixuan
+        - name: Pan Yinhu
+        - name: Astra Yao
+    - name: Team 2
+      characters:
+        - name: Yixuan
+        - name: Pan Yinhu
+        - name: Astra Yao
+  extra_sections:
+    - title: General Notes on Team Building
+      description: |
+        Nicole and Rina are not good teammates for Yixuan as Sheer Damage ignores all
+        DEF. All ATK buffers are good for Yixuan despite her scaling off of HP as Sheer
+        converts 30% of your ATK into Sheer Force. For example Lucy's 600 ATK will
+        convert to 180 Sheer Force. Nicole “could” be used for her Ether DMG%, CR% and
+        W-Engine buff if you really lack options but this is not worth it or recommended at
+        all. Since this isn't a good use of Nicole and another team would want her more.
