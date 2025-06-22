@@ -37,7 +37,7 @@ class RelicSetSection(pydantic.BaseModel):
     """A custom icon can be provided, otherwise an icon will be fetched based on the name."""
 
 
-class RelicSection(pydantic.BaseModel):
+class DiscSection(pydantic.BaseModel):
     four_pieces: list[RelicSetSection]
     two_pieces: list[RelicSetSection]
     extra_sections: list[Section]
@@ -48,7 +48,7 @@ class RelicMainStatSection(pydantic.BaseModel):
     pos: Literal[4, 5, 6]
 
 
-class RelicStatSection(pydantic.BaseModel):
+class StatSection(pydantic.BaseModel):
     main_stats: list[RelicMainStatSection]
     sub_stats: str
     baseline_stats: str
@@ -106,8 +106,8 @@ class Guide(pydantic.BaseModel):
     description: str
 
     weapons: list[WeaponSection] = pydantic.Field(default_factory=list)
-    relics: list[RelicSection] = pydantic.Field(default_factory=list)
-    stat: RelicStatSection | None = None
+    discs: list[DiscSection] = pydantic.Field(default_factory=list)
+    stat: StatSection | None = None
     skill_priority: SkillPrioritySection | None = None
     skills: list[Skill] = pydantic.Field(default_factory=list)
     mindscapes: list[MindscapeSection] = pydantic.Field(default_factory=list)

@@ -8,5 +8,4 @@ For consistency, the following terms are used throughout the repository:
 
 - Character: ZZZ agent.
 - Weapon: W-engine.
-- Relic: Drive disc.
 - Rarity: ZZZ agent or weapon rarity (S: 5, A: 4, B: 3)
