@@ -8,7 +8,7 @@ For consistency, the following terms are used throughout the repository:
 
 - Character: ZZZ agent.
 - Weapon: W-engine.
-- Rarity: ZZZ agent or weapon rarity (S: 5, A: 4, B: 3)
+- Rarity: ZZZ agent or weapon rank (S-rank: 5, A-rank: 4, B-rank: 3)
 
 ## Formatting
 
