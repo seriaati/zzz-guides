@@ -14,7 +14,7 @@ on:
       - 'guides/original/**.yml'
 
 jobs:
-  parse-guides:
+  validate-original:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

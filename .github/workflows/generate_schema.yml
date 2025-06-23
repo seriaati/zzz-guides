@@ -9,7 +9,7 @@ on:
       - 'szgf/schema.py'
 
 jobs:
-  parse-guides:
+  generate-schema:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
