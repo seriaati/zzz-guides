@@ -7,11 +7,13 @@ on:
       - main
     paths:
       - 'guides/original/**.yml'
+      - '.github/workflows/validate_original.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'guides/original/**.yml'
+      - '.github/workflows/validate_original.yml'
 
 jobs:
   validate-original:
