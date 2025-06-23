@@ -1,5 +1,8 @@
+from __future__ import annotations
+
 from enum import StrEnum
 from typing import Literal
+
 import pydantic
 
 
@@ -74,7 +77,8 @@ class SkillPrioritySection(pydantic.BaseModel):
     priorities: list[list[SkillType]]
     description: str
 
-    @pydantic.field_validator("priorities")
+    @pydantic.field_validator("priorities", mode="before")
+    @classmethod
     def __convert_priorities(cls, v: list[str]) -> list[list[SkillType]]:
         return [[SkillType(skill) for skill in priority.split(",")] for priority in v]
 
@@ -106,7 +110,7 @@ class Guide(pydantic.BaseModel):
     description: str
 
     weapons: list[WeaponSection] = pydantic.Field(default_factory=list)
-    discs: list[DiscSection] = pydantic.Field(default_factory=list)
+    discs: DiscSection = pydantic.Field(default_factory=list)
     stat: StatSection | None = None
     skill_priority: SkillPrioritySection | None = None
     skills: list[Skill] = pydantic.Field(default_factory=list)
