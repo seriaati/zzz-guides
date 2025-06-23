@@ -1,0 +1,455 @@
+{
+  "$defs": {
+    "Character": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "rarity": {
+          "enum": [
+            4,
+            5
+          ],
+          "title": "Rarity",
+          "type": "integer"
+        },
+        "banner": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Banner"
+        }
+      },
+      "required": [
+        "name",
+        "rarity"
+      ],
+      "title": "Character",
+      "type": "object"
+    },
+    "DiscSection": {
+      "properties": {
+        "four_pieces": {
+          "items": {
+            "$ref": "#/$defs/RelicSetSection"
+          },
+          "title": "Four Pieces",
+          "type": "array"
+        },
+        "two_pieces": {
+          "items": {
+            "$ref": "#/$defs/RelicSetSection"
+          },
+          "title": "Two Pieces",
+          "type": "array"
+        },
+        "extra_sections": {
+          "items": {
+            "$ref": "#/$defs/Section"
+          },
+          "title": "Extra Sections",
+          "type": "array"
+        }
+      },
+      "required": [
+        "four_pieces",
+        "two_pieces",
+        "extra_sections"
+      ],
+      "title": "DiscSection",
+      "type": "object"
+    },
+    "MindscapeSection": {
+      "properties": {
+        "num": {
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "title": "Num",
+          "type": "integer"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "num",
+        "description"
+      ],
+      "title": "MindscapeSection",
+      "type": "object"
+    },
+    "RelicMainStatSection": {
+      "properties": {
+        "stat_priority": {
+          "title": "Stat Priority",
+          "type": "string"
+        },
+        "pos": {
+          "enum": [
+            4,
+            5,
+            6
+          ],
+          "title": "Pos",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "stat_priority",
+        "pos"
+      ],
+      "title": "RelicMainStatSection",
+      "type": "object"
+    },
+    "RelicSetSection": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "icon": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Icon"
+        }
+      },
+      "required": [
+        "name",
+        "description"
+      ],
+      "title": "RelicSetSection",
+      "type": "object"
+    },
+    "Section": {
+      "description": "A section, anything can be written, like additional explanations.",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ],
+      "title": "Section",
+      "type": "object"
+    },
+    "Skill": {
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "demo": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Demo"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "explanation"
+      ],
+      "title": "Skill",
+      "type": "object"
+    },
+    "SkillPrioritySection": {
+      "properties": {
+        "priorities": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/SkillType"
+            },
+            "type": "array"
+          },
+          "title": "Priorities",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "priorities",
+        "description"
+      ],
+      "title": "SkillPrioritySection",
+      "type": "object"
+    },
+    "SkillType": {
+      "enum": [
+        "core",
+        "basic",
+        "dodge",
+        "special",
+        "chain",
+        "assist"
+      ],
+      "title": "SkillType",
+      "type": "string"
+    },
+    "StatSection": {
+      "properties": {
+        "main_stats": {
+          "items": {
+            "$ref": "#/$defs/RelicMainStatSection"
+          },
+          "title": "Main Stats",
+          "type": "array"
+        },
+        "sub_stats": {
+          "title": "Sub Stats",
+          "type": "string"
+        },
+        "baseline_stats": {
+          "title": "Baseline Stats",
+          "type": "string"
+        },
+        "extra_sections": {
+          "items": {
+            "$ref": "#/$defs/Section"
+          },
+          "title": "Extra Sections",
+          "type": "array"
+        }
+      },
+      "required": [
+        "main_stats",
+        "sub_stats",
+        "baseline_stats"
+      ],
+      "title": "StatSection",
+      "type": "object"
+    },
+    "Team": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "characters": {
+          "items": {
+            "$ref": "#/$defs/TeamMember"
+          },
+          "title": "Characters",
+          "type": "array"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        }
+      },
+      "required": [
+        "name",
+        "characters"
+      ],
+      "title": "Team",
+      "type": "object"
+    },
+    "TeamMember": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "TeamMember",
+      "type": "object"
+    },
+    "TeamSection": {
+      "properties": {
+        "teams": {
+          "items": {
+            "$ref": "#/$defs/Team"
+          },
+          "title": "Teams",
+          "type": "array"
+        },
+        "extra_sections": {
+          "items": {
+            "$ref": "#/$defs/Section"
+          },
+          "title": "Extra Sections",
+          "type": "array"
+        }
+      },
+      "required": [
+        "teams"
+      ],
+      "title": "TeamSection",
+      "type": "object"
+    },
+    "WeaponSection": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "icon": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Icon"
+        }
+      },
+      "required": [
+        "name",
+        "description"
+      ],
+      "title": "WeaponSection",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "character": {
+      "$ref": "#/$defs/Character"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "weapons": {
+      "items": {
+        "$ref": "#/$defs/WeaponSection"
+      },
+      "title": "Weapons",
+      "type": "array"
+    },
+    "discs": {
+      "$ref": "#/$defs/DiscSection"
+    },
+    "stat": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/StatSection"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "skill_priority": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SkillPrioritySection"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "skills": {
+      "items": {
+        "$ref": "#/$defs/Skill"
+      },
+      "title": "Skills",
+      "type": "array"
+    },
+    "mindscapes": {
+      "items": {
+        "$ref": "#/$defs/MindscapeSection"
+      },
+      "title": "Mindscapes",
+      "type": "array"
+    },
+    "team": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TeamSection"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "character",
+    "description"
+  ],
+  "title": "Guide",
+  "type": "object"
+}
