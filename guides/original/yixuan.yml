@@ -39,7 +39,7 @@ discs:
         not
   extra_sections:
     - title: Sheer Damage and Crit Rate VS Crit DMG
-    - description: |
+      description: |
         Sheer Damage completely ignores OEF so PEN isnt on
         Yixuan.
 
