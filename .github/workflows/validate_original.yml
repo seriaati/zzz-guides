@@ -1,4 +1,4 @@
-name: Parse original guides
+name: Validate original guides
 
 on:
   workflow_dispatch:
