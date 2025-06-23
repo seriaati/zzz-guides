@@ -12,7 +12,11 @@ from szgf.validator import validate_szgf
 def validate_original_guides() -> None:
     for file_path in Path("guides/original").glob("*.yml"):
         with file_path.open("r", encoding="utf-8") as file:
-            data = yaml.safe_load(file)
+            try:
+                data = yaml.safe_load(file)
+            except yaml.YAMLError as e:
+                logger.error(f"YAML parsing error in {file_path.name}: {e}")
+                raise
 
             try:
                 validate_szgf(data)
