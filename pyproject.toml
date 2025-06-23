@@ -5,6 +5,7 @@ description = "ZZZ agent guides & definition of Standardized ZZZ Guide Format (S
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "loguru>=0.7.3",
     "pydantic>=2.11.7",
     "pyyaml>=6.0.2",
 ]
