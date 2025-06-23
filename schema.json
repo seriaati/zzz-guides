@@ -3,10 +3,12 @@
     "Character": {
       "properties": {
         "name": {
+          "description": "Name of the character",
           "title": "Name",
           "type": "string"
         },
         "rarity": {
+          "description": "Rarity of the character, either 4 (A-rank) or 5 (S-rank) stars.",
           "enum": [
             4,
             5
@@ -24,6 +26,7 @@
             }
           ],
           "default": null,
+          "description": "Banner image for the character",
           "title": "Banner"
         }
       },
@@ -34,71 +37,15 @@
       "title": "Character",
       "type": "object"
     },
-    "DiscSection": {
-      "properties": {
-        "four_pieces": {
-          "items": {
-            "$ref": "#/$defs/RelicSetSection"
-          },
-          "title": "Four Pieces",
-          "type": "array"
-        },
-        "two_pieces": {
-          "items": {
-            "$ref": "#/$defs/RelicSetSection"
-          },
-          "title": "Two Pieces",
-          "type": "array"
-        },
-        "extra_sections": {
-          "items": {
-            "$ref": "#/$defs/Section"
-          },
-          "title": "Extra Sections",
-          "type": "array"
-        }
-      },
-      "required": [
-        "four_pieces",
-        "two_pieces",
-        "extra_sections"
-      ],
-      "title": "DiscSection",
-      "type": "object"
-    },
-    "MindscapeSection": {
-      "properties": {
-        "num": {
-          "enum": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "title": "Num",
-          "type": "integer"
-        },
-        "description": {
-          "title": "Description",
-          "type": "string"
-        }
-      },
-      "required": [
-        "num",
-        "description"
-      ],
-      "title": "MindscapeSection",
-      "type": "object"
-    },
-    "RelicMainStatSection": {
+    "DiscMainStatSection": {
       "properties": {
         "stat_priority": {
+          "description": "Priority of the main stat for this position's disc, e.g. 'ATK > CRIT DMG > CRIT RATE'.",
           "title": "Stat Priority",
           "type": "string"
         },
         "pos": {
+          "description": "Position of the disc, either 4, 5, or 6.",
           "enum": [
             4,
             5,
@@ -112,16 +59,52 @@
         "stat_priority",
         "pos"
       ],
-      "title": "RelicMainStatSection",
+      "title": "DiscMainStatSection",
       "type": "object"
     },
-    "RelicSetSection": {
+    "DiscSection": {
+      "properties": {
+        "four_pieces": {
+          "description": "List of four-piece disc sets.",
+          "items": {
+            "$ref": "#/$defs/DiscSetSection"
+          },
+          "title": "Four Pieces",
+          "type": "array"
+        },
+        "two_pieces": {
+          "description": "List of two-piece disc sets.",
+          "items": {
+            "$ref": "#/$defs/DiscSetSection"
+          },
+          "title": "Two Pieces",
+          "type": "array"
+        },
+        "extra_sections": {
+          "description": "Additional sections that can be added to the disc section.",
+          "items": {
+            "$ref": "#/$defs/Section"
+          },
+          "title": "Extra Sections",
+          "type": "array"
+        }
+      },
+      "required": [
+        "four_pieces",
+        "two_pieces"
+      ],
+      "title": "DiscSection",
+      "type": "object"
+    },
+    "DiscSetSection": {
       "properties": {
         "name": {
+          "description": "Name of the drive disc set",
           "title": "Name",
           "type": "string"
         },
         "description": {
+          "description": "Description for this section",
           "title": "Description",
           "type": "string"
         },
@@ -135,6 +118,7 @@
             }
           ],
           "default": null,
+          "description": "Icon of the drive disc set. A custom icon can be provided, otherwise an icon will be fetched based on the name.",
           "title": "Icon"
         }
       },
@@ -142,17 +126,47 @@
         "name",
         "description"
       ],
-      "title": "RelicSetSection",
+      "title": "DiscSetSection",
+      "type": "object"
+    },
+    "MindscapeSection": {
+      "properties": {
+        "num": {
+          "description": "Number of the mindscape, from 1 to 6.",
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "title": "Num",
+          "type": "integer"
+        },
+        "description": {
+          "description": "Description of the mindscape, explaining its effects and importance.",
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "num",
+        "description"
+      ],
+      "title": "MindscapeSection",
       "type": "object"
     },
     "Section": {
       "description": "A section, anything can be written, like additional explanations.",
       "properties": {
         "title": {
+          "description": "Title of the section",
           "title": "Title",
           "type": "string"
         },
         "description": {
+          "description": "Description of the section",
           "title": "Description",
           "type": "string"
         }
@@ -167,14 +181,17 @@
     "Skill": {
       "properties": {
         "title": {
+          "description": "Title of the skill",
           "title": "Title",
           "type": "string"
         },
         "description": {
+          "description": "Description of the skill",
           "title": "Description",
           "type": "string"
         },
         "explanation": {
+          "description": "Explanation of the skill mechanics",
           "title": "Explanation",
           "type": "string"
         },
@@ -188,6 +205,7 @@
             }
           ],
           "default": null,
+          "description": "Demo GIF of the skill",
           "title": "Demo"
         }
       },
@@ -202,6 +220,7 @@
     "SkillPrioritySection": {
       "properties": {
         "priorities": {
+          "description": "List of skill priorities, where each sublist represents a priority level. For example, [[core, basic], [special, dodge]] means the first priority is core and basic skills, and the second priority is special and dodge skills.",
           "items": {
             "items": {
               "$ref": "#/$defs/SkillType"
@@ -212,6 +231,7 @@
           "type": "array"
         },
         "description": {
+          "description": "Description of the skill priority section",
           "title": "Description",
           "type": "string"
         }
@@ -238,21 +258,25 @@
     "StatSection": {
       "properties": {
         "main_stats": {
+          "description": "List of main stats for each disc position (4, 5, 6).",
           "items": {
-            "$ref": "#/$defs/RelicMainStatSection"
+            "$ref": "#/$defs/DiscMainStatSection"
           },
           "title": "Main Stats",
           "type": "array"
         },
         "sub_stats": {
+          "description": "Priority of sub stats for the character, e.g. 'ATK > CRIT DMG > CRIT RATE > SPD'.",
           "title": "Sub Stats",
           "type": "string"
         },
         "baseline_stats": {
+          "description": "Baseline stats for the character, e.g. 'ATK: 1000, DEF: 500, HP: 2000'.",
           "title": "Baseline Stats",
           "type": "string"
         },
         "extra_sections": {
+          "description": "Additional sections that can be added to the stat section.",
           "items": {
             "$ref": "#/$defs/Section"
           },
@@ -271,10 +295,12 @@
     "Team": {
       "properties": {
         "name": {
+          "description": "Name of the team",
           "title": "Name",
           "type": "string"
         },
         "characters": {
+          "description": "List of characters in the team",
           "items": {
             "$ref": "#/$defs/TeamMember"
           },
@@ -291,6 +317,7 @@
             }
           ],
           "default": null,
+          "description": "Description of the team",
           "title": "Description"
         }
       },
@@ -304,6 +331,7 @@
     "TeamMember": {
       "properties": {
         "name": {
+          "description": "Name of the team member",
           "title": "Name",
           "type": "string"
         }
@@ -317,6 +345,7 @@
     "TeamSection": {
       "properties": {
         "teams": {
+          "description": "List of teams that the character can be part of.",
           "items": {
             "$ref": "#/$defs/Team"
           },
@@ -324,6 +353,7 @@
           "type": "array"
         },
         "extra_sections": {
+          "description": "Additional sections for the team section.",
           "items": {
             "$ref": "#/$defs/Section"
           },
@@ -331,19 +361,18 @@
           "type": "array"
         }
       },
-      "required": [
-        "teams"
-      ],
       "title": "TeamSection",
       "type": "object"
     },
     "WeaponSection": {
       "properties": {
         "name": {
+          "description": "Name of the weapon",
           "title": "Name",
           "type": "string"
         },
         "description": {
+          "description": "Description of the weapon",
           "title": "Description",
           "type": "string"
         },
@@ -357,6 +386,7 @@
             }
           ],
           "default": null,
+          "description": "Title of the section. A custom title for the section can be provided, otherwise shows the ranking of the weapon, e.g. '2nd Best W-Engine.'",
           "title": "Title"
         },
         "icon": {
@@ -369,6 +399,7 @@
             }
           ],
           "default": null,
+          "description": "Icon of the weapon. A custom icon can be provided, otherwise an icon will be fetched based on the name.",
           "title": "Icon"
         }
       },
@@ -382,13 +413,16 @@
   },
   "properties": {
     "character": {
-      "$ref": "#/$defs/Character"
+      "$ref": "#/$defs/Character",
+      "description": "Character information"
     },
     "description": {
+      "description": "Description of the guide, explaining its purpose and content.",
       "title": "Description",
       "type": "string"
     },
     "weapons": {
+      "description": "List of weapon sections for the character.",
       "items": {
         "$ref": "#/$defs/WeaponSection"
       },
@@ -396,7 +430,8 @@
       "type": "array"
     },
     "discs": {
-      "$ref": "#/$defs/DiscSection"
+      "$ref": "#/$defs/DiscSection",
+      "description": "Disc section for the character."
     },
     "stat": {
       "anyOf": [
@@ -407,7 +442,8 @@
           "type": "null"
         }
       ],
-      "default": null
+      "default": null,
+      "description": "Stat section for the character."
     },
     "skill_priority": {
       "anyOf": [
@@ -418,9 +454,11 @@
           "type": "null"
         }
       ],
-      "default": null
+      "default": null,
+      "description": "Skill priority section for the character."
     },
     "skills": {
+      "description": "List of skills for the character.",
       "items": {
         "$ref": "#/$defs/Skill"
       },
@@ -428,6 +466,7 @@
       "type": "array"
     },
     "mindscapes": {
+      "description": "List of mindscapes for the character.",
       "items": {
         "$ref": "#/$defs/MindscapeSection"
       },
@@ -443,7 +482,8 @@
           "type": "null"
         }
       ],
-      "default": null
+      "default": null,
+      "description": "Team section for the character."
     }
   },
   "required": [
