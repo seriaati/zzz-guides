@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/schema.json
+
 character:
   name: Yixuan
   rarity: 5
@@ -67,9 +69,9 @@ stat:
     (Crit Stats dependent on Engine and Disc 5)
 skill_priority:
   priorities:
-    - core,chain
-    - special
-    - basic
+    - [core, chain]
+    - [special]
+    - [basic]
   description: |
     Ultimate and EX Special are the most important but all skills can
     be upgraded to take advantage of Crit stats and Skill's scaling.
