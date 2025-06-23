@@ -7,12 +7,14 @@ on:
       - main
     paths:
       - 'guides/original/**.yml'
+      - 'scripts/validate_original.py'
       - '.github/workflows/validate_original.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'guides/original/**.yml'
+      - 'scripts/validate_original.py'
       - '.github/workflows/validate_original.yml'
 
 jobs:
