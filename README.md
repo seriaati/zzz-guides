@@ -10,6 +10,10 @@ For consistency, the following terms are used throughout the repository:
 - Weapon: W-engine.
 - Rarity: ZZZ agent or weapon rarity (S: 5, A: 4, B: 3)
 
+## Formatting
+
+The `description` and `explanation` fields accept Markdown formatting. See Discord's [Markdown guide](https://support.discord.com/hc/en-us/articles/210298617) for details.
+
 ## Contributing
 
 If you're unfamiliar with Git on the command line, you can use [GitHub Desktop](https://desktop.github.com/).
