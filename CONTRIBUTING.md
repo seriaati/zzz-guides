@@ -29,8 +29,6 @@ The `description` and `explanation` fields accept Markdown formatting. See Disco
 
 In the skill section, you might need to reference UI buttons. Use the following format:
 
-Of course! Here is the data converted into a Markdown table.
-
 | Image | UI Button Name | Tag |
 | :---: | :---: | :---: |
 | ![Basic Attack](https://api.hakush.in/zzz/UI/Icon_Normal.webp) | Basic Attack | `<basic>` |
@@ -38,6 +36,7 @@ Of course! Here is the data converted into a Markdown table.
 | ![Chain](https://api.hakush.in/zzz/UI/Icon_UltimateReady.webp) | Chain | `<chain>` |
 | ![Special](https://api.hakush.in/zzz/UI/Icon_SpecialReady.webp) | Special | `<special>` |
 | ![Assist](https://api.hakush.in/zzz/UI/Icon_Switch.webp) | Assist | `<assist>` |
+| ![Core Skill](https://api.hakush.in/zzz/UI/Icon_CoreSkill.webp) | Core Skill | `<core>` |
 
 Example:
 
