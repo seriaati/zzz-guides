@@ -54,7 +54,7 @@ stat:
     Energy Regen: 0%+ - 130%+ (Depends on W-Engine and Disk Main Stat choices)
   extra_sections:
     - title: Core Passive cap and Energy Regen
-    - description: |
+      description: |
         Astra Yao needs **atleast 3429 BASE ATK** to fulfill her Core Passive requirement, this should be your highest priority
         After getting 3429 ATK you should focus on getting as much Energy Regen as possible with Min/Maxing stats, the
         more ER% you have the more Quick Assists you can trigger which will make your rotations easier with Astra on the team
