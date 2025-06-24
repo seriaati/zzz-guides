@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/schema.json
+
+character:
+  name: Astra Yao
+  rarity: 5
+description: |
+  Astra Yao is an S rank Agent with the Ether 
+  attribute who belongs to the Support Specialty and
+  who is part of the Stars of Lyra faction.
+weapons:
+  - name: Elegant Vanity
+    description: |
+      Best in Slot in all situations, provides Astra with Energy Regeneration, a stacking 10% DMG Boost for the whole
+      team and a massive 30% ATK Main Stat to help her with reaching her Core Passive Requirement, but due to the
+      strength of A Rank Support W-Engine's this W-Engine is somewhat overkill and Astra can reach full potential without it
+  - name: Bashful Demon
+    description: |
+      The best peforming A Rank W-Engine for Astra, providing a generous 3.2% Combat ATK% boost that stacks up to 4 times
+      at S5 while having a ATK% Main Stat to help out with Astra's Core Passive requirement making it all around the best
+  - name: Kaboom the Cannon
+    description: |
+      The 2nd best A Rank W-Engine for Astra, almost has the exact same passive bonuses as Bashful Demon but requires way more
+      careful play to maximise it, requiring constant swaps to keep it's effect up, it also doesn't have access to a ATK%
+      Main Stat making it harder to fulfill Astra's Core Passive requirement but still a servicable option if you don't
+      have Bashful Demon
+discs:
+  four_pieces:
+    - name: Astral Voice
+      description: |
+        Astral Voice was simply made for Astra, she has no issue mainting it's Quick Assist requirement, making her
+        have full uptime on it's 24% DMG Boost at all times
+  two_pieces:
+    - name: Swing Jazz
+      description: |
+        Her best 2-Pc set, gives a very needed 20% Energy Regen bonus helping her Quick Assist more often
+  two_pieces:
+    - name: Hormone Punk
+      description: |
+        A potential option for people running Kaboom the Cannon that need more ATK% to reach Astra's
+        Core Passive Requirement
+stat:
+  main_stats:
+    - stat_priority: ATK%
+      pos: 4
+    - stat_priority: ATK%
+      pos: 5
+    - stat_priority: Enery Regen% / ATK%
+      pos: 6
+  sub_stats: |
+    - For Crit based usage: ATK%/Flat ATK until Passive Cap > Crit Rate = Crit DMG > PEN
+    - Fpr Anomaly based usage: ATK%/Flat ATK until Passive Cap > Anomaly Proficiency > PEN
+  baseline_stats: |
+    ATK: 3429+ (34925 is the ATK cap for her Core Passive)
+    Energy Regen: 0%+ - 130%+ (Depends on W-Engine and Disk Main Stat choices)
+  extra_sections:
+    - title: Core Passive cap and Energy Regen
+      description: |
+        Astra Yao needs **atleast 3429 BASE ATK** to fulfill her Core Passive requirement, this should be your highest priority
+        After getting 3429 ATK you should focus on getting as much Energy Regen as possible with Min/Maxing stats, the
+        more ER% you have the more Quick Assists you can trigger which will make your rotations easier with Astra on the team
+skill_priority:
+  priorities:
+    - [special]
+    - [chain]
+  description: |
+    Her EX Special has the highest priority for upgrades due to increasing everyones DMG and Crit DMG up to 
+    20% and 25% respectively while her Ultimate will simply provide more healing and more chip damage
+mindscapes:
+  - num: 1
+    description: |
+      Provides a stacking **All-Attribute RES** shred up to 18% and a free 1000 Decibel boost while entering the field
+      for the first time
+  - num: 2
+    description: |
+      Increases the buff gained from her Core Passive by 400 ATK, making the complete buff 1600 ATK and providing some extra
+      damage whenever anyone Quick Assists
+team:
+  teams:
+    - name: Team 1
+      characters:
+        - name: Miyabi
+        - name: Yanagi / Burnice / Vivian
+        - name: Astra Yao
+    - name: Team 2
+      characters:
+        - name: Evelyn
+        - name: Lighter / Trigger / Koleda
+        - name: Astra Yao
+  extra_sections:
+    - title: General Notes on Team Building
+      description: |
+        Astra Yao at this current time fits into every team, even teams that do not need ATK like Yixuan, fitting in
+        Astra into any team will always be a damage gain somehow
