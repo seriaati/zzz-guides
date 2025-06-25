@@ -3,8 +3,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from loguru import logger
-
 from szgf.schema import Guide
 
 
@@ -16,4 +14,4 @@ def generate_schema() -> None:
 
 if __name__ == "__main__":
     generate_schema()
-    logger.info("Schema generated successfully.")
+    print("Schema generated successfully.")
