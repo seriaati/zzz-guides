@@ -150,9 +150,7 @@ class Guide(pydantic.BaseModel):
     weapons: list[WeaponSection] = pydantic.Field(
         default_factory=list, description="List of weapon sections for the character."
     )
-    discs: DiscSection = pydantic.Field(
-        default_factory=list, description="Disc section for the character."
-    )
+    discs: DiscSection | None = pydantic.Field(None, description="Disc section for the character.")
     stat: StatSection | None = pydantic.Field(None, description="Stat section for the character.")
     skill_priority: SkillPrioritySection | None = pydantic.Field(
         None, description="Skill priority section for the character."
