@@ -430,7 +430,15 @@
       "type": "array"
     },
     "discs": {
-      "$ref": "#/$defs/DiscSection",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DiscSection"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
       "description": "Disc section for the character."
     },
     "stat": {
