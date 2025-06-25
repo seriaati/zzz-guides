@@ -1,31 +1,53 @@
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 import jsonschema
 import pydantic
 import yaml
-from loguru import logger
+import yaml.scanner
 
 from szgf.validator import validate_szgf
 
 
+def _parse_yaml(file_path: Path) -> dict:
+    """Parse a YAML file and return its content as a dictionary."""
+    with file_path.open("r", encoding="utf-8") as file:
+        try:
+            return yaml.safe_load(file)
+        except yaml.scanner.ScannerError as e:
+            mark = e.problem_mark
+            if mark is not None:
+                print(
+                    f"::error file={file_path},line={mark.line + 1},col={mark.column + 1}::YAML parsing error"
+                )
+            else:
+                print(f"::error file={file_path}::YAML parsing error")
+            raise
+        except yaml.MarkedYAMLError as e:
+            mark = e.problem_mark
+            if mark is not None:
+                print(
+                    f"::error file={file_path},line={mark.line + 1},col={mark.column + 1}::YAML parsing error"
+                )
+            else:
+                print(f"::error file={file_path}::YAML parsing error")
+            raise
+        except yaml.YAMLError:
+            print(f"::error file={file_path}::YAML parsing error")
+            raise
+
+
 def validate_with_pydantic() -> None:
     for file_path in Path("guides/original").glob("*.yml"):
-        logger.info(f"Validating {file_path.name} against Pydantic")
+        data = _parse_yaml(file_path)
 
-        with file_path.open("r", encoding="utf-8") as file:
-            try:
-                data = yaml.safe_load(file)
-            except yaml.YAMLError as e:
-                logger.error(f"YAML parsing error in {file_path.name}: {e}")
-                raise
-
-            try:
-                validate_szgf(data)
-            except pydantic.ValidationError:
-                logger.error(f"Validation failed for {file_path.name}")
-                raise
+        try:
+            validate_szgf(data)
+        except pydantic.ValidationError as e:
+            print(f"::error file={file_path.name},title=Pydantic validation failed::{e}")
+            raise
 
 
 def validate_with_jsonschema() -> None:
@@ -34,22 +56,18 @@ def validate_with_jsonschema() -> None:
         schema = yaml.safe_load(schema_file)
 
     for file_path in Path("guides/original").glob("*.yml"):
-        logger.info(f"Validating {file_path.name} against JSON schema")
+        data = _parse_yaml(file_path)
 
-        with file_path.open("r", encoding="utf-8") as file:
-            try:
-                data = yaml.safe_load(file)
-            except yaml.YAMLError as e:
-                logger.error(f"YAML parsing error in {file_path.name}: {e}")
-                raise
-
-            try:
-                jsonschema.validate(instance=data, schema=schema)
-            except jsonschema.ValidationError as e:
-                logger.error(f"Validation failed for {file_path.name}: {e.message}")
-                raise
+        try:
+            jsonschema.validate(instance=data, schema=schema)
+        except jsonschema.ValidationError as e:
+            print(f"::error file={file_path.name},title=JSON schema validation failed::{e.message}")
+            raise
 
 
 if __name__ == "__main__":
-    validate_with_pydantic()
-    validate_with_jsonschema()
+    try:
+        validate_with_pydantic()
+        validate_with_jsonschema()
+    except Exception:
+        sys.exit(1)
