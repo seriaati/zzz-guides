@@ -492,6 +492,18 @@
       ],
       "default": null,
       "description": "Team section for the character."
+    },
+    "rotation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Section"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Rotation section for the character, explaining how to use skills effectively."
     }
   },
   "required": [
