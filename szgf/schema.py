@@ -175,3 +175,7 @@ class Guide(pydantic.BaseModel):
         default_factory=list, description="List of mindscapes for the character."
     )
     team: TeamSection | None = pydantic.Field(None, description="Team section for the character.")
+    rotation: Section | None = pydantic.Field(
+        None,
+        description="Rotation section for the character, explaining how to use skills effectively.",
+    )
