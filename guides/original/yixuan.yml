@@ -85,7 +85,7 @@ skills:
   - title: "EX Special Attack: Cloud-Shaper"
     description: |
       ### With enough Adrenaline, hold <basic> to activate:
-      
+
       Continuously charge up, **channeling energy around enemies** to deal DMG over
       time, up to a max of 2s, **dealing massive Auric Ink DMG**.
 
@@ -97,7 +97,7 @@ skills:
   - title: "EX Special Attack: Ink Manifestation"
     description: |
       ### With enough Adrenaline, press or hold <special> to activate:
-      
+
       Charge continuously, and press or release <special> to launch an upward wing attack, **dealing massive Auric Ink DMG**.
 
       **While charging, incoming attacks are automatically blocked and will activate the upward wing attack**.
@@ -112,7 +112,7 @@ skills:
   - title: "Basic Attack: Auric Array & Basic Attack: Ink - Veil Cloud Coalescence"
     description: |
       ### While possessing an Auric Ink Point, hold <dodge> to activate:
-      
+
       Deploy an array, **continuously dealing Auric Ink DMG**.
 
       While channeling, **continuously recover Adrenaline**, **recovering 7 points per second**, for up to 3s.
@@ -122,7 +122,7 @@ skills:
   - title: "Ultimate: Qingming Skyshade & Ultimate: Endless Talisman Suppression"
     description: |
       ### When Decibel Rating is at Maximum / With enough Technique Points, press <chain> to activate:
-      
+
       Launch a barrage of wing attacks, then guide countless talismans to attack, **dealing massive Auric Ink DMG**.
       Upon activating this skill, Yixuan evenly **redistributes the squad's HP** / **Gain an Auric Ink Point**
     explanation: |

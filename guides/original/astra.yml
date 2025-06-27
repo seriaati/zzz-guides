@@ -65,7 +65,7 @@ skill_priority:
     Her <special> **EX Special** has the highest priority for upgrades due to **increasing everyones DMG and Crit DMG** up to 
     **20% and 25% respectively** while her <chain> **Ultimate** will simply provide **more healing** and more chip damage
 skills:
-  - title: "Special Attack: \"Windchimes & Oaths\" & Idyllic Cadenza"
+  - title: 'Special Attack: "Windchimes & Oaths" & Idyllic Cadenza'
     description: |
       ### Press <special> to activate:
 
@@ -75,7 +75,7 @@ skills:
     explanation: |
       Astra's bread and butter Ability, 99.9% of the time you will use this skill once at the start of the fight and simply reap the benefits it
       provides for the rest of the fight for free
-  - title: "Ultimate: \"Fantasian Sonata\""
+  - title: 'Ultimate: "Fantasian Sonata"'
     description: |
       ### When Decibel Rating is at Maximum, press <chain> to activate:
 
