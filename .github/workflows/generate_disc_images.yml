@@ -10,7 +10,7 @@ on:
       - ".github/workflows/generate_disc_images.yml"
 
 jobs:
-  generate-schema:
+  generate-disc-images:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: uv sync --group draw
 
-      - name: Generate schema
+      - name: Generate drive disc images
         run: |
           uv run -m scripts.generate_disc_images
 
