@@ -1,0 +1,42 @@
+name: Generate drive disc images
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/generate_disc_images.py"
+      - ".github/workflows/generate_disc_images.yml"
+
+jobs:
+  generate-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync --group draw
+
+      - name: Generate schema
+        run: |
+          uv run -m scripts.generate_disc_images
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Commit and push
+        run: |
+          git add assets/drive_discs
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(discs): Update drive disc images"
+            git push
+          else
+            echo "No changes to commit."
+          fi

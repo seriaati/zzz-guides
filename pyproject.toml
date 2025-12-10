@@ -13,10 +13,14 @@ dependencies = [
     "pyyaml>=6.0.2",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 validate = ["jsonschema>=4.24.0"]
 parse = ["requests>=2.32.4"]
-
+draw = [
+    "anyio>=4.12.0",
+    "httpx>=0.28.1",
+    "pillow>=12.0.0",
+]
 
 [tool.pyright]
 enableTypeIgnoreComments = false
@@ -27,3 +31,6 @@ reportUnnecessaryContains = true
 reportUnnecessaryIsInstance = true
 reportUnnecessaryTypeIgnoreComment = true
 typeCheckingMode = "standard"
+
+[tool.uv]
+default-groups = "all"
