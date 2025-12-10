@@ -1,5 +1,5 @@
 from __future__ import annotations
 
 from .client import SZGFClient
-from .schema import Guide
-from .validator import validate_szgf
+from .schemas.original import OriginalGuide
+from .validator import validate_original_guide

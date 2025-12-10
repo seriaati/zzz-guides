@@ -8,7 +8,7 @@ import pydantic
 import yaml
 import yaml.scanner
 
-from szgf.validator import validate_szgf
+from szgf.validator import validate_original_guide
 
 
 def _parse_yaml(file_path: Path) -> dict:
@@ -44,7 +44,7 @@ def validate_with_pydantic() -> None:
         data = _parse_yaml(file_path)
 
         try:
-            validate_szgf(data)
+            validate_original_guide(data)
         except pydantic.ValidationError as e:
             print(f"::error file={file_path.name},title=Pydantic validation failed::{e}")
             raise

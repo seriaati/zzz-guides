@@ -3,11 +3,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from szgf.schema import Guide
+from szgf.schemas.original import OriginalGuide
 
 
 def generate_schema() -> None:
-    schema = Guide.model_json_schema()
+    schema = OriginalGuide.model_json_schema()
     with Path("schema.json").open("w", encoding="utf-8") as file:
         json.dump(schema, file, ensure_ascii=False, indent=2)
 

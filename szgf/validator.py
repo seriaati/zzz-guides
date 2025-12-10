@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from szgf.schema import Guide
+from szgf.schemas.original import OriginalGuide
 
 
-def validate_szgf(data: Any) -> Guide:
-    return Guide.model_validate(data)
+def validate_original_guide(data: Any) -> OriginalGuide:
+    return OriginalGuide.model_validate(data)

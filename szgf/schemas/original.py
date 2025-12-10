@@ -3,7 +3,6 @@ from __future__ import annotations
 from enum import StrEnum
 from typing import Literal
 
-import hakushin
 import pydantic
 
 
@@ -24,12 +23,6 @@ class Character(pydantic.BaseModel):
     """A custom banner can be provided, otherwise defaults to M6 art."""
 
 
-class ParsedCharacter(Character):
-    id: int
-    element: hakushin.ZZZElement
-    specialty: hakushin.ZZZSpecialty
-
-
 class WeaponSection(pydantic.BaseModel):
     name: str = pydantic.Field(description="Name of the weapon")
     description: str = pydantic.Field(description="Description of the weapon")
@@ -45,12 +38,6 @@ class WeaponSection(pydantic.BaseModel):
         description="Icon of the weapon. A custom icon can be provided, "
         "otherwise an icon will be fetched based on the name.",
     )
-
-
-class ParsedWeaponSection(WeaponSection):
-    id: int
-    rarity: Literal[5, 4, 3]
-    specialty: hakushin.ZZZSpecialty
 
 
 class DiscSetSection(pydantic.BaseModel):
@@ -154,7 +141,7 @@ class Skill(pydantic.BaseModel):
     demo: str | None = pydantic.Field(None, description="Demo GIF of the skill")
 
 
-class Guide(pydantic.BaseModel):
+class OriginalGuide(pydantic.BaseModel):
     character: Character = pydantic.Field(description="Character information")
     description: str = pydantic.Field(
         description="Description of the guide, explaining its purpose and content."
