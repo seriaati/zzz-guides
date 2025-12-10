@@ -1,20 +1,28 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Final
+import asyncio
+import json
 
-import requests
+import anyio
+import yaml
 
-CHARACTERS_API_URL: Final[str] = "https://api.hakush.in/zzz/data/character.json"
-
-
-@dataclass
-class Character:
-    name: str
-    id: int
+from szgf import parser
+from szgf.schemas.original import OriginalGuide
 
 
-def get_characters() -> list[Character]:
-    response = requests.get(CHARACTERS_API_URL, timeout=5)
-    data = response.json()
-    return [Character(name=c["EN"], id=cid) for cid, c in data.items()]
+async def parse_guides() -> None:
+    async for path in anyio.Path("guides/original").glob("*.yml"):
+        content = await path.read_text(encoding="utf-8")
+        yaml_content = yaml.safe_load(content)
+        original_guide = OriginalGuide.model_validate(yaml_content)
+        parsed_guide = await parser.parse_original_guide(original_guide)
+        output_path = anyio.Path("guides/parsed") / path.name.replace(".yml", ".json")
+
+        await output_path.parent.mkdir(parents=True, exist_ok=True)
+        await output_path.write_text(
+            json.dumps(parsed_guide.model_dump(), indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+
+
+if __name__ == "__main__":
+    asyncio.run(parse_guides())
