@@ -4,9 +4,7 @@ character:
   name: Astra Yao
   rarity: 5
 description: |
-  **Astra Yao** is an **S rank Agent** with the **Ether 
-  attribute** who belongs to the **Support Specialty** and
-  who is part of the **Stars of Lyra faction**.
+  **Astra Yao** is an **S rank Agent** with the **Ether attribute** who belongs to the **Support Specialty** and who is part of the **Stars of Lyra faction**.
 weapons:
   - name: Elegant Vanity
     description: |

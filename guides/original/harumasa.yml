@@ -96,12 +96,12 @@ team:
       characters:
         - name: Qingyi
         - name: Nicole
-        - name: Asaba Harumasa
+        - name: Harumasa
     - name: Team 2
       characters:
         - name: Qingyi
         - name: Rina
-        - name: Asaba Harumasa
+        - name: Harumasa
   extra_sections:
     - title: General Notes on Team Building
       description: |

@@ -4,9 +4,7 @@ character:
   name: Yixuan
   rarity: 5
 description: |
-  **Yixuan** is an **S rank Agent** with the **Auric Ink Ether 
-  attribute** who belongs to the **Rupture Specialty** and 
-  who is part of the **Yunkui Summit faction**.
+  **Yixuan** is an **S rank Agent** with the **Auric Ink Ether attribute** who belongs to the **Rupture Specialty** and who is part of the **Yunkui Summit faction**.
 weapons:
   - name: Qingming Birdcage
     description: |
