@@ -35,7 +35,7 @@ jobs:
         run: |
           git add assets/drive_discs
           if ! git diff --staged --quiet; then
-            git commit -m "chore(discs): Update drive disc images"
+            git commit -m "chore(assets): Update drive disc images"
             git push
           else
             echo "No changes to commit."
