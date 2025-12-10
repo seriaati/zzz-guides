@@ -1,0 +1,256 @@
+{
+  "character": {
+    "name": "Yixuan",
+    "rarity": 5,
+    "banner": "https://api.hakush.in/zzz/UI/Mindscape_1371_3.webp",
+    "id": 1371,
+    "element": 205,
+    "specialty": 6
+  },
+  "description": "**Yixuan** is an **S rank Agent** with the **Auric Ink Ether attribute** who belongs to the **Rupture Specialty** and who is part of the **Yunkui Summit faction**.\n",
+  "weapons": [
+    {
+      "name": "Qingming Birdcage",
+      "description": "**Best in Slot in all situations**, has a **HP% Main Stat**, **in-combat Crit Rate**, \ngives **stacking Ether DMG% Bonus** and **Ether Sheer DMG% Bonus** for <special> **EX Special & <chain> Ultimate**, \nher two highest damaging abilities\n",
+      "title": null,
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1371.webp",
+      "id": 14137,
+      "rarity": "S",
+      "specialty": 6
+    },
+    {
+      "name": "Any S Rank Crit Rate W-Engine",
+      "description": "**Any Crit Rate Main Stat** and **high Base ATK** W-Engine will\nbe good due to Yixuan's **Rupture Specialty passive ATK stat conversion**, even with\nno passive from the W-Engine itself\n",
+      "title": null,
+      "icon": null
+    },
+    {
+      "name": "Radiowave Journey",
+      "description": "Best A Rank option due to having a **HP% Main Stat** but requires\nthe Battle Pass, when using a <chain> **Chain Attack** or **Ultimate**, gain a\n**Sheer Force Stat Boost** which can **stack up to 3 times**\n",
+      "title": null,
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_A_Common_14.webp",
+      "id": 13014,
+      "rarity": "A",
+      "specialty": 6
+    },
+    {
+      "name": "Puzzle Sphere",
+      "description": "The 2nd best option following closely behind Radiowave Journey, providing a **Crit DMG Boost** for 12s upon using <special> **EX Special**\nand on top of that, if the enemy is at or **below 50% HP** they will **recieve more DMG** from said <special> **EX Special**, a respectable choice, even better than\nRadiowave Journery when Puzzle Sphere is at S5\n",
+      "title": null,
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_A_Common_12.webp",
+      "id": 13012,
+      "rarity": "A",
+      "specialty": 6
+    }
+  ],
+  "discs": {
+    "four_pieces": [
+      {
+        "name": "Yunkui Tales",
+        "description": "The best and currently only option for Yixuan. tailor made for her kit\n\nIts 2-Pc bonus gives **HP%** which is desired for Yixuan and its 4-Pc\neffect gives a **stacking Crit Rate Bonus up to 12%** from simply\nusing her most important skills. and on top of that at max stacks it\ngives you a **Sheer DMG bonus**\n",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/33100.webp"
+      }
+    ],
+    "two_pieces": [
+      {
+        "name": "Branch & Blade Song / Woodpecker Electro",
+        "description": "The two best 2-Pc options for Yixuan. always being a damage\nincrease but your pick will depend on if you have her signature or\nnot\n",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/32700_31000.webp"
+      }
+    ],
+    "extra_sections": [
+      {
+        "title": "Sheer Damage and Crit Rate VS Crit DMG",
+        "description": "**Sheer Damage completely ignores DEF** so PEN isnt needed on\nYixuan.\n\nYixuan with her **signature W-Engine only needs 68% Crit Rate** to reach\n**100% Crit Rate in combat**.\n\nGenerally use 2-Pc Woodpecker to **balance Crit Ratio** especially\nwithout Signature Engine. If you have well rolled Disc pieces go Branch & Blade\n"
+      }
+    ]
+  },
+  "stat": {
+    "main_stats": [
+      {
+        "stat_priority": "CR%/CDMG%",
+        "pos": 4
+      },
+      {
+        "stat_priority": "Ether DMG% > HP%",
+        "pos": 5
+      },
+      {
+        "stat_priority": "HP%",
+        "pos": 6
+      }
+    ],
+    "sub_stats": "CR% > CDMG% > HP% > ATK% > Flat HP\n(Note: Flat HP is only slightly worse than ATK% for Sheer Force conversion.)\n",
+    "baseline_stats": "HP with main engine: 18,000\nHP without Main engine: 15,000\nCR%: 68-88%\nCD%: 120-140%+\n(Crit Stats dependent on Engine and Disc 5)\n",
+    "extra_sections": []
+  },
+  "skill_priority": {
+    "priorities": [
+      [
+        "core",
+        "chain"
+      ],
+      [
+        "special"
+      ],
+      [
+        "basic"
+      ]
+    ],
+    "description": "Ultimate and EX Special are the most important but all skills can\nbe upgraded to take advantage of Crit stats and Skill's scaling.\nAssist is low Priority.\n"
+  },
+  "skills": [
+    {
+      "title": "EX Special Attack: Cloud-Shaper",
+      "description": "### With enough Adrenaline, hold <basic> to activate:\n\nContinuously charge up, **channeling energy around enemies** to deal DMG over\ntime, up to a max of 2s, **dealing massive Auric Ink DMG**.\n\nAt the **moment the skill is activated, a <dodge> Perfect Dodge can be triggered**.\nAfter the Perfect Dodge, enter the **Vital View** state.\n",
+      "explanation": "Best used during the **Stun Window** after using your <chain> **Ultimate** due to\ndealing **30% Extra DMG to Stunned enemies** and the **40% Crit DMG Boost** from <core> **Additional Core Passive**.\n",
+      "demo": null
+    },
+    {
+      "title": "EX Special Attack: Ink Manifestation",
+      "description": "### With enough Adrenaline, press or hold <special> to activate:\n\nCharge continuously, and press or release <special> to launch an upward wing attack, **dealing massive Auric Ink DMG**.\n\n**While charging, incoming attacks are automatically blocked and will activate the upward wing attack**.\nIf **hit** at the **exact moment charging begins or the button is pressed**, it triggers a **Perfect Block effect**, negating the DMG, **dealing more damage** and **recovering 10 Adrenaline**.\n\nAfter the skill, press <special> to launch <special> **EX Special Attack: Celestial Cloud Blitz - Break**.\n\nAfter <special> **EX Special Attack: Celestial Cloud Blitz - Break**, and **with enough Adrenaline**, press <special> to consume **another 20 Adrenaline** to launch <special> **EX Special Attack: Qingming Eruption - Break**.\n",
+      "explanation": "**Initial attack** best used to **parry incoming attacks** to **regenerate Adrenaline** for Yixuan and **deal more damage**,\nfollow up attacks should be used to **stack up Technique Points**\n",
+      "demo": null
+    },
+    {
+      "title": "Basic Attack: Auric Array & Basic Attack: Ink - Veil Cloud Coalescence",
+      "description": "### While possessing an Auric Ink Point, hold <dodge> to activate:\n\nDeploy an array, **continuously dealing Auric Ink DMG**.\n\nWhile channeling, **continuously recover Adrenaline**, **recovering 7 points per second**, for up to 3s.\n",
+      "explanation": "Typical used with either a **Swap Cancel** or **after a Stun window** to **regenerate Adrenaline**.\nthis move can be used **without an Auric Ink Point** but **without the regeneration effect and lower damage**, great value when **Swap Canceling** though\n",
+      "demo": null
+    },
+    {
+      "title": "Ultimate: Qingming Skyshade & Ultimate: Endless Talisman Suppression",
+      "description": "### When Decibel Rating is at Maximum / With enough Technique Points, press <chain> to activate:\n\nLaunch a barrage of wing attacks, then guide countless talismans to attack, **dealing massive Auric Ink DMG**.\nUpon activating this skill, Yixuan evenly **redistributes the squad's HP** / **Gain an Auric Ink Point**\n",
+      "explanation": "Yixuan has access to two <chain> **Ultimate** attacks, one **consuming Decibels** and the other **consuming Technique Points**, when you are **in possesion of both Max Decibels and Technique Points**,\nthe **Technique Points version of her <chain> Ultimate will activate first**.\nYou should aim to activate both <chain> **Ultimates** in a **single Stun window**. Using Yixuan's <chain> **Ultimate will give you a 40% Crit Damage Boost for 15s through her <core> Additional Core Passive**.\n",
+      "demo": null
+    }
+  ],
+  "mindscapes": [
+    {
+      "num": 1,
+      "description": "Provides a **10% Combat Crit Rate Boost** while allowing her to **start the fight with full\nTechnique Gauge**. In addition to **following up with an attack** whenever another agent deals damage\nto an enemy target with a 6 sec CD\n"
+    },
+    {
+      "num": 2,
+      "description": "<core> **Ultimate**/<special> **EX Special** now **ignores 15% Ether Res** and **using Normal <chain> Ultimate** on a **Stunned target**\n**extends** their **Stun duration for 3 secs**. After using <chain> **Technique Gauge Ultimate** gain a buff that\nwill deal <special> **EX Special damage** that deals **1200% of Sheer Force as damage** upon using either **Hold <basic> Ability** or <special> **EX Special Combo**\n"
+    },
+    {
+      "num": 4,
+      "description": "Activating any <chain> **Ultimate** will grant you **stacks, up to two**, increasing the damage of\nyour **next Hold <basic> Ability by 30%**\n"
+    },
+    {
+      "num": 6,
+      "description": "Using <chain> **Ultimate** allows you to **bypass the resource cost** of **Technique Gauge Ultimate** with a cooldown\nof 30 secs, further more **increase Yixuan Sheer Force by 20%** during her\n**Meditation State**, also known as <core> **Additional Core Passive**\n"
+    }
+  ],
+  "team": {
+    "teams": [
+      {
+        "name": "Team 1",
+        "characters": [
+          {
+            "name": "Yixuan",
+            "ids": [
+              1371
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect44.webp"
+            ]
+          },
+          {
+            "name": "Pan Yinhu",
+            "ids": [
+              1421
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect45.webp"
+            ]
+          },
+          {
+            "name": "Astra Yao",
+            "ids": [
+              1311
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect36.webp"
+            ]
+          }
+        ],
+        "description": null
+      },
+      {
+        "name": "Team 2",
+        "characters": [
+          {
+            "name": "Yixuan",
+            "ids": [
+              1371
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect44.webp"
+            ]
+          },
+          {
+            "name": "Pan Yinhu",
+            "ids": [
+              1421
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect45.webp"
+            ]
+          },
+          {
+            "name": "Ju Fufu",
+            "ids": [
+              1391
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect43.webp"
+            ]
+          }
+        ],
+        "description": null
+      },
+      {
+        "name": "Team 3",
+        "characters": [
+          {
+            "name": "Yixuan",
+            "ids": [
+              1371
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect44.webp"
+            ]
+          },
+          {
+            "name": "Pan Yinhu",
+            "ids": [
+              1421
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect45.webp"
+            ]
+          },
+          {
+            "name": "Pulchra",
+            "ids": [
+              1351
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect38.webp"
+            ]
+          }
+        ],
+        "description": null
+      }
+    ],
+    "extra_sections": [
+      {
+        "title": "Extra Notes on Team Building",
+        "description": "**Nicole and Rina** are **not good teammates** for Yixuan as **Sheer Damage ignores all\nDEF** making their buffs useless. All **ATK buffers are good** for Yixuan despite her scaling off of HP as **Rupture Passive\nconverts 30% of your ATK into Sheer Force**. For example Lucy's 600 ATK will\nconvert to 180 Sheer Force. Nicole “could” be used for her Ether DMG%, CR% and\nW-Engine buff if you really lack options but this is not worth it or recommended at\nall. Since this isn't a good use of Nicole and another team would want her more.\n"
+      }
+    ]
+  },
+  "rotation": null
+}

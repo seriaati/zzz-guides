@@ -1,0 +1,188 @@
+{
+  "character": {
+    "name": "Harumasa",
+    "rarity": 5,
+    "banner": "https://api.hakush.in/zzz/UI/Mindscape_1201_3.webp",
+    "id": 1201,
+    "element": 203,
+    "specialty": 1
+  },
+  "description": "Harumasa is an S rank Agent with the Electric attribute who belongs to the Attack Specialty and who is part of the Section 6 faction.\n",
+  "weapons": [
+    {
+      "name": "Zanshin Herb Case",
+      "description": "BIS W-Engine, gives a near 100% uptime on 20 Crit Rate when needed, on top of its Crit Damage Main Stat while providing a massive 40% Electric DMG Bonus to his Dash Attacks, his main source of damage\n",
+      "title": null,
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1201.webp",
+      "id": 14120,
+      "rarity": "S",
+      "specialty": 1
+    },
+    {
+      "name": "Any S Rank Crit Rate W-Engine",
+      "description": "Any Crit Rate Main Stat and high Base ATK W-Engine will\nbe good due to Yixuan's passive ATK stat conversion, even with\nno passive from the W-Engine itself\n",
+      "title": null,
+      "icon": null
+    },
+    {
+      "name": "The Brimstone",
+      "description": "Best Non-Limited S Rank W-Engine, gives an insane amount of ATK due to it's Main Stat while also providing insane in-combat ATK%\n",
+      "title": null,
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1041.webp",
+      "id": 14104,
+      "rarity": "S",
+      "specialty": 1
+    }
+  ],
+  "discs": {
+    "four_pieces": [
+      {
+        "name": "Shadow Harmony",
+        "description": "4-Pc Shadow Harmony is the most consistent due to it not being reliant on Shock anomaly or Hormone Punk's uptime to do the most damage. The set gives everything Harumasa needs on top of\nit's near 100% uptime. At max stacks (which will be surely after your burst starts) you will gain:\n\n15% Dash Attack DMG Bonus\n12% Combat ATK Boost\n12% Crit Rate\n\nThe other sets have their uses in Mono-shock team and/or Shiyu Defense Speedrun.\n",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32900.webp"
+      },
+      {
+        "name": "Hormone Punk",
+        "description": "The best 4-Pc set for high burst DMG builds outside of Rina Mono Shock Teams, on top of it's 2-Pc 10% ATK bonus it grants a massive 25% Combat ATK Bonus when swapped on field when it's not\non cooldown for 10 seconds\n\nEspecially the best when you do not need the Crit boost from 4-Pc Shadow Harmony to reach 100%~ Crit Rate with Dash Attacks\n",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/31400.webp"
+      }
+    ],
+    "two_pieces": [
+      {
+        "name": "Branch & Blade Song / Woodpecker Electro",
+        "description": "The two best 2-Pc options for Harumasa. always being a damage\nincrease but your pick will depend on if you have her signature or\nnot\n",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/32700_31000.webp"
+      }
+    ],
+    "extra_sections": [
+      {
+        "title": "Note for Harumasa Stats",
+        "description": "ATK% Disc 5 is better than Elec% Disc 5, especially with his Signature giving him bonus Elec% on Dash attack. A good Elec% disc can still outperform a bad ATK% disc, so it is recommended\nto pick the disc with the best sub stats.\n\nHis Enhanced Dash Attack gets 25% Crit Rate bonus, making the max Crit Rate 75%, further reduced by 12% from 4-Pc Shadow Harmony, 15% from M6 Nicole, 20% from Signature W-Engine, and\nmore depending on the setup.\n"
+      }
+    ]
+  },
+  "stat": {
+    "main_stats": [
+      {
+        "stat_priority": "CDMG%/ATK%",
+        "pos": 4
+      },
+      {
+        "stat_priority": "ATK% > Electric DMG% / PEN% when running a Rina team",
+        "pos": 5
+      },
+      {
+        "stat_priority": "ATK%",
+        "pos": 6
+      }
+    ],
+    "sub_stats": "Crit Rate% (until 75%/63%(Shadow Harmony)/48%(Shadow Harmony + Nicole)/28%(Shadow Harmony + Nicole + Signature W-Engine) Build Breakpoints) > Crit DMG% = ATK%\n",
+    "baseline_stats": "ATK Main Engine: 2800-3300+\nNon ATK Main Engine: 2700-3000+\nCrit Rate%\n4-Pc Shadow Harmony: 38-63%\nOtherwise: 50-75%\nCrit DMG%: 150-200%+\n(Range Dependent on Team, Disc 5 and Engine)\n",
+    "extra_sections": []
+  },
+  "skill_priority": {
+    "priorities": [
+      [
+        "dodge"
+      ],
+      [
+        "chain"
+      ],
+      [
+        "special"
+      ]
+    ],
+    "description": "Dash Attacks are his main source of damage but his Ultimate/Chain Attack and EX Special can contribute to damage\n"
+  },
+  "skills": [
+    {
+      "title": "Dash Attack: Hiten no Tsuru - Slash",
+      "description": "While there are X-Marked enemies on the field, Harumasa will enter the Awakened state, switching Dash Attack: Hiten no Tsuru for Dash Attack: Hiten no Tsuru - Slash.\n\nRush forwards to the closest X-Marked enemy and execute a powerful slash, dealing Electric DMG.\nWhen the slash hits the target, it consumes 2 stacks of Electro Prison.\nrepeatedly press DASH ATTACK to repeatedly use Dash Attack: Hiten no Tsuru - Slash.\n",
+      "explanation": "Best used during the stun window due to Harumasa dealing 40% more DMG to stunned or anomaly inflicted enemies\n",
+      "demo": null
+    }
+  ],
+  "mindscapes": [
+    {
+      "num": 1,
+      "description": "Harumasa's M1 is a great extender for his burst dps windows allowing more stacks from your basic attack and your quivers shooting another arrow at the target. Allowing for some lethal\nsetups with increased stacks and marks on the opponent. It is also a good mindscape for On-field Harumasa as it extends his dash attack combo further.\n"
+    }
+  ],
+  "team": {
+    "teams": [
+      {
+        "name": "Team 1",
+        "characters": [
+          {
+            "name": "Qingyi",
+            "ids": [
+              1251
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect29.webp"
+            ]
+          },
+          {
+            "name": "Nicole",
+            "ids": [
+              1031
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect12.webp"
+            ]
+          },
+          {
+            "name": "Harumasa",
+            "ids": [
+              1201
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect35.webp"
+            ]
+          }
+        ],
+        "description": null
+      },
+      {
+        "name": "Team 2",
+        "characters": [
+          {
+            "name": "Qingyi",
+            "ids": [
+              1251
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect29.webp"
+            ]
+          },
+          {
+            "name": "Rina",
+            "ids": [
+              1211
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect22.webp"
+            ]
+          },
+          {
+            "name": "Harumasa",
+            "ids": [
+              1201
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect35.webp"
+            ]
+          }
+        ],
+        "description": null
+      }
+    ],
+    "extra_sections": [
+      {
+        "title": "General Notes on Team Building",
+        "description": "Rina is only recommended at M1 due to it increasing the field time of her puppets, making her PEN buff stay longer\n"
+      }
+    ]
+  },
+  "rotation": null
+}
