@@ -1,0 +1,42 @@
+name: Generate parsed guides
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/generate_parsed.py"
+      - ".github/workflows/generate_parsed.yml"
+
+jobs:
+  generate-parsed-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Generate parsed guides
+        run: |
+          uv run -m scripts.generate_parsed
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Commit and push
+        run: |
+          git add guides/parsed
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(guide): Update parsed guides"
+            git push
+          else
+            echo "No changes to commit."
+          fi
