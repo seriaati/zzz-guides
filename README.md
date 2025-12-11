@@ -8,6 +8,23 @@ This repository contains:
 - Parsed version of the guides in `guides/parsed`
 - Translated guides in `guides/translated`
 
+## Usage
+
+Install the package:
+
+```bash
+pip install szgf
+```
+
+Import and use the `SZGFClient` to fetch and read guides:
+
+```python
+from szgf.client import SZGFClient
+client = SZGFClient()
+await client.download_guides()
+guides = await client.read_guides() # Returns a dict of ParsedGuide objects
+```
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
