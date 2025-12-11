@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 from pathlib import Path
 from typing import Self
@@ -45,7 +46,7 @@ class SZGFClient:
         return json.loads(content)
 
     async def download_guides(self) -> None:
-        logger.info("Downloading parsed guides")
+        logger.debug("Downloading guides...")
 
         async with self.session.get(self._guides_url / "parsed") as response:
             response.raise_for_status()
@@ -58,24 +59,54 @@ class SZGFClient:
         ) as gitignore:
             await gitignore.write("*\n")
 
-        for item in data:
-            if item["type"] == "file" and item["name"].endswith(".json"):
-                file_url = item["download_url"]
-                content = await self._fetch_txt(file_url)
+        # Save shas of the files
+        logger.debug("Saving SHAs of guide files...")
+        shas = {
+            item["name"]: item["sha"]
+            for item in data
+            if item["type"] == "file" and item["name"].endswith(".json")
+        }
+        async with aiofiles.open(
+            self._guides_dir / "shas.json", mode="w", encoding="utf-8"
+        ) as sha_file:
+            await sha_file.write(json.dumps(shas, indent=2))
 
-                async with aiofiles.open(
-                    self._guides_dir / item["name"], mode="w", encoding="utf-8"
-                ) as file:
-                    await file.write(content)
+        # read existing shas
+        existing_shas: dict[str, str] = {}
+        sha_path = self._guides_dir / "shas.json"
+        if sha_path.exists():
+            logger.debug("Reading existing SHAs of guide files...")
+            async with aiofiles.open(sha_path, encoding="utf-8") as sha_file:
+                content = await sha_file.read()
+                existing_shas = self._parse_json(content)
+
+        async with asyncio.TaskGroup() as tg:
+            for item in data:
+                if item["type"] == "file" and item["name"].endswith(".json"):
+                    if item["name"] in existing_shas and existing_shas[item["name"]] == item["sha"]:
+                        logger.debug(f"Guide {item['name']} is up to date. Skipping download.")
+                        continue
+                    tg.create_task(self._download_guide_file(item))
+
+    async def _download_guide_file(self, item: dict) -> None:
+        file_url = item["download_url"]
+        content = await self._fetch_txt(file_url)
+
+        async with aiofiles.open(
+            self._guides_dir / item["name"], mode="w", encoding="utf-8"
+        ) as file:
+            await file.write(content)
 
     async def read_guides(self) -> dict[str, ParsedGuide]:
-        logger.info("Reading parsed guides")
+        logger.debug("Reading guides from local storage...")
 
         guides: dict[str, ParsedGuide] = {}
         guide_dir = self._guides_dir
+
         entries = await aiofiles.os.scandir(guide_dir)
+
         for entry in entries:
-            if entry.is_file() and entry.name.endswith(".json"):
+            if entry.is_file() and entry.name.endswith(".json") and entry.name != "shas.json":
                 async with aiofiles.open(guide_dir / entry.name, encoding="utf-8") as file:
                     content = await file.read()
                     guide_dict = self._parse_json(content)
