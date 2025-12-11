@@ -28,7 +28,7 @@ jobs:
         uses: astral-sh/setup-uv@v5
 
       - name: Install dependencies
-        run: uv sync --extra validate
+        run: uv sync --group validate
 
       - name: Validate original guides
         run: |
