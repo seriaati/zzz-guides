@@ -52,6 +52,12 @@ class SZGFClient:
             data = await response.json()
 
         await aiofiles.os.makedirs(self._guides_dir, exist_ok=True)
+
+        async with aiofiles.open(
+            self._guides_dir / ".gitignore", mode="w", encoding="utf-8"
+        ) as gitignore:
+            await gitignore.write("*\n")
+
         for item in data:
             if item["type"] == "file" and item["name"].endswith(".json"):
                 file_url = item["download_url"]
