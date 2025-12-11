@@ -185,11 +185,12 @@ async def _parse_two_piece_discs(two_pieces: list[DiscSetSection]) -> None:
             raise ValueError(msg)
 
 
-async def _parse_discs(discs_section: DiscSection | None) -> None:
+async def _parse_discs(discs_section: DiscSection | None) -> DiscSection | None:
     """Parse disc sections (both four-piece and two-piece) in-place."""
     if discs_section is not None:
         await _parse_four_piece_discs(discs_section.four_pieces)
         await _parse_two_piece_discs(discs_section.two_pieces)
+    return discs_section
 
 
 async def _parse_team_member(member: TeamMember) -> ParsedTeamMember:
@@ -238,12 +239,13 @@ async def parse_original_guide(original: OriginalGuide) -> ParsedGuide:
     """Parse an original guide into a parsed guide with enriched data from Hakushin API."""
     parsed_character = await _parse_character(original.character)
     parsed_weapons = await _parse_weapons(original.weapons)
-    await _parse_discs(original.discs)
+    parsed_discs = await _parse_discs(original.discs)
     parsed_team_section = await _parse_team_section(original.team)
 
     return ParsedGuide(
         character=parsed_character,
         weapons=parsed_weapons,
         team=parsed_team_section,
-        **original.model_dump(exclude={"character", "weapons", "team"}),
+        discs=parsed_discs,
+        **original.model_dump(exclude={"character", "weapons", "team", "discs"}),
     )
