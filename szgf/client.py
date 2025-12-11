@@ -1,14 +1,16 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
-from typing import Literal, Self
+from typing import Self
 
 import aiofiles
 import aiofiles.os
 import aiohttp
-import yaml
 from loguru import logger
 from yarl import URL
+
+from szgf.schemas.parsed import ParsedGuide
 
 
 class SZGFClient:
@@ -39,27 +41,42 @@ class SZGFClient:
             return await response.text()
 
     @staticmethod
-    def _parse_yaml(content: str) -> dict:
-        return yaml.safe_load(content)
+    def _parse_json(content: str) -> dict:
+        return json.loads(content)
 
-    async def download_guides(self, guide_type: Literal["original", "parsed"]) -> None:
-        logger.info(f"Downloading guides of type: {guide_type!r}")
+    async def download_guides(self) -> None:
+        logger.info("Downloading parsed guides")
 
-        async with self.session.get(self._guides_url / guide_type) as response:
+        async with self.session.get(self._guides_url / "parsed") as response:
             response.raise_for_status()
             data = await response.json()
 
-        await aiofiles.os.makedirs(self._guides_dir / guide_type, exist_ok=True)
-
+        await aiofiles.os.makedirs(self._guides_dir, exist_ok=True)
         for item in data:
-            if item["type"] == "file" and item["name"].endswith(".yml"):
+            if item["type"] == "file" and item["name"].endswith(".json"):
                 file_url = item["download_url"]
                 content = await self._fetch_txt(file_url)
 
                 async with aiofiles.open(
-                    self._guides_dir / guide_type / item["name"], mode="w", encoding="utf-8"
+                    self._guides_dir / item["name"], mode="w", encoding="utf-8"
                 ) as file:
                     await file.write(content)
+
+    async def read_guides(self) -> dict[str, ParsedGuide]:
+        logger.info("Reading parsed guides")
+
+        guides: dict[str, ParsedGuide] = {}
+        guide_dir = self._guides_dir
+        entries = await aiofiles.os.scandir(guide_dir)
+        for entry in entries:
+            if entry.is_file() and entry.name.endswith(".json"):
+                async with aiofiles.open(guide_dir / entry.name, encoding="utf-8") as file:
+                    content = await file.read()
+                    guide_dict = self._parse_json(content)
+                    parsed = ParsedGuide.model_validate(guide_dict)
+                    guides[str(parsed.character.id)] = parsed
+
+        return guides
 
     async def start(self) -> None:
         self._session = aiohttp.ClientSession()

@@ -272,8 +272,26 @@ def _replace_stat_keywords(string: str) -> str:
                 end = pos + len(kw_lower)
 
                 # Check if this is a whole word match (not part of another word)
-                before_ok = pos == 0 or lowered[pos - 1] in {" ", "\n", "\t", ",", ".", "(", "[", ":"}
-                after_ok = end == len(lowered) or lowered[end] in {" ", "\n", "\t", ",", ".", ")", "]", ":"}
+                before_ok = pos == 0 or lowered[pos - 1] in {
+                    " ",
+                    "\n",
+                    "\t",
+                    ",",
+                    ".",
+                    "(",
+                    "[",
+                    ":",
+                }
+                after_ok = end == len(lowered) or lowered[end] in {
+                    " ",
+                    "\n",
+                    "\t",
+                    ",",
+                    ".",
+                    ")",
+                    "]",
+                    ":",
+                }
 
                 if before_ok and after_ok:
                     # Check if this position overlaps with an existing match
