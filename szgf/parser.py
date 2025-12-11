@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 from enum import StrEnum
+from operator import itemgetter
 from typing import TYPE_CHECKING
 
 import hakushin
 
+from szgf.schemas.original import Section
 from szgf.schemas.parsed import (
     ParsedCharacter,
     ParsedGuide,
@@ -235,8 +237,129 @@ async def _parse_team_section(original_team: TeamSection | None) -> ParsedTeamSe
     return ParsedTeamSection(teams=parsed_teams, extra_sections=original_team.extra_sections)
 
 
+def _replace_stat_keywords(string: str) -> str:
+    """Replace stat keywords with formatted versions including icon placeholders.
+
+    This function:
+    1. Converts text to lowercase for case-insensitive matching
+    2. Finds all keyword matches and their positions
+    3. Reverts to original text with proper casing
+    4. Adds formatting and icon placeholders
+
+    Example:
+        Input: "BIS W-Engine, has a HP% Main Stat"
+        Output: "BIS W-Engine, has a <hp> **HP%** Main Stat"
+    """
+    lowered = string.lower()
+
+    # Collect all matches with their positions
+    matches: list[tuple[int, int, str, Stat]] = []  # (start, end, original_text, stat)
+
+    for stat, keywords in STAT_KW_MATCHES.items():
+        # Sort keywords by length (longest first) to match longer phrases first
+        sorted_keywords = sorted(keywords, key=len, reverse=True)
+
+        for kw in sorted_keywords:
+            kw_lower = kw.lower()
+            start = 0
+
+            while True:
+                # Find next occurrence of keyword
+                pos = lowered.find(kw_lower, start)
+                if pos == -1:
+                    break
+
+                end = pos + len(kw_lower)
+
+                # Check if this is a whole word match (not part of another word)
+                before_ok = pos == 0 or lowered[pos - 1] in {" ", "\n", "\t", ",", ".", "(", "[", ":"}
+                after_ok = end == len(lowered) or lowered[end] in {" ", "\n", "\t", ",", ".", ")", "]", ":"}
+
+                if before_ok and after_ok:
+                    # Check if this position overlaps with an existing match
+                    overlaps = any(
+                        (pos < match_end and end > match_start)
+                        for match_start, match_end, _, _ in matches
+                    )
+
+                    if not overlaps:
+                        # Get the original text (with proper casing) from the input string
+                        original_text = string[pos:end]
+                        matches.append((pos, end, original_text, stat))
+
+                start = pos + 1
+
+    # Sort matches by position (reverse order to replace from end to start)
+    matches.sort(key=itemgetter(0), reverse=True)
+
+    # Replace each match with formatted version
+    result = string
+    for start, end, original_text, stat in matches:
+        formatted = f"<{stat.value}> {original_text}"
+        result = result[:start] + formatted + result[end:]
+
+    return result
+
+
+def _mass_replace_stat_keywords(original: OriginalGuide) -> None:  # noqa: C901, PLR0912
+    # Guide description
+    original.description = _replace_stat_keywords(original.description)
+
+    # Weapon
+    for weapon in original.weapons:
+        weapon.description = _replace_stat_keywords(weapon.description)
+
+    # Discs
+    if original.discs is not None:
+        for disc_set in original.discs.four_pieces:
+            disc_set.description = _replace_stat_keywords(disc_set.description)
+        for disc_set in original.discs.two_pieces:
+            disc_set.description = _replace_stat_keywords(disc_set.description)
+
+    # Stats
+    if original.stat is not None:
+        for main_stat in original.stat.main_stats:
+            main_stat.stat_priority = _replace_stat_keywords(main_stat.stat_priority)
+        for sub_stat in original.stat.sub_stats:
+            sub_stat = _replace_stat_keywords(sub_stat)  # noqa: PLW2901
+        original.stat.baseline_stats = _replace_stat_keywords(original.stat.baseline_stats)
+        original.stat.extra_sections = [
+            Section(title=section.title, description=_replace_stat_keywords(section.description))
+            for section in original.stat.extra_sections
+        ]
+
+    # Skill priority
+    if original.skill_priority is not None:
+        original.skill_priority.description = _replace_stat_keywords(
+            original.skill_priority.description
+        )
+
+    # Skills
+    for skill in original.skills:
+        skill.description = _replace_stat_keywords(skill.description)
+        skill.explanation = _replace_stat_keywords(skill.explanation)
+
+    # Mindscapes
+    for mindscape in original.mindscapes:
+        mindscape.description = _replace_stat_keywords(mindscape.description)
+
+    # Team
+    if original.team is not None:
+        for team in original.team.teams:
+            if team.description is not None:
+                team.description = _replace_stat_keywords(team.description)
+        for section in original.team.extra_sections:
+            section.description = _replace_stat_keywords(section.description)
+
+    # Rotation
+    if original.rotation is not None:
+        original.rotation.description = _replace_stat_keywords(original.rotation.description)
+
+
 async def parse_original_guide(original: OriginalGuide) -> ParsedGuide:
     """Parse an original guide into a parsed guide with enriched data from Hakushin API."""
+    _mass_replace_stat_keywords(original)
+
     parsed_character = await _parse_character(original.character)
     parsed_weapons = await _parse_weapons(original.weapons)
     parsed_discs = await _parse_discs(original.discs)
