@@ -714,6 +714,51 @@ wheels = [
 ]
 
 [[package]]
+name = "szgf"
+version = "0.1.4"
+source = { editable = "." }
+dependencies = [
+    { name = "aiofiles" },
+    { name = "aiohttp" },
+    { name = "hakushin-py" },
+    { name = "loguru" },
+    { name = "pydantic" },
+    { name = "pyyaml" },
+]
+
+[package.dev-dependencies]
+draw = [
+    { name = "anyio" },
+    { name = "httpx" },
+    { name = "pillow" },
+]
+parse = [
+    { name = "requests" },
+]
+validate = [
+    { name = "jsonschema" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "aiofiles", specifier = ">=24.1.0" },
+    { name = "aiohttp", specifier = ">=3.12.13" },
+    { name = "hakushin-py", specifier = ">=0.4.11" },
+    { name = "loguru", specifier = ">=0.7.3" },
+    { name = "pydantic", specifier = ">=2.11.7" },
+    { name = "pyyaml", specifier = ">=6.0.2" },
+]
+
+[package.metadata.requires-dev]
+draw = [
+    { name = "anyio", specifier = ">=4.12.0" },
+    { name = "httpx", specifier = ">=0.28.1" },
+    { name = "pillow", specifier = ">=12.0.0" },
+]
+parse = [{ name = "requests", specifier = ">=2.32.4" }]
+validate = [{ name = "jsonschema", specifier = ">=4.24.0" }]
+
+[[package]]
 name = "typing-extensions"
 version = "4.14.0"
 source = { registry = "https://pypi.org/simple" }
@@ -828,48 +873,3 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/94/c3/b2e9f38bc3e11191981d57ea08cab2166e74ea770024a646617c9cddd9f6/yarl-1.20.1-cp313-cp313t-win_amd64.whl", hash = "sha256:541d050a355bbbc27e55d906bc91cb6fe42f96c01413dd0f4ed5a5240513874f", size = 93003, upload-time = "2025-06-10T00:45:27.752Z" },
     { url = "https://files.pythonhosted.org/packages/b4/2d/2345fce04cfd4bee161bf1e7d9cdc702e3e16109021035dbb24db654a622/yarl-1.20.1-py3-none-any.whl", hash = "sha256:83b8eb083fe4683c6115795d9fc1cfaf2cbbefb19b3a1cb68f6527460f483a77", size = 46542, upload-time = "2025-06-10T00:46:07.521Z" },
 ]
-
-[[package]]
-name = "zzz-guides"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "aiofiles" },
-    { name = "aiohttp" },
-    { name = "hakushin-py" },
-    { name = "loguru" },
-    { name = "pydantic" },
-    { name = "pyyaml" },
-]
-
-[package.dev-dependencies]
-draw = [
-    { name = "anyio" },
-    { name = "httpx" },
-    { name = "pillow" },
-]
-parse = [
-    { name = "requests" },
-]
-validate = [
-    { name = "jsonschema" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "aiofiles", specifier = ">=24.1.0" },
-    { name = "aiohttp", specifier = ">=3.12.13" },
-    { name = "hakushin-py", specifier = ">=0.4.11" },
-    { name = "loguru", specifier = ">=0.7.3" },
-    { name = "pydantic", specifier = ">=2.11.7" },
-    { name = "pyyaml", specifier = ">=6.0.2" },
-]
-
-[package.metadata.requires-dev]
-draw = [
-    { name = "anyio", specifier = ">=4.12.0" },
-    { name = "httpx", specifier = ">=0.28.1" },
-    { name = "pillow", specifier = ">=12.0.0" },
-]
-parse = [{ name = "requests", specifier = ">=2.32.4" }]
-validate = [{ name = "jsonschema", specifier = ">=4.24.0" }]
