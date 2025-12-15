@@ -59,34 +59,9 @@ class SZGFClient:
         ) as gitignore:
             await gitignore.write("*\n")
 
-        # Save shas of the files
-        logger.debug("Saving SHAs of guide files...")
-        shas = {
-            item["name"]: item["sha"]
-            for item in data
-            if item["type"] == "file" and item["name"].endswith(".json")
-        }
-        is_first_time = not (self._guides_dir / "shas.json").exists()
-        async with aiofiles.open(
-            self._guides_dir / "shas.json", mode="w", encoding="utf-8"
-        ) as sha_file:
-            await sha_file.write(json.dumps(shas, indent=2))
-
-        # read existing shas
-        existing_shas: dict[str, str] = {}
-        sha_path = self._guides_dir / "shas.json"
-        if sha_path.exists() and not is_first_time:
-            logger.debug("Reading existing SHAs of guide files...")
-            async with aiofiles.open(sha_path, encoding="utf-8") as sha_file:
-                content = await sha_file.read()
-                existing_shas = self._parse_json(content)
-
         async with asyncio.TaskGroup() as tg:
             for item in data:
                 if item["type"] == "file" and item["name"].endswith(".json"):
-                    if item["name"] in existing_shas and existing_shas[item["name"]] == item["sha"]:
-                        logger.debug(f"Guide {item['name']} is up to date. Skipping download.")
-                        continue
                     tg.create_task(self._download_guide_file(item))
 
     async def _download_guide_file(self, item: dict) -> None:
@@ -107,7 +82,7 @@ class SZGFClient:
         entries = await aiofiles.os.scandir(guide_dir)
 
         for entry in entries:
-            if entry.is_file() and entry.name.endswith(".json") and entry.name != "shas.json":
+            if entry.is_file() and entry.name.endswith(".json"):
                 async with aiofiles.open(guide_dir / entry.name, encoding="utf-8") as file:
                     content = await file.read()
                     guide_dict = self._parse_json(content)
