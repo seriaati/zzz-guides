@@ -7,11 +7,11 @@
     "element": 203,
     "specialty": 1
   },
-  "description": "Harumasa is an S rank Agent with the Electric attribute who belongs to the Attack Specialty and who is part of the Section 6 faction.\n",
+  "description": "Harumasa is an S rank Agent with the <elec> Electric attribute who belongs to the Attack Specialty and who is part of the Section 6 faction.\n",
   "weapons": [
     {
       "name": "Zanshin Herb Case",
-      "description": "BIS W-Engine, gives a near 100% uptime on 20 Crit Rate when needed, on top of its Crit Damage Main Stat while providing a massive 40% Electric DMG Bonus to his Dash Attacks, his main source of damage\n",
+      "description": "BIS W-Engine, gives a near 100% uptime on 20 <cr> Crit Rate when needed, on top of its <cd> Crit Damage Main Stat while providing a massive 40% <elec> Electric DMG Bonus to his Dash Attacks, his main source of damage\n",
       "title": null,
       "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1201.webp",
       "id": 14120,
@@ -20,13 +20,13 @@
     },
     {
       "name": "Any S Rank Crit Rate W-Engine",
-      "description": "Any Crit Rate Main Stat and high Base ATK W-Engine will\nbe good due to Yixuan's passive ATK stat conversion, even with\nno passive from the W-Engine itself\n",
+      "description": "Any <cr> Crit Rate Main Stat and high Base <atk> ATK W-Engine will\nbe good due to Yixuan's passive <atk> ATK stat conversion, even with\nno passive from the W-Engine itself\n",
       "title": null,
       "icon": null
     },
     {
       "name": "The Brimstone",
-      "description": "Best Non-Limited S Rank W-Engine, gives an insane amount of ATK due to it's Main Stat while also providing insane in-combat ATK%\n",
+      "description": "Best Non-Limited S Rank W-Engine, gives an insane amount of <atk> ATK due to it's Main Stat while also providing insane in-combat <atk> ATK%\n",
       "title": null,
       "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1041.webp",
       "id": 14104,
@@ -38,12 +38,12 @@
     "four_pieces": [
       {
         "name": "Shadow Harmony",
-        "description": "4-Pc Shadow Harmony is the most consistent due to it not being reliant on Shock anomaly or Hormone Punk's uptime to do the most damage. The set gives everything Harumasa needs on top of\nit's near 100% uptime. At max stacks (which will be surely after your burst starts) you will gain:\n\n15% Dash Attack DMG Bonus\n12% Combat ATK Boost\n12% Crit Rate\n\nThe other sets have their uses in Mono-shock team and/or Shiyu Defense Speedrun.\n",
+        "description": "4-Pc Shadow Harmony is the most consistent due to it not being reliant on Shock anomaly or Hormone Punk's uptime to do the most damage. The set gives everything Harumasa needs on top of\nit's near 100% uptime. At max stacks (which will be surely after your burst starts) you will gain:\n\n15% Dash Attack DMG Bonus\n12% Combat <atk> ATK Boost\n12% <cr> Crit Rate\n\nThe other sets have their uses in Mono-shock team and/or Shiyu Defense Speedrun.\n",
         "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32900.webp"
       },
       {
         "name": "Hormone Punk",
-        "description": "The best 4-Pc set for high burst DMG builds outside of Rina Mono Shock Teams, on top of it's 2-Pc 10% ATK bonus it grants a massive 25% Combat ATK Bonus when swapped on field when it's not\non cooldown for 10 seconds\n\nEspecially the best when you do not need the Crit boost from 4-Pc Shadow Harmony to reach 100%~ Crit Rate with Dash Attacks\n",
+        "description": "The best 4-Pc set for high burst DMG builds outside of Rina Mono Shock Teams, on top of it's 2-Pc 10% <atk> ATK bonus it grants a massive 25% Combat <atk> ATK Bonus when swapped on field when it's not\non cooldown for 10 seconds\n\nEspecially the best when you do not need the Crit boost from 4-Pc Shadow Harmony to reach 100%~ <cr> Crit Rate with Dash Attacks\n",
         "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/31400.webp"
       }
     ],
@@ -68,16 +68,16 @@
         "pos": 4
       },
       {
-        "stat_priority": "ATK% > Electric DMG% / PEN% when running a Rina team",
+        "stat_priority": "<atk> ATK% > <elec> Electric DMG% / PEN% when running a Rina team",
         "pos": 5
       },
       {
-        "stat_priority": "ATK%",
+        "stat_priority": "<atk> ATK%",
         "pos": 6
       }
     ],
     "sub_stats": "Crit Rate% (until 75%/63%(Shadow Harmony)/48%(Shadow Harmony + Nicole)/28%(Shadow Harmony + Nicole + Signature W-Engine) Build Breakpoints) > Crit DMG% = ATK%\n",
-    "baseline_stats": "ATK Main Engine: 2800-3300+\nNon ATK Main Engine: 2700-3000+\nCrit Rate%\n4-Pc Shadow Harmony: 38-63%\nOtherwise: 50-75%\nCrit DMG%: 150-200%+\n(Range Dependent on Team, Disc 5 and Engine)\n",
+    "baseline_stats": "<atk> ATK Main Engine: 2800-3300+\nNon <atk> ATK Main Engine: 2700-3000+\n<cr> Crit Rate%\n4-Pc Shadow Harmony: 38-63%\nOtherwise: 50-75%\n<cd> Crit DMG%: 150-200%+\n(Range Dependent on Team, Disc 5 and Engine)\n",
     "extra_sections": []
   },
   "skill_priority": {
@@ -97,7 +97,7 @@
   "skills": [
     {
       "title": "Dash Attack: Hiten no Tsuru - Slash",
-      "description": "While there are X-Marked enemies on the field, Harumasa will enter the Awakened state, switching Dash Attack: Hiten no Tsuru for Dash Attack: Hiten no Tsuru - Slash.\n\nRush forwards to the closest X-Marked enemy and execute a powerful slash, dealing Electric DMG.\nWhen the slash hits the target, it consumes 2 stacks of Electro Prison.\nrepeatedly press DASH ATTACK to repeatedly use Dash Attack: Hiten no Tsuru - Slash.\n",
+      "description": "While there are X-Marked enemies on the field, Harumasa will enter the Awakened state, switching Dash Attack: Hiten no Tsuru for Dash Attack: Hiten no Tsuru - Slash.\n\nRush forwards to the closest X-Marked enemy and execute a powerful slash, dealing <elec> Electric DMG.\nWhen the slash hits the target, it consumes 2 stacks of Electro Prison.\nrepeatedly press DASH ATTACK to repeatedly use Dash Attack: Hiten no Tsuru - Slash.\n",
       "explanation": "Best used during the stun window due to Harumasa dealing 40% more DMG to stunned or anomaly inflicted enemies\n",
       "demo": null
     }
@@ -180,7 +180,7 @@
     "extra_sections": [
       {
         "title": "General Notes on Team Building",
-        "description": "Rina is only recommended at M1 due to it increasing the field time of her puppets, making her PEN buff stay longer\n"
+        "description": "Rina is only recommended at M1 due to it increasing the field time of her puppets, making her <pen> PEN buff stay longer\n"
       }
     ]
   },
