@@ -66,6 +66,7 @@ class SZGFClient:
             for item in data
             if item["type"] == "file" and item["name"].endswith(".json")
         }
+        is_first_time = not (self._guides_dir / "shas.json").exists()
         async with aiofiles.open(
             self._guides_dir / "shas.json", mode="w", encoding="utf-8"
         ) as sha_file:
@@ -74,7 +75,7 @@ class SZGFClient:
         # read existing shas
         existing_shas: dict[str, str] = {}
         sha_path = self._guides_dir / "shas.json"
-        if sha_path.exists():
+        if sha_path.exists() and not is_first_time:
             logger.debug("Reading existing SHAs of guide files...")
             async with aiofiles.open(sha_path, encoding="utf-8") as sha_file:
                 content = await sha_file.read()
