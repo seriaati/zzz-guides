@@ -1,6 +1,6 @@
 [project]
 name = "szgf"
-version = "0.1.4"
+version = "0.1.5"
 description = "ZZZ agent guides & definition of Standardized ZZZ Guide Format (SZGF)"
 readme = "README.md"
 requires-python = ">=3.12"
