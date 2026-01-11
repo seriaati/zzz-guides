@@ -1,6 +1,7 @@
 {
   "$defs": {
     "Character": {
+      "description": "A character in ZZZ.",
       "properties": {
         "name": {
           "description": "Name of the character",
@@ -38,6 +39,7 @@
       "type": "object"
     },
     "DiscMainStatSection": {
+      "description": "Main stat section for a drive disc.",
       "properties": {
         "stat_priority": {
           "description": "Priority of the main stat for this position's disc, e.g. 'ATK > CRIT DMG > CRIT RATE'.",
@@ -63,6 +65,7 @@
       "type": "object"
     },
     "DiscSection": {
+      "description": "A drive disc section for a character.",
       "properties": {
         "four_pieces": {
           "description": "List of four-piece disc sets.",
@@ -97,6 +100,7 @@
       "type": "object"
     },
     "DiscSetSection": {
+      "description": "A drive disc set section.",
       "properties": {
         "name": {
           "description": "Name of the drive disc set",
@@ -130,6 +134,7 @@
       "type": "object"
     },
     "MindscapeSection": {
+      "description": "A mindscape cinema section for a character.",
       "properties": {
         "num": {
           "description": "Number of the mindscape, from 1 to 6.",
@@ -179,6 +184,7 @@
       "type": "object"
     },
     "Skill": {
+      "description": "A skill of a character.",
       "properties": {
         "title": {
           "description": "Title of the skill",
@@ -218,6 +224,7 @@
       "type": "object"
     },
     "SkillPrioritySection": {
+      "description": "Skill priority section for a character.",
       "properties": {
         "priorities": {
           "description": "List of skill priorities, where each sublist represents a priority level. For example, [[core, basic], [special, dodge]] means the first priority is core and basic skills, and the second priority is special and dodge skills.",
@@ -244,6 +251,7 @@
       "type": "object"
     },
     "SkillType": {
+      "description": "Types of skills in ZZZ.",
       "enum": [
         "core",
         "basic",
@@ -256,6 +264,7 @@
       "type": "string"
     },
     "StatSection": {
+      "description": "Stat section for a character.",
       "properties": {
         "main_stats": {
           "description": "List of main stats for each disc position (4, 5, 6).",
@@ -293,6 +302,7 @@
       "type": "object"
     },
     "Team": {
+      "description": "A team that a character can be part of.",
       "properties": {
         "name": {
           "description": "Name of the team",
@@ -329,6 +339,7 @@
       "type": "object"
     },
     "TeamMember": {
+      "description": "A team member in a team.",
       "properties": {
         "name": {
           "description": "Name of the team member",
@@ -343,6 +354,7 @@
       "type": "object"
     },
     "TeamSection": {
+      "description": "Team section for a character.",
       "properties": {
         "teams": {
           "description": "List of teams that the character can be part of.",
@@ -365,6 +377,7 @@
       "type": "object"
     },
     "WeaponSection": {
+      "description": "A weapon section for a character.",
       "properties": {
         "name": {
           "description": "Name of the weapon",
@@ -411,6 +424,7 @@
       "type": "object"
     }
   },
+  "description": "The original standardized ZZZ guide format (SZGF) schema.",
   "properties": {
     "author": {
       "description": "Author of the guide",
