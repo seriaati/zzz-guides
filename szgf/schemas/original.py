@@ -160,6 +160,8 @@ class Skill(pydantic.BaseModel):
 
 
 class OriginalGuide(pydantic.BaseModel):
+    author: str = pydantic.Field(description="Author of the guide")
+    last_updated: str = pydantic.Field(description="Last updated date of the guide")
     character: Character = pydantic.Field(description="Character information")
     description: str = pydantic.Field(
         description="Description of the guide, explaining its purpose and content."
