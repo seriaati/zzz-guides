@@ -419,7 +419,7 @@
     },
     "last_updated": {
       "description": "Last updated date of the guide",
-      "format": "date-time",
+      "format": "date",
       "title": "Last Updated",
       "type": "string"
     },
