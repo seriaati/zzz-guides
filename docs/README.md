@@ -8,6 +8,7 @@ This repository contains:
 - Definition of the Standardized ZZZ Guide Format (SZGF) in `/schema.json` (or as Pydantic models in `/szgf/schemas`)
 - Python package for validating and fetching guides from this repository in `/szgf`
 - Assets/icons used in the guides in `/assets`
+- [Documentation](https://gh.seria.moe/zzz-guides/) on how to contribute and the SZGF schema
 
 ## Usage
 
