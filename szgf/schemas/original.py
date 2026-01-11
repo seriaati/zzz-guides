@@ -33,6 +33,8 @@ class Section(pydantic.BaseModel):
 
 
 class Character(pydantic.BaseModel):
+    """A character in ZZZ."""
+
     name: str = pydantic.Field(description="Name of the character")
     rarity: Literal[4, 5] = pydantic.Field(
         description="Rarity of the character, either 4 (A-rank) or 5 (S-rank) stars."
@@ -43,6 +45,8 @@ class Character(pydantic.BaseModel):
 
 
 class WeaponSection(pydantic.BaseModel):
+    """A weapon section for a character."""
+
     name: str = pydantic.Field(description="Name of the weapon")
     description: str = pydantic.Field(description="Description of the weapon")
 
@@ -60,6 +64,8 @@ class WeaponSection(pydantic.BaseModel):
 
 
 class DiscSetSection(pydantic.BaseModel):
+    """A drive disc set section."""
+
     name: str = pydantic.Field(description="Name of the drive disc set")
     description: str = pydantic.Field(description="Description for this section")
 
@@ -72,6 +78,8 @@ class DiscSetSection(pydantic.BaseModel):
 
 
 class DiscSection(pydantic.BaseModel):
+    """A drive disc section for a character."""
+
     four_pieces: list[DiscSetSection] = pydantic.Field(description="List of four-piece disc sets.")
     two_pieces: list[DiscSetSection] = pydantic.Field(description="List of two-piece disc sets.")
 
@@ -82,6 +90,8 @@ class DiscSection(pydantic.BaseModel):
 
 
 class DiscMainStatSection(pydantic.BaseModel):
+    """Main stat section for a drive disc."""
+
     stat_priority: str = pydantic.Field(
         description="Priority of the main stat for this position's disc, e.g. 'ATK > CRIT DMG > CRIT RATE'."
     )
@@ -89,6 +99,8 @@ class DiscMainStatSection(pydantic.BaseModel):
 
 
 class StatSection(pydantic.BaseModel):
+    """Stat section for a character."""
+
     main_stats: list[DiscMainStatSection] = pydantic.Field(
         description="List of main stats for each disc position (4, 5, 6)."
     )
@@ -106,6 +118,8 @@ class StatSection(pydantic.BaseModel):
 
 
 class MindscapeSection(pydantic.BaseModel):
+    """A mindscape cinema section for a character."""
+
     num: Literal[1, 2, 3, 4, 5, 6] = pydantic.Field(
         description="Number of the mindscape, from 1 to 6."
     )
@@ -115,6 +129,8 @@ class MindscapeSection(pydantic.BaseModel):
 
 
 class SkillType(StrEnum):
+    """Types of skills in ZZZ."""
+
     CORE = "core"
     BASIC = "basic"
     DODGE = "dodge"
@@ -124,6 +140,8 @@ class SkillType(StrEnum):
 
 
 class SkillPrioritySection(pydantic.BaseModel):
+    """Skill priority section for a character."""
+
     priorities: list[list[SkillType]] = pydantic.Field(
         description="List of skill priorities, where each sublist represents a priority level. "
         "For example, [[core, basic], [special, dodge]] means the first priority is core and basic skills, "
@@ -133,10 +151,14 @@ class SkillPrioritySection(pydantic.BaseModel):
 
 
 class TeamMember(pydantic.BaseModel):
+    """A team member in a team."""
+
     name: str = pydantic.Field(description="Name of the team member")
 
 
 class Team(pydantic.BaseModel):
+    """A team that a character can be part of."""
+
     name: str = pydantic.Field(description="Name of the team")
     characters: list[TeamMember] = pydantic.Field(description="List of characters in the team")
 
@@ -144,6 +166,8 @@ class Team(pydantic.BaseModel):
 
 
 class TeamSection(pydantic.BaseModel):
+    """Team section for a character."""
+
     teams: list[Team] = pydantic.Field(
         default_factory=list, description="List of teams that the character can be part of."
     )
@@ -153,6 +177,8 @@ class TeamSection(pydantic.BaseModel):
 
 
 class Skill(pydantic.BaseModel):
+    """A skill of a character."""
+
     title: str = pydantic.Field(description="Title of the skill")
     description: str = pydantic.Field(description="Description of the skill")
     explanation: str = pydantic.Field(description="Explanation of the skill mechanics")
@@ -161,6 +187,8 @@ class Skill(pydantic.BaseModel):
 
 
 class OriginalGuide(pydantic.BaseModel):
+    """The original standardized ZZZ guide format (SZGF) schema."""
+
     author: str = pydantic.Field(description="Author of the guide")
     last_updated: datetime.date = pydantic.Field(description="Last updated date of the guide")
     character: Character = pydantic.Field(description="Character information")
