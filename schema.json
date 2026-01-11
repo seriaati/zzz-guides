@@ -412,6 +412,16 @@
     }
   },
   "properties": {
+    "author": {
+      "description": "Author of the guide",
+      "title": "Author",
+      "type": "string"
+    },
+    "last_updated": {
+      "description": "Last updated date of the guide",
+      "title": "Last Updated",
+      "type": "string"
+    },
     "character": {
       "$ref": "#/$defs/Character",
       "description": "Character information"
@@ -507,6 +517,8 @@
     }
   },
   "required": [
+    "author",
+    "last_updated",
     "character",
     "description"
   ],
