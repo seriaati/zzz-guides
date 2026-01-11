@@ -1,35 +1,39 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/schema.json
+# yaml-language-server: $schema=../../schema.json
 
+author: Mercer
+last_updated: 2025-06-25
 character:
   name: Yixuan
   rarity: 5
-description: |
-  **Yixuan** is an **S rank Agent** with the **Auric Ink Ether attribute** who belongs to the **Rupture Specialty** and who is part of the **Yunkui Summit faction**.
+description: >-
+  **Yixuan** is an **S rank Agent** with the **Auric Ink Ether attribute** who belongs to
+  the **Rupture Specialty** and who is part of the **Yunkui Summit faction**.
 weapons:
   - name: Qingming Birdcage
-    description: |
+    description: >-
       **Best in Slot in all situations**, has a **HP% Main Stat**, **in-combat Crit Rate**, 
       gives **stacking Ether DMG% Bonus** and **Ether Sheer DMG% Bonus** for <special> **EX Special & <chain> Ultimate**, 
       her two highest damaging abilities
   - name: Any S Rank Crit Rate W-Engine
-    description: |
+    description: >-
       **Any Crit Rate Main Stat** and **high Base ATK** W-Engine will
       be good due to Yixuan's **Rupture Specialty passive ATK stat conversion**, even with
       no passive from the W-Engine itself
   - name: Radiowave Journey
-    description: |
+    description: >-
       Best A Rank option due to having a **HP% Main Stat** but requires
       the Battle Pass, when using a <chain> **Chain Attack** or **Ultimate**, gain a
       **Sheer Force Stat Boost** which can **stack up to 3 times**
   - name: Puzzle Sphere
-    description: |
-      The 2nd best option following closely behind Radiowave Journey, providing a **Crit DMG Boost** for 12s upon using <special> **EX Special**
-      and on top of that, if the enemy is at or **below 50% HP** they will **recieve more DMG** from said <special> **EX Special**, a respectable choice, even better than
-      Radiowave Journery when Puzzle Sphere is at S5
+    description: >-
+      The 2nd best option following closely behind Radiowave Journey, providing a **Crit DMG Boost** for
+      12s upon using <special> **EX Special**, and on top of that, if the enemy is at or **below 50% HP**
+      they will **recieve more DMG** from said <special> **EX Special**, a respectable choice, even better than
+      Radiowave Journery when Puzzle Sphere is at S5.
 discs:
   four_pieces:
     - name: Yunkui Tales
-      description: |
+      description: >-
         The best and currently only option for Yixuan. tailor made for her kit
 
         Its 2-Pc bonus gives **HP%** which is desired for Yixuan and its 4-Pc
@@ -38,13 +42,13 @@ discs:
         gives you a **Sheer DMG bonus**
   two_pieces:
     - name: Branch & Blade Song / Woodpecker Electro
-      description: |
+      description: >-
         The two best 2-Pc options for Yixuan. always being a damage
         increase but your pick will depend on if you have her signature or
         not
   extra_sections:
     - title: Sheer Damage and Crit Rate VS Crit DMG
-      description: |
+      description: >-
         **Sheer Damage completely ignores DEF** so PEN isnt needed on
         Yixuan.
 
@@ -61,10 +65,10 @@ stat:
       pos: 5
     - stat_priority: HP%
       pos: 6
-  sub_stats: |
+  sub_stats: >-
     CR% > CDMG% > HP% > ATK% > Flat HP
     (Note: Flat HP is only slightly worse than ATK% for Sheer Force conversion.)
-  baseline_stats: |
+  baseline_stats: >-
     HP with main engine: 18,000
     HP without Main engine: 15,000
     CR%: 68-88%
@@ -75,13 +79,13 @@ skill_priority:
     - [core, chain]
     - [special]
     - [basic]
-  description: |
+  description: >-
     Ultimate and EX Special are the most important but all skills can
     be upgraded to take advantage of Crit stats and Skill's scaling.
     Assist is low Priority.
 skills:
   - title: "EX Special Attack: Cloud-Shaper"
-    description: |
+    description: >-
       ### With enough Adrenaline, hold <basic> to activate:
 
       Continuously charge up, **channeling energy around enemies** to deal DMG over
@@ -89,63 +93,75 @@ skills:
 
       At the **moment the skill is activated, a <dodge> Perfect Dodge can be triggered**.
       After the Perfect Dodge, enter the **Vital View** state.
-    explanation: |
+    explanation: >-
       Best used during the **Stun Window** after using your <chain> **Ultimate** due to
-      dealing **30% Extra DMG to Stunned enemies** and the **40% Crit DMG Boost** from <core> **Additional Core Passive**.
+      dealing **30% Extra DMG to Stunned enemies** and the **40% Crit DMG Boost** from <core>
+      **Additional Core Passive**.
   - title: "EX Special Attack: Ink Manifestation"
-    description: |
+    description: >-
       ### With enough Adrenaline, press or hold <special> to activate:
 
-      Charge continuously, and press or release <special> to launch an upward wing attack, **dealing massive Auric Ink DMG**.
+      Charge continuously, and press or release <special> to launch an upward wing attack,
+      **dealing massive Auric Ink DMG**.
 
       **While charging, incoming attacks are automatically blocked and will activate the upward wing attack**.
-      If **hit** at the **exact moment charging begins or the button is pressed**, it triggers a **Perfect Block effect**, negating the DMG, **dealing more damage** and **recovering 10 Adrenaline**.
+      If **hit** at the **exact moment charging begins or the button is pressed**, it triggers a
+      **Perfect Block effect**, negating the DMG, **dealing more damage** and **recovering 10 Adrenaline**.
 
       After the skill, press <special> to launch <special> **EX Special Attack: Celestial Cloud Blitz - Break**.
 
-      After <special> **EX Special Attack: Celestial Cloud Blitz - Break**, and **with enough Adrenaline**, press <special> to consume **another 20 Adrenaline** to launch <special> **EX Special Attack: Qingming Eruption - Break**.
-    explanation: |
-      **Initial attack** best used to **parry incoming attacks** to **regenerate Adrenaline** for Yixuan and **deal more damage**,
-      follow up attacks should be used to **stack up Technique Points**
+      After <special> **EX Special Attack: Celestial Cloud Blitz - Break**, and
+      **with enough Adrenaline**, press <special> to consume **another 20 Adrenaline** to launch
+      <special> **EX Special Attack: Qingming Eruption - Break**.
+    explanation: >-
+      **Initial attack** best used to **parry incoming attacks** to **regenerate Adrenaline**
+      for Yixuan and **deal more damage**, follow up attacks should be used to **stack up Technique Points**
   - title: "Basic Attack: Auric Array & Basic Attack: Ink - Veil Cloud Coalescence"
-    description: |
+    description: >-
       ### While possessing an Auric Ink Point, hold <dodge> to activate:
 
       Deploy an array, **continuously dealing Auric Ink DMG**.
 
       While channeling, **continuously recover Adrenaline**, **recovering 7 points per second**, for up to 3s.
-    explanation: |
+    explanation: >-
       Typical used with either a **Swap Cancel** or **after a Stun window** to **regenerate Adrenaline**.
-      this move can be used **without an Auric Ink Point** but **without the regeneration effect and lower damage**, great value when **Swap Canceling** though
+      this move can be used **without an Auric Ink Point** but **without the regeneration effect
+      and lower damage**, great value when **Swap Canceling** though.
   - title: "Ultimate: Qingming Skyshade & Ultimate: Endless Talisman Suppression"
-    description: |
+    description: >-
       ### When Decibel Rating is at Maximum / With enough Technique Points, press <chain> to activate:
 
       Launch a barrage of wing attacks, then guide countless talismans to attack, **dealing massive Auric Ink DMG**.
       Upon activating this skill, Yixuan evenly **redistributes the squad's HP** / **Gain an Auric Ink Point**
-    explanation: |
-      Yixuan has access to two <chain> **Ultimate** attacks, one **consuming Decibels** and the other **consuming Technique Points**, when you are **in possesion of both Max Decibels and Technique Points**,
+    explanation: >-
+      Yixuan has access to two <chain> **Ultimate** attacks, one **consuming Decibels** and
+      the other **consuming Technique Points**, when you are **in possesion of both Max Decibels and Technique Points**,
       the **Technique Points version of her <chain> Ultimate will activate first**.
-      You should aim to activate both <chain> **Ultimates** in a **single Stun window**. Using Yixuan's <chain> **Ultimate will give you a 40% Crit Damage Boost for 15s through her <core> Additional Core Passive**.
+      You should aim to activate both <chain> **Ultimates** in a **single Stun window**.
+      Using Yixuan's <chain> **Ultimate will give you a 40% Crit Damage Boost for 15s through
+      her <core> Additional Core Passive**.
 mindscapes:
   - num: 1
-    description: |
+    description: >-
       Provides a **10% Combat Crit Rate Boost** while allowing her to **start the fight with full
       Technique Gauge**. In addition to **following up with an attack** whenever another agent deals damage
       to an enemy target with a 6 sec CD
   - num: 2
-    description: |
-      <core> **Ultimate**/<special> **EX Special** now **ignores 15% Ether Res** and **using Normal <chain> Ultimate** on a **Stunned target**
-      **extends** their **Stun duration for 3 secs**. After using <chain> **Technique Gauge Ultimate** gain a buff that
-      will deal <special> **EX Special damage** that deals **1200% of Sheer Force as damage** upon using either **Hold <basic> Ability** or <special> **EX Special Combo**
+    description: >-
+      <core> **Ultimate**/<special> **EX Special** now **ignores 15% Ether Res** and
+      **using Normal <chain> Ultimate** on a **Stunned target**
+      **extends** their **Stun duration for 3 secs**. After using <chain>
+      **Technique Gauge Ultimate** gain a buff that will deal <special> **EX Special damage** that deals
+      **1200% of Sheer Force as damage** upon using either **Hold <basic> Ability** or <special> **EX Special Combo**
   - num: 4
-    description: |
+    description: >-
       Activating any <chain> **Ultimate** will grant you **stacks, up to two**, increasing the damage of
       your **next Hold <basic> Ability by 30%**
   - num: 6
-    description: |
-      Using <chain> **Ultimate** allows you to **bypass the resource cost** of **Technique Gauge Ultimate** with a cooldown
-      of 30 secs, further more **increase Yixuan Sheer Force by 20%** during her
+    description: >-
+      Using <chain> **Ultimate** allows you to **bypass the resource cost** of
+      **Technique Gauge Ultimate** with a cooldown of 30 secs, further more
+      **increase Yixuan Sheer Force by 20%** during her
       **Meditation State**, also known as <core> **Additional Core Passive**
 team:
   teams:
@@ -166,9 +182,10 @@ team:
         - name: Pulchra
   extra_sections:
     - title: Extra Notes on Team Building
-      description: |
+      description: >-
         **Nicole and Rina** are **not good teammates** for Yixuan as **Sheer Damage ignores all
-        DEF** making their buffs useless. All **ATK buffers are good** for Yixuan despite her scaling off of HP as **Rupture Passive
+        DEF** making their buffs useless. All **ATK buffers are good** for Yixuan
+        despite her scaling off of HP as **Rupture Passive
         converts 30% of your ATK into Sheer Force**. For example Lucy's 600 ATK will
         convert to 180 Sheer Force. Nicole “could” be used for her Ether DMG%, CR% and
         W-Engine buff if you really lack options but this is not worth it or recommended at

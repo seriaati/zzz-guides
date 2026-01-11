@@ -1,28 +1,35 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/schema.json
+# yaml-language-server: $schema=../../schema.json
 
+author: Mercer
+last_updated: 2025-06-25
 character:
   name: Harumasa
   rarity: 5
-description: |
-  Harumasa is an S rank Agent with the Electric attribute who belongs to the Attack Specialty and who is part of the Section 6 faction.
+description: >-
+  Harumasa is an S rank Agent with the Electric attribute who belongs to the Attack Specialty
+  and who is part of the Section 6 faction.
 weapons:
   - name: Zanshin Herb Case
-    description: |
-      BIS W-Engine, gives a near 100% uptime on 20 Crit Rate when needed, on top of its Crit Damage Main Stat while providing a massive 40% Electric DMG Bonus to his Dash Attacks, his main source of damage
+    description: >-
+      BIS W-Engine, gives a near 100% uptime on 20 Crit Rate when needed,
+      on top of its Crit Damage Main Stat while providing a massive 40% Electric DMG Bonus to his Dash Attacks,
+      his main source of damage.
   - name: Any S Rank Crit Rate W-Engine
-    description: |
+    description: >-
       Any Crit Rate Main Stat and high Base ATK W-Engine will
       be good due to Yixuan's passive ATK stat conversion, even with
       no passive from the W-Engine itself
   - name: The Brimstone
-    description: |
-      Best Non-Limited S Rank W-Engine, gives an insane amount of ATK due to it's Main Stat while also providing insane in-combat ATK%
+    description: >-
+      Best Non-Limited S Rank W-Engine, gives an insane amount of ATK due to
+      its Main Stat while also providing insane in-combat ATK%
 discs:
   four_pieces:
     - name: Shadow Harmony
-      description: |
-        4-Pc Shadow Harmony is the most consistent due to it not being reliant on Shock anomaly or Hormone Punk's uptime to do the most damage. The set gives everything Harumasa needs on top of
-        it's near 100% uptime. At max stacks (which will be surely after your burst starts) you will gain:
+      description: >-
+        4-Pc Shadow Harmony is the most consistent due to it not being reliant on Shock anomaly
+        or Hormone Punk's uptime to do the most damage. The set gives everything Harumasa needs on top of
+        its near 100% uptime. At max stacks (which will be surely after your burst starts) you will gain:
 
         15% Dash Attack DMG Bonus
         12% Combat ATK Boost
@@ -30,24 +37,28 @@ discs:
 
         The other sets have their uses in Mono-shock team and/or Shiyu Defense Speedrun.
     - name: Hormone Punk
-      description: |
-        The best 4-Pc set for high burst DMG builds outside of Rina Mono Shock Teams, on top of it's 2-Pc 10% ATK bonus it grants a massive 25% Combat ATK Bonus when swapped on field when it's not
-        on cooldown for 10 seconds
+      description: >-
+        The best 4-Pc set for high burst DMG builds outside of Rina Mono Shock Teams, on top of its
+        2-Pc 10% ATK bonus it grants a massive 25% Combat ATK Bonus when swapped on field when it's not
+        on cooldown for 10 seconds.
 
-        Especially the best when you do not need the Crit boost from 4-Pc Shadow Harmony to reach 100%~ Crit Rate with Dash Attacks
+        Especially the best when you do not need the Crit boost from 4-Pc Shadow Harmony to reach 100%~ Crit Rate
+        with Dash Attacks.
   two_pieces:
     - name: Branch & Blade Song / Woodpecker Electro
-      description: |
-        The two best 2-Pc options for Harumasa. always being a damage
-        increase but your pick will depend on if you have her signature or
-        not
+      description: >-
+        The two best 2-Pc options for Harumasa. Always being a damage
+        increase, but your pick will depend on if you have her signature or
+        not.
   extra_sections:
     - title: Note for Harumasa Stats
-      description: |
-        ATK% Disc 5 is better than Elec% Disc 5, especially with his Signature giving him bonus Elec% on Dash attack. A good Elec% disc can still outperform a bad ATK% disc, so it is recommended
+      description: >-
+        ATK% Disc 5 is better than Elec% Disc 5, especially with his Signature giving him bonus Elec% on Dash attack.
+        A good Elec% disc can still outperform a bad ATK% disc, so it is recommended
         to pick the disc with the best sub stats.
 
-        His Enhanced Dash Attack gets 25% Crit Rate bonus, making the max Crit Rate 75%, further reduced by 12% from 4-Pc Shadow Harmony, 15% from M6 Nicole, 20% from Signature W-Engine, and
+        His Enhanced Dash Attack gets 25% Crit Rate bonus, making the max Crit Rate 75%, further
+        reduced by 12% from 4-Pc Shadow Harmony, 15% from M6 Nicole, 20% from Signature W-Engine, and
         more depending on the setup.
 
 stat:
@@ -58,38 +69,48 @@ stat:
       pos: 5
     - stat_priority: ATK%
       pos: 6
-  sub_stats: |
-    Crit Rate% (until 75%/63%(Shadow Harmony)/48%(Shadow Harmony + Nicole)/28%(Shadow Harmony + Nicole + Signature W-Engine) Build Breakpoints) > Crit DMG% = ATK%
-  baseline_stats: |
+  sub_stats: >-
+    Crit Rate% (until 75%/63%(Shadow Harmony)/48%(Shadow Harmony + Nicole)
+    /28%(Shadow Harmony + Nicole + Signature W-Engine) Build Breakpoints) > Crit DMG% = ATK%
+  baseline_stats: >-
     ATK Main Engine: 2800-3300+
+
     Non ATK Main Engine: 2700-3000+
+
     Crit Rate%
+
     4-Pc Shadow Harmony: 38-63%
+
     Otherwise: 50-75%
+
     Crit DMG%: 150-200%+
+
     (Range Dependent on Team, Disc 5 and Engine)
 skill_priority:
   priorities:
     - [dodge]
     - [chain]
     - [special]
-  description: |
+  description: >-
     Dash Attacks are his main source of damage but his Ultimate/Chain Attack and EX Special can contribute to damage
 skills:
   - title: "Dash Attack: Hiten no Tsuru - Slash"
-    description: |
-      While there are X-Marked enemies on the field, Harumasa will enter the Awakened state, switching Dash Attack: Hiten no Tsuru for Dash Attack: Hiten no Tsuru - Slash.
+    description: >-
+      While there are X-Marked enemies on the field, Harumasa will enter the Awakened state,
+      switching Dash Attack: Hiten no Tsuru for Dash Attack: Hiten no Tsuru - Slash.
 
       Rush forwards to the closest X-Marked enemy and execute a powerful slash, dealing Electric DMG.
       When the slash hits the target, it consumes 2 stacks of Electro Prison.
       repeatedly press DASH ATTACK to repeatedly use Dash Attack: Hiten no Tsuru - Slash.
-    explanation: |
+    explanation: >-
       Best used during the stun window due to Harumasa dealing 40% more DMG to stunned or anomaly inflicted enemies
 mindscapes:
   - num: 1
-    description: |
-      Harumasa's M1 is a great extender for his burst dps windows allowing more stacks from your basic attack and your quivers shooting another arrow at the target. Allowing for some lethal
-      setups with increased stacks and marks on the opponent. It is also a good mindscape for On-field Harumasa as it extends his dash attack combo further.
+    description: >-
+      Harumasa's M1 is a great extender for his burst dps windows allowing more stacks from your
+      basic attack and your quivers shooting another arrow at the target. Allowing for some lethal
+      setups with increased stacks and marks on the opponent. It is also a good mindscape for On-field
+      Harumasa as it extends his dash attack combo further.
 team:
   teams:
     - name: Team 1
@@ -104,5 +125,6 @@ team:
         - name: Harumasa
   extra_sections:
     - title: General Notes on Team Building
-      description: |
-        Rina is only recommended at M1 due to it increasing the field time of her puppets, making her PEN buff stay longer
+      description: >-
+        Rina is only recommended at M1 due to it increasing the field time of her puppets, making her PEN
+        buff stay longer
