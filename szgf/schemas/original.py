@@ -187,7 +187,7 @@ class Skill(pydantic.BaseModel):
 
 
 class OriginalGuide(pydantic.BaseModel):
-    """The original standardized ZZZ guide format (SZGF) schema."""
+    """The standardized ZZZ guide format (SZGF) schema."""
 
     author: str = pydantic.Field(description="Author of the guide")
     last_updated: datetime.date = pydantic.Field(description="Last updated date of the guide")
