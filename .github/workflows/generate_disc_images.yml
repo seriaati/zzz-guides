@@ -8,6 +8,9 @@ on:
     paths:
       - "scripts/generate_disc_images.py"
       - ".github/workflows/generate_disc_images.yml"
+  schedule:
+    # Every day at 19:00 UTC
+    - cron: "0 19 * * *"
 
 jobs:
   generate-disc-images:
