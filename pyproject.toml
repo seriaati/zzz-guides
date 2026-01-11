@@ -2,7 +2,7 @@
 name = "szgf"
 version = "0.1.5"
 description = "ZZZ agent guides & definition of Standardized ZZZ Guide Format (SZGF)"
-readme = "README.md"
+readme = "docs/README.md"
 requires-python = ">=3.12"
 dependencies = [
     "aiofiles>=24.1.0",
@@ -13,10 +13,21 @@ dependencies = [
     "pyyaml>=6.0.2",
 ]
 
+[project.urls]
+Homepage = "https://github.com/seriaati/zzz-guides"
+Repository = "https://github.com/seriaati/zzz-guides.git"
+Issues = "https://github.com/seriaati/zzz-guides/issues"
+Documentation = "https://gh.seria.moe/zzz-guides"
+
 [dependency-groups]
 validate = ["jsonschema>=4.24.0"]
 parse = ["requests>=2.32.4"]
 draw = ["anyio>=4.12.0", "httpx>=0.28.1", "pillow>=12.0.0"]
+docs = [
+    "mkdocs-material>=9.6.15",
+    "mkdocstrings[python]>=0.29.1",
+    "griffe-pydantic>=1.1.7",
+]
 
 [build-system]
 requires = ["uv_build>=0.9.0,<0.10.0"]

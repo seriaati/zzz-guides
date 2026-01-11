@@ -1,0 +1,102 @@
+# Project information
+site_name: zzz-guides
+site_url: https://gh.seria.moe/zzz-guides
+site_author: Seria Ati
+site_description: An async API wrapper for Enka Network written in Python, supports GI, HSR, and ZZZ.
+
+# Repository
+repo_name: seriaati/zzz-guides
+repo_url: https://github.com/seriaati/zzz-guides
+
+# Copyright
+copyright: Copyright &copy; 2025 - 2026 Seria Ati
+
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - content.code.copy
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      primary: indigo
+      accent: indigo
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: indigo
+      accent: indigo
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      primary: indigo
+      accent: indigo
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["szgf"]
+          inventories:
+            - https://docs.python.org/3/objects.inv
+            - https://mkdocstrings.github.io/griffe/objects.inv
+            - https://docs.pydantic.dev/latest/objects.inv
+          options:
+            backlinks: tree
+            docstring_style: google
+            docstring_options:
+              ignore_init_summary: true
+            docstring_section_style: list
+            parameter_headings: true
+            relative_crossrefs: true
+            scoped_crossrefs: true
+            type_parameter_headings: true
+            show_root_heading: false
+            show_root_full_path: false
+            show_root_toc_entry: false
+            show_symbol_type_heading: true
+            show_if_no_docstring: true
+            show_source: false
+            show_bases: false
+            separate_signature: true
+            signature_crossrefs: true
+            show_symbol_type_toc: true
+            show_signature_annotations: true
+            show_signature_type_parameters: true
+            members_order: source
+            summary: true
+            filters:
+              - "!^_"
+            unwrap_annotated: true
+            extensions:
+              - griffe_pydantic:
+                  schema: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Home: README.md
+  - Contribution Guidelines: CONTRIBUTING.md
+  - SZGF Schema: schema.md
