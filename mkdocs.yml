@@ -2,7 +2,7 @@
 site_name: zzz-guides
 site_url: https://gh.seria.moe/zzz-guides
 site_author: Seria Ati
-site_description: An async API wrapper for Enka Network written in Python, supports GI, HSR, and ZZZ.
+site_description: SZGF documentation
 
 # Repository
 repo_name: seriaati/zzz-guides
