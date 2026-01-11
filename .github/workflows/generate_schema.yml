@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - 'szgf/schema.py'
+      - 'szgf/schemas/original.py'
       - 'scripts/generate_schema.py'
       - '.github/workflows/generate_schema.yml'
 
