@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import asyncio
-import json
 
 import anyio
 import yaml
@@ -19,7 +18,7 @@ async def _parse_guide(path: anyio.Path) -> None:
 
     await output_path.parent.mkdir(parents=True, exist_ok=True)
     await output_path.write_text(
-        json.dumps(parsed_guide.model_dump(), indent=2, ensure_ascii=False), encoding="utf-8"
+        parsed_guide.model_dump_json(indent=2), encoding="utf-8"
     )
 
 
