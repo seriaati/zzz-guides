@@ -424,7 +424,7 @@
       "type": "object"
     }
   },
-  "description": "The original standardized ZZZ guide format (SZGF) schema.",
+  "description": "The standardized ZZZ guide format (SZGF) schema.",
   "properties": {
     "author": {
       "description": "Author of the guide",
