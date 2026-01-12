@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import contextlib
 import sys
 from pathlib import Path
 
@@ -58,7 +59,9 @@ def validate_with_jsonschema() -> None:
     for file_path in Path("guides/original").glob("*.yml"):
         data = _parse_yaml(file_path)
         # Convert from datetime.date to str for JSON schema validation
-        data["last_updated"] = data["last_updated"].isoformat()
+        with contextlib.suppress(AttributeError):
+            data["last_updated"] = data["last_updated"].isoformat()
+
         try:
             jsonschema.validate(instance=data, schema=schema)
         except jsonschema.ValidationError as e:
@@ -70,5 +73,6 @@ if __name__ == "__main__":
     try:
         validate_with_pydantic()
         validate_with_jsonschema()
-    except Exception:
+    except Exception as e:
+        print(e)
         sys.exit(1)
