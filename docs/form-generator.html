@@ -878,7 +878,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/ajv@8.12.0/dist/ajv7.min.js"></script>
     <script>
         // Floating Toolbox Manager
         const Toolbox = {
@@ -1718,32 +1717,10 @@
 
         // App
         const App = {
-            schema: null,
-            ajv: null,
-
-            async init() {
+            init() {
                 // Set today's date
                 const today = new Date().toISOString().split('T')[0];
                 document.getElementById('lastUpdated').value = today;
-
-                // Load schema - try multiple paths
-                const path = 'https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/schema.json';
-
-                try {
-                    const response = await fetch(path);
-                    if (response.ok) {
-                        this.schema = await response.json();
-                        this.ajv = new ajv7({ allErrors: true, strict: false });
-                        console.log('Schema loaded successfully from:', path);
-                    }
-                } catch (e) {
-                    console.log('Failed to load schema from:', path);
-                }
-
-                if (!this.schema) {
-                    console.warn('Could not load schema from any path. This is expected when opening locally.');
-                    // Don't show error on page load - it will show when user tries to validate
-                }
 
                 // Set up event listeners for required fields
                 const requiredFields = ['author', 'lastUpdated', 'characterName', 'characterRarity', 'description'];
@@ -1775,88 +1752,22 @@
                 const downloadButton = document.querySelector('button[onclick="App.downloadYAML()"]');
                 const copyButton = document.querySelector('button[onclick="App.copyToClipboard()"]');
 
-                if (allRequiredFilled) {
-                    generateButton.disabled = false;
-                    downloadButton.disabled = false;
-                    copyButton.disabled = false;
-                    this.showValidationMessage('', '');
-                } else {
-                    generateButton.disabled = true;
-                    downloadButton.disabled = true;
-                    copyButton.disabled = true;
-                    this.showValidationMessage('warning', 'Fill in all required fields (Author, Last Updated, Character Name, Character Rarity, and Guide Description) before generating YAML.');
-                }
+                generateButton.disabled = !allRequiredFilled;
+                downloadButton.disabled = !allRequiredFilled;
+                copyButton.disabled = !allRequiredFilled;
             },
 
             generateYAML() {
                 if (!this.checkRequiredFields()) {
-                    this.showValidationMessage('error', 'Fill in all required fields before generating YAML.');
                     return;
                 }
 
                 const data = FormManager.collectFormData();
                 const yaml = YAMLGenerator.generateYAML(data);
                 document.getElementById('yamlPreview').textContent = yaml;
-
-                // Validate
-                this.validateData(data);
             },
 
-            validateData(data) {
-                if (!this.schema || !this.ajv) {
-                    this.showValidationMessage('warning',
-                        'Schema validation unavailable (this is normal when opening the file locally). ' +
-                        'Your YAML has been generated and can be downloaded. ' +
-                        'To enable validation, host this page on a web server or use it from GitHub Pages once deployed.'
-                    );
-                    return true; // Allow download even without validation
-                }
 
-                try {
-                    const validate = this.ajv.compile(this.schema);
-                    const valid = validate(data);
-
-                    if (valid) {
-                        this.showValidationMessage('success', 'Valid YAML! Ready to download.');
-                        return true;
-                    } else {
-                        const errors = validate.errors.map(err => {
-                            return `${err.instancePath || '/'}: ${err.message}`;
-                        });
-                        this.showValidationMessage('error', 'Validation errors found:', errors);
-                        return false;
-                    }
-                } catch (e) {
-                    console.error('Validation error:', e);
-                    this.showValidationMessage('error', 'Validation failed: ' + e.message);
-                    return false;
-                }
-            },
-
-            showValidationMessage(type, message, errors = []) {
-                const container = document.getElementById('validationMessage');
-                if (type === 'success') {
-                    container.className = 'validation-message validation-success';
-                    container.innerHTML = `<strong>✓ Success!</strong> ${message}`;
-                } else if (type === 'error') {
-                    container.className = 'validation-message validation-error';
-                    let html = `<strong>✗ Error!</strong> ${message}`;
-                    if (errors.length > 0) {
-                        html += '<div class="validation-errors"><ul>';
-                        errors.forEach(err => {
-                            html += `<li>${err}</li>`;
-                        });
-                        html += '</ul></div>';
-                    }
-                    container.innerHTML = html;
-                } else if (type === 'warning') {
-                    container.className = 'validation-message validation-warning';
-                    container.innerHTML = `<strong>⚠ Note:</strong> ${message}`;
-                } else {
-                    container.className = 'validation-message';
-                    container.innerHTML = message;
-                }
-            },
 
             downloadYAML() {
                 if (!this.checkRequiredFields()) {
