@@ -1727,25 +1727,17 @@
                 document.getElementById('lastUpdated').value = today;
 
                 // Load schema - try multiple paths
-                const schemaPaths = [
-                    '../schema.json',           // When hosted on GitHub Pages
-                    '/schema.json',              // Absolute path from root
-                    'schema.json',               // Same directory (if copied)
-                    window.location.origin + '/zzz-guides/schema.json'  // Full GitHub Pages path
-                ];
+                const path = 'https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/schema.json';
 
-                for (const path of schemaPaths) {
-                    try {
-                        const response = await fetch(path);
-                        if (response.ok) {
-                            this.schema = await response.json();
-                            this.ajv = new ajv7({ allErrors: true, strict: false });
-                            console.log('Schema loaded successfully from:', path);
-                            break;
-                        }
-                    } catch (e) {
-                        console.log('Failed to load schema from:', path);
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        this.schema = await response.json();
+                        this.ajv = new ajv7({ allErrors: true, strict: false });
+                        console.log('Schema loaded successfully from:', path);
                     }
+                } catch (e) {
+                    console.log('Failed to load schema from:', path);
                 }
 
                 if (!this.schema) {
