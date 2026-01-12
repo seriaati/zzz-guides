@@ -29,4 +29,4 @@ guides = await client.read_guides() # Returns a dict of ParsedGuide objects
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+See [CONTRIBUTING.md](https://gh.seria.moe/zzz-guides/CONTRIBUTING.md) for contribution guidelines.
