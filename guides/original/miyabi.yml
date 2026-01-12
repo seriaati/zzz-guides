@@ -15,7 +15,11 @@ discs:
     - name: Branch & Blade Song
       description: This disk set just making for her. At 2pc gives 16% crit dmg can boost all the time and 12% crit rate on 4pc. Branch & Blade Song set can make you easily reach 80% crit rate to max her core
   two_pieces:
-    - name: Any 2pc u got best substats (Hormone Punk,Puffer Electro,Astral Voice,Polar Metal,Woodpecker Electro
+    - name: Hormone Punk / Puffer Electro
+      description: The difference for those set isnt big, choose which one u got best substats (like %atk, AP and crit)
+    - name: Astral Voice / Polar Metal
+      description: The difference for those set isnt big, choose which one u got best substats (like %atk, AP and crit)
+    - name: Woodpecker Electro
       description: The difference for those set isnt big, choose which one u got best substats (like %atk, AP and crit)
 stat:
   main_stats:
