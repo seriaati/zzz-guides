@@ -18,9 +18,9 @@ discs:
     - name: Hormone Punk / Puffer Electro
       description: The difference for those set isnt big, choose which one u got best substats (like %atk, AP and crit)
     - name: Astral Voice / Polar Metal
-      description: The difference for those set isnt big, choose which one u got best substats (like %atk, AP and crit)
+      description: Same as set above, just choose which one u got best substats
     - name: Woodpecker Electro
-      description: The difference for those set isnt big, choose which one u got best substats (like %atk, AP and crit)
+      description: Same as set above, just choose which one u got best substats
 stat:
   main_stats:
     - stat_priority: Atk% > Crit dmg/rate
