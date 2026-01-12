@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../schema.json
+
+author: Syrex
+last_updated: "2026-01-12"
+character:
+  name: Miyabi
+  rarity: 5
+description: 'Hoshimi Miyabi is a S rank character in Zenless Zone Zero, with Frost element and anomaly Attribute. She has been awarded the title of "Void Hunter: Isshin Muga"'
+weapons:
+  - name: Hailstorm Shine
+    description: This is the best W engine for Hoshimi Miyabi.With 24% crit rate on main stats, 50% crit dmg and 40% ice dmg can make you build her easier.
+    title: Best W engine and only one, no replacement
+discs:
+  four_pieces:
+    - name: Branch & Blade Song
+      description: This disk set just making for her. At 2pc gives 16% crit dmg can boost all the time and 12% crit rate on 4pc. Branch & Blade Song set can make you easily reach 80% crit rate to max her core
+  two_pieces:
+    - name: Hormone Punk / Puffer Electro
+      description: The difference for those set isnt big, choose which one u got best substats (like %atk, AP and crit)
+    - name: Astral Voice / Polar Metal
+      description: Same as set above, just choose which one u got best substats
+    - name: Woodpecker Electro
+      description: Same as set above, just choose which one u got best substats
+stat:
+  main_stats:
+    - stat_priority: Atk% > Crit dmg/rate
+      pos: 4
+    - stat_priority: Pen% (m0) > ice dmg% > atk%
+      pos: 5
+    - stat_priority: ATK = AM (choose AM if u got <m1)
+      pos: 6
+  sub_stats: Crit > ATK% > AP
+  baseline_stats: "Atk : > 2700 - 3400 (1 atk disk slot) Crit rate : 80% (<m2), 65-73 (m2+) Crit dmg : 130-150  AP : < 300"
+  extra_sections:
+    - title: Disorder gameplay
+      description: "You can looking for Disk 4 AP if you got many atk% substats and doesnt got any AP rolls on ur build your team must be : soukaku and yuzuha to use AP on disk 4, if no just looking for atk% or crit."
+mindscapes:
+  - num: 1
+    description: "With 36% ignore Def% can increased your Dmg and with removing frostburn state at  the slash for charge level three of Basic Attack: Shimotsuki hits can make you trigger anomaly damage easier and more often, especially on disorder team"
+  - num: 2
+    description: With more 15% crit rate makes you can reach 80% crit rate easier, at 5th attack can give 1 fallen frost and first combat gives 6 fallen frost, all for this can make miyabi less depending on anomaly teammate.
+team:
+  teams:
+    - name: Mono Ice Team
+      characters:
+        - name: Miyabi
+        - name: Lycaon
+        - name: Soukaku
+      description: F2p team for Hoshimi Miyabi, mainly aim for dealing many disorder as much as possible
+    - name: Fake mono Ice team
+      characters:
+        - name: Miyabi
+        - name: Yuzuha
+        - name: Soukaku
+      description: An improving mono ice team, this team is easier to play thanks to yuzuha.
+skill_priority:
+  priorities:
+    - - core
+    - - basic
+    - - chain
+    - - special
+    - - assist
+      - dodge
