@@ -8,7 +8,7 @@
 
 ### For Non-Technical People
 
-Use the [YAML Generator](https://gh.seria.moe/zzz-guides/form-generator.html), an AI-made website that helps you create YAML files without needing to understand the syntax.
+Use the [SZGF Generator](https://szgf.seria.moe), an AI-made website that helps you create YAML files without needing to understand the syntax.
 
 After you're done, submit your guide by creating an issue in this repository and attaching the YAML file, or by sending it to the #submit-guides channel in our [Discord server](https://link.seria.moe/hb-dc).
 
