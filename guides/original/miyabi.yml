@@ -49,3 +49,11 @@ team:
         - name: Yuzuha
         - name: Soukaku
       description: An improving mono ice team, this team is easier to play thanks to yuzuha.
+skill_priority:
+  priorities:
+    - - core
+    - - basic
+    - - chain
+    - - special
+    - - assist
+      - dodge
