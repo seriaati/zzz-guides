@@ -841,7 +841,7 @@
                 <div class="action-buttons">
                     <button onclick="App.generateYAML()" class="button-success">Generate YAML</button>
                     <button onclick="App.downloadYAML()">Download .yml File</button>
-                    <button onclick="App.copyToClipboard()" class="button-secondary">Copy to Clipboard</button>
+                    <button onclick="App.copyToClipboard(event)" class="button-secondary">Copy to Clipboard</button>
                 </div>
             </div>
         </div>
@@ -1750,7 +1750,7 @@
                 const allRequiredFilled = this.checkRequiredFields();
                 const generateButton = document.querySelector('button[onclick="App.generateYAML()"]');
                 const downloadButton = document.querySelector('button[onclick="App.downloadYAML()"]');
-                const copyButton = document.querySelector('button[onclick="App.copyToClipboard()"]');
+                const copyButton = document.querySelector('button[onclick="App.copyToClipboard(event)"]');
 
                 generateButton.disabled = !allRequiredFilled;
                 downloadButton.disabled = !allRequiredFilled;
@@ -1795,7 +1795,7 @@
                 URL.revokeObjectURL(url);
             },
 
-            async copyToClipboard() {
+            async copyToClipboard(event) {
                 if (!this.checkRequiredFields()) {
                     alert('Fill in all required fields before copying.');
                     return;
@@ -1818,6 +1818,7 @@
                         button.classList.remove('button-success');
                     }, 2000);
                 } catch (e) {
+                    console.error('Clipboard copy failed:', e);
                     alert('Failed to copy to clipboard, copy manually.');
                 }
             },
