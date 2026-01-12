@@ -43,13 +43,13 @@ team:
   teams:
     - name: Mono Ice Team
       characters:
-        - name: Hoshimi Miyabi
+        - name: Miyabi
         - name: Lycaon
         - name: Soukaku
       description: F2p team for Hoshimi Miyabi, mainly aim for dealing many disorder as much as possible
     - name: Fake mono Ice team
       characters:
-        - name: Hoshimi Miyabi
+        - name: Miyabi
         - name: Yuzuha
         - name: Soukaku
       description: An improving mono ice team, this team is easier to play thanks to yuzuha.
