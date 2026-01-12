@@ -1695,8 +1695,9 @@
 
             escapeString(str) {
                 if (!str) return '""';
-                // If string contains special characters, quote it
-                if (str.includes(':') || str.includes('#') || str.includes('"') || str.includes("'") || str.includes('[') || str.includes(']') || str.includes('{') || str.includes('}')) {
+                // If string contains special characters or starts with *, quote it
+                // Starting with * could be mistaken as a YAML alias
+                if (str.includes(':') || str.includes('#') || str.includes('"') || str.includes("'") || str.includes('[') || str.includes(']') || str.includes('{') || str.includes('}') || str.startsWith('*')) {
                     return '"' + str.replace(/"/g, '\\"') + '"';
                 }
                 return str;
@@ -1704,7 +1705,12 @@
 
             formatMultiline(text, indent) {
                 if (!text) return '""';
+                
+                // Check if text needs quoting (e.g., starts with *)
+                const needsQuoting = text.startsWith('*');
+                
                 if (!text.includes('\n') && text.length < 80) {
+                    // Short single-line text - use escapeString which handles * prefix
                     return this.escapeString(text);
                 }
 
