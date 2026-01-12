@@ -238,14 +238,21 @@
           "type": "array"
         },
         "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
           "description": "Description of the skill priority section",
-          "title": "Description",
-          "type": "string"
+          "title": "Description"
         }
       },
       "required": [
-        "priorities",
-        "description"
+        "priorities"
       ],
       "title": "SkillPrioritySection",
       "type": "object"

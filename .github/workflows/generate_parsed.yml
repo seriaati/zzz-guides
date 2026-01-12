@@ -6,6 +6,14 @@ on:
     branches:
       - main
     paths:
+      - "guides/original/**.yml"
+      - "scripts/generate_parsed.py"
+      - ".github/workflows/generate_parsed.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "guides/original/**.yml"
       - "scripts/generate_parsed.py"
       - ".github/workflows/generate_parsed.yml"
 
@@ -27,11 +35,13 @@ jobs:
           uv run -m scripts.generate_parsed
 
       - name: Configure Git Credentials
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Commit and push
+        if: github.event_name != 'pull_request'
         run: |
           git add guides/parsed
           if ! git diff --staged --quiet; then

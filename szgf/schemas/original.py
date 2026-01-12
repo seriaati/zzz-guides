@@ -147,7 +147,9 @@ class SkillPrioritySection(pydantic.BaseModel):
         "For example, [[core, basic], [special, dodge]] means the first priority is core and basic skills, "
         "and the second priority is special and dodge skills."
     )
-    description: str = pydantic.Field(description="Description of the skill priority section")
+    description: str | None = pydantic.Field(
+        None, description="Description of the skill priority section"
+    )
 
 
 class TeamMember(pydantic.BaseModel):
