@@ -2,15 +2,13 @@
 
 ## Getting Started
 
-1. Read the [schema documentation](./schema.md) to understand the available fields and structure of SZGF.
-2. Review existing guides in [`guides/original`](https://github.com/seriaati/zzz-guides/tree/main/guides/original) for examples.
-3. Follow the steps below based on your technical background.
+You can check existing guides by using the `/build zzz` command in Hoyo Buddy.
 
 ### For Non-Technical People
 
 Use the [SZGF Generator](https://szgf.seria.moe), an AI-made website that helps you create YAML files without needing to understand the syntax.
 
-After you're done, submit your guide by creating an issue in this repository and attaching the YAML file, or by sending it to the #submit-guides channel in our [Discord server](https://link.seria.moe/hb-dc).
+After you're done, submit your guide by opening a new thread in the #submit-guides channel in our [Discord server](https://link.seria.moe/hb-dc).
 
 ### For Technical People
 
