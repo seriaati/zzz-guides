@@ -584,7 +584,6 @@
                                 <label for="author">
                                     <div class="label-with-help">
                                         Author
-                                        <span class="help-icon" data-help="Your name or username">?</span>
                                     </div>
                                 </label>
                                 <input type="text" id="author" required>
@@ -594,7 +593,6 @@
                                 <label for="lastUpdated">
                                     <div class="label-with-help">
                                         Last Updated
-                                        <span class="help-icon" data-help="Date in YYYY-MM-DD format">?</span>
                                     </div>
                                 </label>
                                 <input type="date" id="lastUpdated" required>
@@ -618,7 +616,8 @@
                                 <label for="characterBanner">
                                     <div class="label-with-help">
                                         Character Banner URL (optional)
-                                        <span class="help-icon" data-help="Optional banner image URL">?</span>
+                                        <span class="help-icon"
+                                            data-help="Will automatically use agent's M6 image">?</span>
                                     </div>
                                 </label>
                                 <input type="url" id="characterBanner" placeholder="https://...">
@@ -636,7 +635,7 @@
                     <div class="section">
                         <div class="section-header" onclick="UIHelper.toggleSection(this)">
                             <h2>
-                                Weapons (W-Engines)
+                                W-Engines
                                 <span class="optional-badge">Optional</span>
                             </h2>
                             <span class="section-toggle collapsed">▼</span>
@@ -694,7 +693,7 @@
 
                             <div class="form-group">
                                 <label for="mainStat5">Position 5 Priority</label>
-                                <input type="text" id="mainStat5" placeholder="e.g., Attribute DMG% > PEN%">
+                                <input type="text" id="mainStat5" placeholder="e.g., CDMG%/ATK%">
                             </div>
 
                             <div class="form-group">
@@ -706,8 +705,6 @@
                                 <label for="subStats">
                                     <div class="label-with-help">
                                         Sub Stats Priority
-                                        <span class="help-icon"
-                                            data-help="Priority order for sub stats, e.g., 'CRIT RATE% > CRIT DMG% > ATK%'">?</span>
                                     </div>
                                 </label>
                                 <input type="text" id="subStats" placeholder="e.g., CRIT RATE% > CRIT DMG% > ATK%">
@@ -718,7 +715,7 @@
                                     <div class="label-with-help">
                                         Baseline Stats
                                         <span class="help-icon"
-                                            data-help="Target stats to aim for, e.g., 'HP: 18000, ATK: 2500, CRIT RATE: 68%'">?</span>
+                                            data-help="Target stats to aim for">?</span>
                                     </div>
                                 </label>
                                 <textarea id="baselineStats" rows="3"
@@ -973,7 +970,9 @@
                             <input type="text" class="weapon-title" placeholder="e.g., Best W-Engine">
                         </div>
                         <div class="form-group">
-                            <label>Icon URL (optional)</label>
+                            <label>Icon URL (optional)
+                                <span class="help-icon" data-help="Will automatically use icon from hakush.in">?</span>
+                                </label>
                             <input type="url" class="weapon-icon" placeholder="https://...">
                         </div>
                     </div>
@@ -989,14 +988,16 @@
                         <button type="button" class="button-small button-danger remove-button" onclick="this.parentElement.remove()">Remove</button>
                         <div class="form-group">
                             <label>Disc Set Name</label>
-                            <input type="text" class="fourpiece-name" placeholder="e.g., Woodpecker Electro">
+                            <input type="text" class="fourpiece-name" placeholder="e.g., Woodpecker Electro / Swing Jazz">
                         </div>
                         <div class="form-group">
                             <label>Description</label>
                             <textarea class="fourpiece-desc" placeholder="Why use this disc set?" onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Icon URL (optional)</label>
+                            <label>Icon URL (optional)
+                                <span class="help-icon" data-help="Will automatically use icon from hakush.in">?</span>
+                                </label>
                             <input type="url" class="fourpiece-icon" placeholder="https://...">
                         </div>
                     </div>
@@ -1012,14 +1013,16 @@
                         <button type="button" class="button-small button-danger remove-button" onclick="this.parentElement.remove()">Remove</button>
                         <div class="form-group">
                             <label>Disc Set Name</label>
-                            <input type="text" class="twopiece-name" placeholder="e.g., Puffer Electro">
+                            <input type="text" class="twopiece-name" placeholder="e.g., Puffer Electro / Swing Jazz">
                         </div>
                         <div class="form-group">
                             <label>Description</label>
                             <textarea class="twopiece-desc" placeholder="Why use this disc set?" onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Icon URL (optional)</label>
+                            <label>Icon URL (optional)
+                                <span class="help-icon" data-help="Will automatically use icon from hakush.in">?</span>
+                                </label>
                             <input type="url" class="twopiece-icon" placeholder="https://...">
                         </div>
                     </div>
@@ -1705,10 +1708,10 @@
 
             formatMultiline(text, indent) {
                 if (!text) return '""';
-                
+
                 // Check if text needs quoting (e.g., starts with *)
                 const needsQuoting = text.startsWith('*');
-                
+
                 if (!text.includes('\n') && text.length < 80) {
                     // Short single-line text - use escapeString which handles * prefix
                     return this.escapeString(text);
