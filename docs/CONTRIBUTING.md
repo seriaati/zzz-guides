@@ -8,11 +8,9 @@
 
 ### For Non-Technical People
 
-You will write your guides in [YAML](https://yaml.org/), a human-readable data format.
+Use the [YAML Generator](https://gh.seria.moe/zzz-guides/form-generator.html), an AI-made website that helps you create YAML files without needing to understand the syntax.
 
-1. Write your guide in a text editor you like, following the structure outlined in the SZGF documentation.
-2. Save your guide as a YAML file (e.g., `nicole.yml`).
-3. Submit your guide by creating an issue in this repository and attaching the YAML file, or by sending it to the #submit-guides channel in our [Discord server](https://link.seria.moe/hb-dc).
+After you're done, submit your guide by creating an issue in this repository and attaching the YAML file, or by sending it to the #submit-guides channel in our [Discord server](https://link.seria.moe/hb-dc).
 
 ### For Technical People
 
