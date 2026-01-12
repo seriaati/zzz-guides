@@ -1,11 +1,17 @@
 # zzz-guides
 
+Generate your own SZGF-compliant ZZZ agent guides at [SZGF Generator](https://szgf.seria.moe/).
+
+## About
+
+SZGF stands for Standardized ZZZ Guide Format, a YAML-based format for writing guides for agents in Zenless Zone Zero. This repository hosts a collection of guides written in SZGF, along with tools to parse and validate them.
+
 This repository contains:
 
 - ZZZ agent guides in `/guides/original`
 - Parsed version of the guides in `/guides/parsed`
 - Translated guides in `/guides/translated` (WIP)
-- Definition of the Standardized ZZZ Guide Format (SZGF) in `/schema.json` (or as Pydantic models in `/szgf/schemas`)
+- Definition of SZGF in `/schema.json` (or as Pydantic models in `/szgf/schemas`)
 - Python package for validating and fetching guides from this repository in `/szgf`
 - Assets/icons used in the guides in `/assets`
 - [Documentation](https://gh.seria.moe/zzz-guides/) on how to contribute and the SZGF schema
