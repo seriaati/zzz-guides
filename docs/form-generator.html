@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +70,8 @@
             }
         }
 
-        .form-container, .preview-container {
+        .form-container,
+        .preview-container {
             background: var(--section-bg);
             padding: 30px;
             border-radius: 12px;
@@ -551,6 +553,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -614,7 +617,7 @@
                             <div class="form-group">
                                 <label for="characterBanner">
                                     <div class="label-with-help">
-                                        Character Banner URL
+                                        Character Banner URL (optional)
                                         <span class="help-icon" data-help="Optional banner image URL">?</span>
                                     </div>
                                 </label>
@@ -623,7 +626,8 @@
 
                             <div class="form-group">
                                 <label for="description">Guide Description</label>
-                                <textarea id="description" placeholder="Describe what this guide covers..." required onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
+                                <textarea id="description" placeholder="Describe what this guide covers..." required
+                                    onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
                             </div>
                         </div>
                     </div>
@@ -639,7 +643,8 @@
                         </div>
                         <div class="section-content collapsed">
                             <div id="weaponsContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addWeapon()">+ Add Weapon</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addWeapon()">+ Add
+                                Weapon</button>
                         </div>
                     </div>
 
@@ -655,15 +660,18 @@
                         <div class="section-content collapsed">
                             <h3 style="margin-bottom: 15px;">4-Piece Sets</h3>
                             <div id="fourPieceContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addFourPiece()">+ Add 4-Piece Set</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addFourPiece()">+ Add 4-Piece
+                                Set</button>
 
                             <h3 style="margin: 25px 0 15px 0;">2-Piece Sets</h3>
                             <div id="twoPieceContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addTwoPiece()">+ Add 2-Piece Set</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addTwoPiece()">+ Add 2-Piece
+                                Set</button>
 
                             <h3 style="margin: 25px 0 15px 0;">Extra Notes</h3>
                             <div id="discExtraContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addDiscExtra()">+ Add Note</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addDiscExtra()">+ Add
+                                Note</button>
                         </div>
                     </div>
 
@@ -698,7 +706,8 @@
                                 <label for="subStats">
                                     <div class="label-with-help">
                                         Sub Stats Priority
-                                        <span class="help-icon" data-help="Priority order for sub stats, e.g., 'CRIT RATE% > CRIT DMG% > ATK%'">?</span>
+                                        <span class="help-icon"
+                                            data-help="Priority order for sub stats, e.g., 'CRIT RATE% > CRIT DMG% > ATK%'">?</span>
                                     </div>
                                 </label>
                                 <input type="text" id="subStats" placeholder="e.g., CRIT RATE% > CRIT DMG% > ATK%">
@@ -708,15 +717,19 @@
                                 <label for="baselineStats">
                                     <div class="label-with-help">
                                         Baseline Stats
-                                        <span class="help-icon" data-help="Target stats to aim for, e.g., 'HP: 18000, ATK: 2500, CRIT RATE: 68%'">?</span>
+                                        <span class="help-icon"
+                                            data-help="Target stats to aim for, e.g., 'HP: 18000, ATK: 2500, CRIT RATE: 68%'">?</span>
                                     </div>
                                 </label>
-                                <textarea id="baselineStats" rows="3" placeholder="e.g., HP: 18000, ATK: 2500, CRIT RATE: 68%" onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
+                                <textarea id="baselineStats" rows="3"
+                                    placeholder="e.g., HP: 18000, ATK: 2500, CRIT RATE: 68%"
+                                    onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
                             </div>
 
                             <h3 style="margin: 25px 0 15px 0;">Extra Notes</h3>
                             <div id="statExtraContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addStatExtra()">+ Add Note</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addStatExtra()">+ Add
+                                Note</button>
                         </div>
                     </div>
 
@@ -731,11 +744,14 @@
                         </div>
                         <div class="section-content collapsed">
                             <div id="priorityTiersContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addPriorityTier()">+ Add Priority Tier</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addPriorityTier()">+ Add Priority
+                                Tier</button>
 
                             <div class="form-group" style="margin-top: 20px;">
                                 <label for="skillPriorityDesc">Priority Explanation</label>
-                                <textarea id="skillPriorityDesc" placeholder="Explain why these skills should be prioritized..." onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
+                                <textarea id="skillPriorityDesc"
+                                    placeholder="Explain why these skills should be prioritized..."
+                                    onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
                             </div>
                         </div>
                     </div>
@@ -766,7 +782,8 @@
                         </div>
                         <div class="section-content collapsed">
                             <div id="mindscapesContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addMindscape()">+ Add Mindscape</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addMindscape()">+ Add
+                                Mindscape</button>
                         </div>
                     </div>
 
@@ -785,7 +802,8 @@
 
                             <h3 style="margin: 25px 0 15px 0;">Extra Team Notes</h3>
                             <div id="teamExtraContainer"></div>
-                            <button type="button" class="add-button" onclick="UIHelper.addTeamExtra()">+ Add Note</button>
+                            <button type="button" class="add-button" onclick="UIHelper.addTeamExtra()">+ Add
+                                Note</button>
                         </div>
                     </div>
 
@@ -806,7 +824,8 @@
 
                             <div class="form-group">
                                 <label for="rotationDesc">Rotation Description</label>
-                                <textarea id="rotationDesc" placeholder="Describe the skill rotation..." onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
+                                <textarea id="rotationDesc" placeholder="Describe the skill rotation..."
+                                    onfocus="Toolbox.show(this)" onblur="Toolbox.hide()"></textarea>
                             </div>
                         </div>
                     </div>
@@ -829,10 +848,13 @@
     </div>
 
     <!-- Floating Toolbox -->
-    <div id="floatingToolbox" class="floating-toolbox" onmousedown="event.preventDefault()" onmouseenter="Toolbox.cancelHide()">
+    <div id="floatingToolbox" class="floating-toolbox" onmousedown="event.preventDefault()"
+        onmouseenter="Toolbox.cancelHide()">
         <div class="floating-toolbox-header">
             <h3>Quick Tags</h3>
-            <button class="floating-toolbox-close" onclick="Toolbox.activeTextarea = null; Toolbox.cancelHide(); document.getElementById('floatingToolbox').classList.remove('visible');" title="Close">&times;</button>
+            <button class="floating-toolbox-close"
+                onclick="Toolbox.activeTextarea = null; Toolbox.cancelHide(); document.getElementById('floatingToolbox').classList.remove('visible');"
+                title="Close">&times;</button>
         </div>
         <div class="floating-toolbox-content">
             <div class="toolbox-category">
@@ -1770,13 +1792,13 @@
                     generateButton.disabled = true;
                     downloadButton.disabled = true;
                     copyButton.disabled = true;
-                    this.showValidationMessage('warning', 'Please fill in all required fields (Author, Last Updated, Character Name, Character Rarity, and Guide Description) before generating YAML.');
+                    this.showValidationMessage('warning', 'Fill in all required fields (Author, Last Updated, Character Name, Character Rarity, and Guide Description) before generating YAML.');
                 }
             },
 
             generateYAML() {
                 if (!this.checkRequiredFields()) {
-                    this.showValidationMessage('error', 'Please fill in all required fields before generating YAML.');
+                    this.showValidationMessage('error', 'Fill in all required fields before generating YAML.');
                     return;
                 }
 
@@ -1846,13 +1868,13 @@
 
             downloadYAML() {
                 if (!this.checkRequiredFields()) {
-                    alert('Please fill in all required fields before downloading.');
+                    alert('Fill in all required fields before downloading.');
                     return;
                 }
 
                 const yamlContent = document.getElementById('yamlPreview').textContent;
                 if (!yamlContent || yamlContent.startsWith('#')) {
-                    alert('Please generate YAML first!');
+                    alert('Generate YAML first!');
                     return;
                 }
 
@@ -1872,13 +1894,13 @@
 
             async copyToClipboard() {
                 if (!this.checkRequiredFields()) {
-                    alert('Please fill in all required fields before copying.');
+                    alert('Fill in all required fields before copying.');
                     return;
                 }
 
                 const yamlContent = document.getElementById('yamlPreview').textContent;
                 if (!yamlContent || yamlContent.startsWith('#')) {
-                    alert('Please generate YAML first!');
+                    alert('Generate YAML first!');
                     return;
                 }
 
@@ -1893,7 +1915,7 @@
                         button.classList.remove('button-success');
                     }, 2000);
                 } catch (e) {
-                    alert('Failed to copy to clipboard. Please copy manually.');
+                    alert('Failed to copy to clipboard, copy manually.');
                 }
             },
 
@@ -1933,4 +1955,5 @@
         document.addEventListener('DOMContentLoaded', () => App.init());
     </script>
 </body>
+
 </html>
