@@ -57,7 +57,8 @@ def validate_with_jsonschema() -> None:
 
     for file_path in Path("guides/original").glob("*.yml"):
         data = _parse_yaml(file_path)
-
+        # Convert from datetime.date to str for JSON schema validation
+        data["last_updated"] = data["last_updated"].isoformat()
         try:
             jsonschema.validate(instance=data, schema=schema)
         except jsonschema.ValidationError as e:

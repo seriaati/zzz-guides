@@ -347,7 +347,7 @@ def _mass_replace_stat_keywords(original: OriginalGuide) -> None:  # noqa: C901,
         ]
 
     # Skill priority
-    if original.skill_priority is not None:
+    if original.skill_priority is not None and original.skill_priority.description is not None:
         original.skill_priority.description = _replace_stat_keywords(
             original.skill_priority.description
         )
