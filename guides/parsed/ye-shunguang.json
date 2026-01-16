@@ -1,0 +1,203 @@
+{
+  "author": "Mercer",
+  "last_updated": "2026-01-15",
+  "character": {
+    "name": "Ye Shunguang",
+    "rarity": 5,
+    "banner": "https://api.hakush.in/zzz/UI/Mindscape_1431_3.webp",
+    "id": 1431,
+    "element": 200,
+    "specialty": 1
+  },
+  "description": "A 2.5 release guide for Ye Shunguang",
+  "weapons": [
+    {
+      "name": "Cloudcleave Radiance",
+      "description": "Perfect synergy with Ye Shunguang as it provides a huge CDMG% boost on top of DMG% and Phys Res ignore.",
+      "title": "Best W-Engine",
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1431.webp",
+      "id": 14143,
+      "rarity": "S",
+      "specialty": 1
+    },
+    {
+      "name": "The Brimstone",
+      "description": "At low copy levels a somewhat mediocre option but scales excellently at higher levels due to most of Ye Shunguang's attacks during Enlightened Mind State being from basic attacks although you have to use more in-air basic attacks to ramp stacks faster. At max copies this W-Engine performs close to her Signature. Make sure to run CMDG% in Slot 4 of Disk Drives.",
+      "title": "Good Scaling",
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1041.webp",
+      "id": 14104,
+      "rarity": "S",
+      "specialty": 1
+    },
+    {
+      "name": "Severed Innocence",
+      "description": "A good stat sick due to purely being CDMG% and no CRATE%.",
+      "title": "Best Limited Non-Signature W-Engine",
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1381.webp",
+      "id": 14138,
+      "rarity": "S",
+      "specialty": 1
+    },
+    {
+      "name": "Steel Cushion",
+      "description": "A good alternative incase you do not own The Brimstone due to high base stats and Phys DMG%. Make sure to run CMDG% in Slot 4 of Disk Drives.",
+      "title": "Alternative to The Brimstone",
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1021.webp",
+      "id": 14102,
+      "rarity": "S",
+      "specialty": 1
+    }
+  ],
+  "discs": {
+    "four_pieces": [
+      {
+        "name": "White Water Ballad",
+        "description": "Custom made specifically for Ye Shunguang, provides an insane amount of CRATE% while in any <ether> Ether Veil which Ye Shunguang provides herself.",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/33500.webp"
+      }
+    ],
+    "two_pieces": [
+      {
+        "name": "Branch & Blade Song",
+        "description": "Better against bosses with low <def> DEF like Ye Shunguang's own boss in Deadly Assault. Main recommendation.",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32700.webp"
+      },
+      {
+        "name": "Puffer Electro / Astral Voice",
+        "description": "Better against Deadly Assault bosses with higher <def> DEF and Shiyu Defense enemies. Choose which ever has better sub-stats.",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/31100_32800.webp"
+      }
+    ],
+    "extra_sections": [
+      {
+        "title": "Crit Rate Note",
+        "description": "Ye Shunguang only needs 50% CRATE% in the stat screen to get 100% in combat due to her 4 Piece set giving 20% and her Core Passive at max rank giving 30%. Don't overcap"
+      }
+    ]
+  },
+  "stat": {
+    "main_stats": [
+      {
+        "stat_priority": "<atk> ATK% > CDMG%",
+        "pos": 4
+      },
+      {
+        "stat_priority": "<atk> ATK% = PEN%",
+        "pos": 5
+      },
+      {
+        "stat_priority": "<atk> ATK%",
+        "pos": 6
+      }
+    ],
+    "sub_stats": "CRATE% Until 50% in stat screen > CDMG% > ATK%",
+    "baseline_stats": "<atk> ATK: 3000+\nCRATE%: 50% MAX\nCDMG% 160% - 200%+",
+    "extra_sections": [
+      {
+        "title": "Crit Rate Note",
+        "description": "Ye Shunguang only needs 50% CRATE% in the stat screen to get 100% in combat due to her 4 Piece set giving 20% and her Core Passive at max rank giving 30%. Don't overcap"
+      }
+    ]
+  },
+  "skill_priority": {
+    "priorities": [
+      [
+        "basic"
+      ],
+      [
+        "chain"
+      ],
+      [
+        "special"
+      ]
+    ],
+    "description": "Most of Ye Shunguan's damage comes from basic attack and ultimate."
+  },
+  "skills": [],
+  "mindscapes": [
+    {
+      "num": 1,
+      "description": "Grants full stacks of her passive at the start of combat while also giving some nice damage boosts in the form of raw DMG% and <def> DEF IGNORE%"
+    },
+    {
+      "num": 2,
+      "description": "Allows more overcapping of her passive stacks while giving some of her attacks additional <def> DEF IGNORE% while also allowing for new rotations due to more Culmination stacks."
+    },
+    {
+      "num": 4,
+      "description": "Grants 1000 Decibels at the start of combat while increasing the max % of <ether> Ether Veil: Verdict."
+    }
+  ],
+  "team": {
+    "teams": [
+      {
+        "name": "Best Team",
+        "characters": [
+          {
+            "name": "Ye Shunguang",
+            "ids": [
+              1431
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect55.webp"
+            ]
+          },
+          {
+            "name": "Dialyn",
+            "ids": [
+              1481
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect54.webp"
+            ]
+          },
+          {
+            "name": "Zhao",
+            "ids": [
+              1341
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect56.webp"
+            ]
+          }
+        ],
+        "description": null
+      },
+      {
+        "name": "Team #2",
+        "characters": [
+          {
+            "name": "Ye Shunguang",
+            "ids": [
+              1431
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect55.webp"
+            ]
+          },
+          {
+            "name": "Trigger",
+            "ids": [
+              1361
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect39.webp"
+            ]
+          },
+          {
+            "name": "Astra Yao",
+            "ids": [
+              1311
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect36.webp"
+            ]
+          }
+        ],
+        "description": null
+      }
+    ],
+    "extra_sections": []
+  },
+  "rotation": null
+}
