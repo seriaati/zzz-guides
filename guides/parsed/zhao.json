@@ -1,0 +1,195 @@
+{
+  "author": "Mercer",
+  "last_updated": "2026-01-15",
+  "character": {
+    "name": "Zhao",
+    "rarity": 5,
+    "banner": "https://api.hakush.in/zzz/UI/Mindscape_1341_3.webp",
+    "id": 1341,
+    "element": 202,
+    "specialty": 5
+  },
+  "description": "a 2.5 release guide for Zhao",
+  "weapons": [
+    {
+      "name": "Half-Sugar Bunny",
+      "description": "A very strong W-Engine for Zhao giving a bunch of different buffs like 10% <atk> ATK and 30% CDMG while giving her extra ER% allowing her passive full uptime.",
+      "title": "Best W-Engine",
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1341.webp",
+      "id": 14134,
+      "rarity": "S",
+      "specialty": 5
+    },
+    {
+      "name": "Tusks of Fury",
+      "description": "While nowhere near close to Zhao's Engine this is still a decent option due to proving a decent 18% DMG%.",
+      "title": "2nd Best Option",
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1071.webp",
+      "id": 14107,
+      "rarity": "S",
+      "specialty": 5
+    },
+    {
+      "name": "Original Transmorpher",
+      "description": "While not being able to compete with her Signature or Tusks of Fury it still has a decent <hp> HP% main stat allowing near of full DMG% of her passive.",
+      "title": "Best A Rank Option",
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_A_Common_07.webp",
+      "id": 13007,
+      "rarity": "A",
+      "specialty": 5
+    }
+  ],
+  "discs": {
+    "four_pieces": [
+      {
+        "name": "Astral Voice",
+        "description": "Likely to be the best option for Zhao due to the lack of options for the defense class as a whole.",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32800.webp"
+      }
+    ],
+    "two_pieces": [
+      {
+        "name": "Moonlight Lullaby / Yunkui Tales",
+        "description": "Go Moonlight Lullaby if you need more ER% for her buff uptime or Yukui Tales if you want more <hp> HP% for her passive.",
+        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/33400_33100.webp"
+      }
+    ],
+    "extra_sections": []
+  },
+  "stat": {
+    "main_stats": [
+      {
+        "stat_priority": "<hp> HP%",
+        "pos": 4
+      },
+      {
+        "stat_priority": "<hp> HP%",
+        "pos": 5
+      },
+      {
+        "stat_priority": "ER%",
+        "pos": 6
+      }
+    ],
+    "sub_stats": "HP% or Flat HP until 27000 > CRATE% > CDMG%",
+    "baseline_stats": "<hp> HP: 25000+\nCRATE%: 30% to 40%\nCDMG%: 50%+",
+    "extra_sections": [
+      {
+        "title": "HP stat note",
+        "description": "Zhao needs 27000 <hp> HP BEFORE combat to gain the maximum bonus of 40% DMG% from her passive, focus on getting as close to possible."
+      }
+    ]
+  },
+  "skill_priority": {
+    "priorities": [
+      [
+        "core"
+      ],
+      [
+        "basic"
+      ],
+      [
+        "special",
+        "chain"
+      ]
+    ],
+    "description": null
+  },
+  "skills": [],
+  "mindscapes": [
+    {
+      "num": 1,
+      "description": "When switching out of Zhao provides everyone with a decent 15% RES Ignore buff."
+    },
+    {
+      "num": 2,
+      "description": "Whenever Zhao restores <hp> HP she increases her own <atk> ATK% and providing everyone a juicy 15% in-combat <atk> ATK% buff."
+    },
+    {
+      "num": 4,
+      "description": "Regularly gives Zhao extra Decibels while buffing her own DMG."
+    },
+    {
+      "num": 6,
+      "description": "Gives massive stat and DMG bonuses to Zhao."
+    }
+  ],
+  "team": {
+    "teams": [
+      {
+        "name": "Best Team",
+        "characters": [
+          {
+            "name": "Ye Shunguang",
+            "ids": [
+              1431
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect55.webp"
+            ]
+          },
+          {
+            "name": "Dialyn",
+            "ids": [
+              1481
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect54.webp"
+            ]
+          },
+          {
+            "name": "Zhao",
+            "ids": [
+              1341
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect56.webp"
+            ]
+          }
+        ],
+        "description": null
+      },
+      {
+        "name": "Any ATK Teams",
+        "characters": [
+          {
+            "name": "Soldier 11 / Ellen / Nekomata",
+            "ids": [
+              1041,
+              1191,
+              1021
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect05.webp",
+              "https://api.hakush.in/zzz/UI/IconRoleSelect21.webp",
+              "https://api.hakush.in/zzz/UI/IconRoleSelect11.webp"
+            ]
+          },
+          {
+            "name": "Dialyn / Lighter",
+            "ids": [
+              1481,
+              1161
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect54.webp",
+              "https://api.hakush.in/zzz/UI/IconRoleSelect26.webp"
+            ]
+          },
+          {
+            "name": "Zhao",
+            "ids": [
+              1341
+            ],
+            "icons": [
+              "https://api.hakush.in/zzz/UI/IconRoleSelect56.webp"
+            ]
+          }
+        ],
+        "description": null
+      }
+    ],
+    "extra_sections": []
+  },
+  "rotation": null
+}
