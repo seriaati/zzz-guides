@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=../../schema.json
+
+author: Mercer
+last_updated: "2026-01-15"
+character:
+  name: Ye Shunguang
+  rarity: 5
+weapons:
+  - name: Cloudcleave Radiance
+    description: Perfect synergy with Ye Shunguang as it provides a huge CDMG% boost on top of DMG% and Phys Res ignore.
+    title: Best W-Engine
+  - name: The Brimstone
+    description: At low copy levels a somewhat mediocre option but scales excellently at higher levels due to most of Ye Shunguang's attacks during Enlightened Mind State being from basic attacks although you have to use more in-air basic attacks to ramp stacks faster. At max copies this W-Engine performs close to her Signature. Make sure to run CMDG% in Slot 4 of Disk Drives.
+    title: Good Scaling
+  - name: Severed Innocence
+    description: A good stat sick due to purely being CDMG% and no CRATE%.
+    title: Best Limited Non-Signature W-Engine
+  - name: Steel Cushion
+    description: A good alternative incase you do not own The Brimstone due to high base stats and Phys DMG%. Make sure to run CMDG% in Slot 4 of Disk Drives.
+    title: Alternative to The Brimstone
+discs:
+  four_pieces:
+    - name: White Water Ballad
+      description: Custom made specifically for Ye Shunguang, provides an insane amount of CRATE% while in any Ether Veil which Ye Shunguang provides herself.
+  two_pieces:
+    - name: Branch & Blade Song
+      description: Better against bosses with low DEF like Ye Shunguang's own boss in Deadly Assault. Main recommendation.
+    - name: Puffer Electro / Astral Voice
+      description: Better against Deadly Assault bosses with higher DEF and Shiyu Defense enemies. Choose which ever has better sub-stats.
+  extra_sections:
+    - title: Crit Rate Note
+      description: Ye Shunguang only needs 50% CRATE% in the stat screen to get 100% in combat due to her 4 Piece set giving 20% and her Core Passive at max rank giving 30%. Don't overcap
+stat:
+  main_stats:
+    - pos: 4
+      stat_priority: ATK% > CDMG%
+    - pos: 5
+      stat_priority: ATK% = PEN%
+    - pos: 6
+      stat_priority: ATK%
+  sub_stats: CRATE% Until 50% in stat screen > CDMG% > ATK%
+  baseline_stats: |-
+    ATK: 3000+
+    CRATE%: 50% MAX
+    CDMG% 160% - 200%+
+  extra_sections:
+    - title: Crit Rate Note
+      description: Ye Shunguang only needs 50% CRATE% in the stat screen to get 100% in combat due to her 4 Piece set giving 20% and her Core Passive at max rank giving 30%. Don't overcap
+skill_priority:
+  priorities:
+    - - basic
+    - - chain
+    - - special
+  description: Most of Ye Shunguan's damage comes from basic attack and ultimate.
+mindscapes:
+  - num: 1
+    description: Grants full stacks of her passive at the start of combat while also giving some nice damage boosts in the form of raw DMG% and DEF IGNORE%
+  - num: 2
+    description: Allows more overcapping of her passive stacks while giving some of her attacks additional DEF IGNORE% while also allowing for new rotations due to more Culmination stacks.
+  - num: 4
+    description: "Grants 1000 Decibels at the start of combat while increasing the max % of Ether Veil: Verdict."
+team:
+  teams:
+    - name: Best Team
+      characters:
+        - name: Ye Shunguang
+        - name: Dialyn
+        - name: Zhao
+    - name: "Team #2"
+      characters:
+        - name: Ye Shunguang
+        - name: Trigger
+        - name: Astra Yao
+description: A 2.5 release guide for Ye Shunguang
