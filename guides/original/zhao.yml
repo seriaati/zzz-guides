@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../schema.json
+
+author: Mercer
+last_updated: "2026-01-15"
+character:
+  name: Zhao
+  rarity: 5
+description: a 2.5 release guide for Zhao
+weapons:
+  - name: Half-Sugar Bunny
+    description: A very strong W-Engine for Zhao giving a bunch of different buffs like 10% ATK and 30% CDMG while giving her extra ER% allowing her passive full uptime.
+    title: Best W-Engine
+  - name: Tusks of Fury
+    description: While nowhere near close to Zhao's Engine this is still a decent option due to proving a decent 18% DMG%.
+    title: 2nd Best Option
+  - name: Original Transmorpher
+    description: While not being able to compete with her Signature or Tusks of Fury it still has a decent HP% main stat allowing near of full DMG% of her passive.
+    title: Best A Rank Option
+discs:
+  four_pieces:
+    - name: Astral Voice
+      description: Likely to be the best option for Zhao due to the lack of options for the defense class as a whole.
+  two_pieces:
+    - name: Moonlight Lullaby / Yunkui Tales
+      description: Go Moonlight Lullaby if you need more ER% for her buff uptime or Yukui Tales if you want more HP% for her passive.
+stat:
+  main_stats:
+    - pos: 4
+      stat_priority: HP%
+    - pos: 5
+      stat_priority: HP%
+    - pos: 6
+      stat_priority: ER%
+  sub_stats: HP% or Flat HP until 27000 > CRATE% > CDMG%
+  baseline_stats: |-
+    HP: 25000+
+    CRATE%: 30% to 40%
+    CDMG%: 50%+
+  extra_sections:
+    - title: HP stat note
+      description: Zhao needs 27000 HP BEFORE combat to gain the maximum bonus of 40% DMG% from her passive, focus on getting as close to possible.
+skill_priority:
+  priorities:
+    - - core
+    - - basic
+    - - special
+      - chain
+team:
+  teams:
+    - name: Best Team
+      characters:
+        - name: Ye Shunguang
+        - name: Dialyn
+        - name: Zhao
+    - name: Any ATK Teams
+      characters:
+        - name: Soldier 11 / Ellen / Nekomata
+        - name: Dialyn / Lighter
+        - name: Zhao
+mindscapes:
+  - num: 1
+    description: When switching out of Zhao provides everyone with a decent 15% RES Ignore buff.
+  - num: 2
+    description: Whenever Zhao restores HP she increases her own ATK% and providing everyone a juicy 15% in-combat ATK% buff.
+  - num: 4
+    description: Regularly gives Zhao extra Decibels while buffing her own DMG.
+  - num: 6
+    description: Gives massive stat and DMG bonuses to Zhao.
