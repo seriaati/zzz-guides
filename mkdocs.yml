@@ -1,12 +1,12 @@
 # Project information
-site_name: zzz-guides
-site_url: https://gh.seria.moe/zzz-guides
+site_name: SZGF Documentation
+site_url: https://docs.szgf.seria.moe
 site_author: Seria Ati
 site_description: SZGF documentation
 
 # Repository
-repo_name: seriaati/zzz-guides
-repo_url: https://github.com/seriaati/zzz-guides
+repo_name: seriaati/szgf
+repo_url: https://github.com/seriaati/szgf
 
 # Copyright
 copyright: Copyright &copy; 2025 - 2026 Seria Ati
