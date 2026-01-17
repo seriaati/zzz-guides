@@ -4,33 +4,7 @@
 
 You can check existing guides by using the `/build zzz` command in Hoyo Buddy.
 
-### For Non-Technical People
-
-Use the [SZGF Generator](https://szgf.seria.moe), an AI-made website that helps you create YAML files without needing to understand the syntax.
-
-After you're done, submit your guide by opening a new thread in the #submit-guides channel in our [Discord server](https://link.seria.moe/hb-dc).
-
-### For Technical People
-
-To proceed with this section, you need a basic understanding of Git and GitHub.
-
-If you're using VSCode, install the [YAML extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) for schema validation and autocompletion.
-
-1. [Make a fork of this repository](https://github.com/seriaati/zzz-guides/fork).
-2. Git clone your fork locally
-3. Create a new branch for your changes (e.g. `nicole-guide`).
-4. Create a new file in the `guides/original` directory with the name of the character (e.g. `nicole.yml`).
-5. At the top of the file, add the schema:
-
-   ```yml
-   # yaml-language-server: $schema=../../schema.json
-   ```
-
-6. Write your guide in the file.
-7. Push the changes to your fork.
-8. Create a pull request to the main repository.
-9. If you are not the author of the original guide, include a link to it in the pull request description, along with any additional context or notes about your changes.
-10. Wait for the maintainers to review your pull request. We may request changes or provide feedback.
+Use the [SZGF generator](https://generator.szgf.seria.moe) to write your guide using a user-friendly interface. The generator will help you create a valid guide file.
 
 ## Formatting
 

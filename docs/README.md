@@ -1,22 +1,27 @@
 # zzz-guides
 
-Generate your own SZGF-compliant ZZZ agent guides at [SZGF Generator](https://szgf.seria.moe/).
+- [Official website](https://szgf.seria.moe)
+- [Documentation](https://docs.szgf.seria.moe)
+- [Generator](https://generator.szgf.seria.moe)
+- [Discord server](https://link.seria.moe/hb-dc)
 
 ## About
 
-SZGF stands for Standardized ZZZ Guide Format, a YAML-based format for writing guides for agents in Zenless Zone Zero. This repository hosts a collection of guides written in SZGF, along with tools to parse and validate them.
+SZGF stands for Standardized Zenless Zone Zero Guide Format, a YAML-based format for writing guides for agents in Zenless Zone Zero.
+
+You can see it in action in the [Hoyo Buddy](https://hb.seria.moe) Discord bot.
 
 This repository contains:
 
-- ZZZ agent guides in `/guides/original`
-- Parsed version of the guides in `/guides/parsed`
-- Translated guides in `/guides/translated` (WIP)
-- Definition of SZGF in `/schema.json` (or as Pydantic models in `/szgf/schemas`)
-- Python package for validating and fetching guides from this repository in `/szgf`
-- Assets/icons used in the guides in `/assets`
-- [Documentation](https://gh.seria.moe/zzz-guides/) on how to contribute and the SZGF schema
+- `/guides`: SZGF guide files.
+- `/schema.json`: SZGF JSON schema file.
+- `/szgf`: Python SDK.
+- `/assets`: Drive disc, stats, and UI icons.
+- `/docs`: Documentation and contribution guidelines.
 
-## Usage
+## Python SDK
+
+You can use the SZGF Python SDK to download and read guides from this repository. The guides will be parsed using Pydantic and available as Python objects.
 
 Install the package:
 
@@ -35,4 +40,4 @@ guides = await client.read_guides() # Returns a dict of ParsedGuide objects
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://gh.seria.moe/zzz-guides/CONTRIBUTING.md) for contribution guidelines.
+See [CONTRIBUTING.md](https://docs.szgf.seria.moe/CONTRIBUTING/) for contribution guidelines.
