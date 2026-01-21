@@ -15,6 +15,8 @@ from szgf.schemas.parsed import ParsedGuide
 
 
 class SZGFClient:
+    """Client for interacting with the SZGF guides repository."""
+
     def __init__(self) -> None:
         self._session: aiohttp.ClientSession | None = None
         self._guides_url = URL("https://api.github.com/repos/seriaati/zzz-guides/contents/guides")
@@ -46,6 +48,7 @@ class SZGFClient:
         return json.loads(content)
 
     async def download_guides(self) -> None:
+        """Download all guides from the GitHub repository and store them locally."""
         logger.debug("Downloading guides...")
 
         async with self.session.get(self._guides_url / "parsed") as response:
@@ -74,6 +77,11 @@ class SZGFClient:
             await file.write(content)
 
     async def read_guides(self) -> dict[str, ParsedGuide]:
+        """Read all locally stored guides and parse them into ParsedGuide objects.
+
+        Returns:
+            A dictionary mapping character IDs to ParsedGuide objects.
+        """
         logger.debug("Reading guides from local storage...")
 
         guides: dict[str, ParsedGuide] = {}
@@ -92,8 +100,10 @@ class SZGFClient:
         return guides
 
     async def start(self) -> None:
+        """Start the client session."""
         self._session = aiohttp.ClientSession()
 
     async def close(self) -> None:
+        """Close the client session."""
         if self._session is not None:
             await self._session.close()
