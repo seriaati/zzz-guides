@@ -100,3 +100,9 @@ nav:
   - Home: README.md
   - Contribution Guidelines: CONTRIBUTING.md
   - SZGF Schema: schema.md
+  - SDKs:
+      - Python:
+          - SDK: sdks/python/README.md
+          - API Reference: api/python/reference.md
+      - TypeScript:
+          - SDK: sdks/typescript/README.md
