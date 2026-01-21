@@ -102,7 +102,7 @@ nav:
   - SZGF Schema: schema.md
   - SDKs:
       - Python:
-          - SDK: sdks/python/README.md
-          - API Reference: api/python/reference.md
+          - SDK: sdks/python/index.md
+          - API Reference: sdks/python/reference.md
       - TypeScript:
-          - SDK: sdks/typescript/README.md
+          - SDK: sdks/typescript/index.md
