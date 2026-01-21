@@ -1,0 +1,47 @@
+name: Generate TypeScript types
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'schema.json'
+      - 'scripts/generate_ts_types.js'
+      - '.github/workflows/generate_ts_types.yml'
+
+jobs:
+  generate-types:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'szgf-ts/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: szgf-ts
+        run: npm ci
+
+      - name: Generate TypeScript types
+        run: node scripts/generate_ts_types.js
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Commit and push
+        run: |
+          git add szgf-ts/src/types.ts
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(types): Update TypeScript types"
+            git push
+          else
+            echo "No changes to commit."
+          fi

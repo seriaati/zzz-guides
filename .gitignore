@@ -207,3 +207,10 @@ marimo/_lsp/
 __marimo__/
 
 test.py
+
+# TypeScript
+node_modules/
+szgf-ts/dist/
+
+# Downloaded guides
+.zzz_guides/

@@ -1,0 +1,38 @@
+{
+  "name": "szgf",
+  "version": "0.1.5",
+  "description": "TypeScript SDK for ZZZ agent guides & Standardized ZZZ Guide Format (SZGF)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "generate-types": "node ../scripts/generate_ts_types.js",
+    "prepublishOnly": "npm run generate-types && npm run build"
+  },
+  "keywords": [
+    "zenless-zone-zero",
+    "zzz",
+    "guides",
+    "szgf"
+  ],
+  "author": "seriaati",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seriaati/zzz-guides.git",
+    "directory": "szgf-ts"
+  },
+  "homepage": "https://gh.seria.moe/zzz-guides",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "json-schema-to-typescript": "^15.0.3",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
