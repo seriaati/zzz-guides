@@ -19,7 +19,7 @@ class SZGFClient:
 
     def __init__(self) -> None:
         self._session: aiohttp.ClientSession | None = None
-        self._guides_url = URL("https://api.github.com/repos/seriaati/zzz-guides/contents/guides")
+        self._guides_url = URL("https://api.github.com/repos/seriaati/szgf/contents/guides")
         self._guides_dir = Path(".zzz_guides/")
 
     @property

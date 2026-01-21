@@ -14,9 +14,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/seriaati/zzz-guides"
-Repository = "https://github.com/seriaati/zzz-guides.git"
-Issues = "https://github.com/seriaati/zzz-guides/issues"
+Homepage = "https://github.com/seriaati/szgf"
+Repository = "https://github.com/seriaati/szgf.git"
+Issues = "https://github.com/seriaati/szgf/issues"
 Documentation = "https://gh.seria.moe/zzz-guides"
 
 [dependency-groups]

@@ -43,7 +43,7 @@ export interface ParsedGuideWithId extends OriginalGuide {
  * ```
  */
 export class SZGFClient {
-  private guidesUrl = 'https://api.github.com/repos/seriaati/zzz-guides/contents/guides/parsed';
+  private guidesUrl = 'https://api.github.com/repos/seriaati/szgf/contents/guides/parsed';
   private guidesDir: string;
 
   /**

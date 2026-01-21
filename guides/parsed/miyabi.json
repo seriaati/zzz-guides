@@ -23,24 +23,24 @@
       {
         "name": "Branch & Blade Song",
         "description": "This disk set just making for her. At 2pc gives 16% <cd> crit dmg can boost all the time and 12% <cr> crit rate on 4pc. Branch & Blade Song set can make you easily reach 80% <cr> crit rate to max her core",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32700.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/32700.webp"
       }
     ],
     "two_pieces": [
       {
         "name": "Hormone Punk / Puffer Electro",
         "description": "The difference for those set isnt big, choose which one u got best substats (like %atk, <ap> AP and crit)",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/31400_31100.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/31400_31100.webp"
       },
       {
         "name": "Astral Voice / Polar Metal",
         "description": "Same as set above, just choose which one u got best substats",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/32800_32500.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/32800_32500.webp"
       },
       {
         "name": "Woodpecker Electro",
         "description": "Same as set above, just choose which one u got best substats",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/31000.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/31000.webp"
       }
     ],
     "extra_sections": []

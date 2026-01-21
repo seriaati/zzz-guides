@@ -44,19 +44,19 @@
       {
         "name": "Astral Voice",
         "description": "Astral Voice was simply made for Astra, she has no issue mainting its **Quick Assist** requirement, making her have full uptime on its **24% DMG Boost** at all times",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32800.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/32800.webp"
       }
     ],
     "two_pieces": [
       {
         "name": "Swing Jazz",
         "description": "Her best 2-Pc set, gives a very needed **20% <er> Energy Regen bonus** helping her **Quick Assist** more often",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/31600.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/31600.webp"
       },
       {
         "name": "Hormone Punk",
         "description": "A potential option for people running Kaboom the Cannon that need more <atk> ATK% to reach Astra's <core> **Core Passive** requirement",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/31400.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/31400.webp"
       }
     ],
     "extra_sections": []

@@ -44,14 +44,14 @@
       {
         "name": "Astral Voice",
         "description": "Likely to be the best option for Zhao due to the lack of options for the defense class as a whole.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32800.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/32800.webp"
       }
     ],
     "two_pieces": [
       {
         "name": "Moonlight Lullaby / Yunkui Tales",
         "description": "Go Moonlight Lullaby if you need more ER% for her buff uptime or Yukui Tales if you want more <hp> HP% for her passive.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/33400_33100.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/33400_33100.webp"
       }
     ],
     "extra_sections": []

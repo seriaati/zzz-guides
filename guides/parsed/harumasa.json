@@ -41,19 +41,19 @@
       {
         "name": "Shadow Harmony",
         "description": "4-Pc Shadow Harmony is the most consistent due to it not being reliant on Shock anomaly or Hormone Punk's uptime to do the most damage. The set gives everything Harumasa needs on top of its near 100% uptime. At max stacks (which will be surely after your burst starts) you will gain:\n15% Dash Attack DMG Bonus 12% Combat <atk> ATK Boost 12% <cr> Crit Rate\nThe other sets have their uses in Mono-shock team and/or Shiyu Defense Speedrun.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32900.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/32900.webp"
       },
       {
         "name": "Hormone Punk",
         "description": "The best 4-Pc set for high burst DMG builds outside of Rina Mono Shock Teams, on top of its 2-Pc 10% <atk> ATK bonus it grants a massive 25% Combat <atk> ATK Bonus when swapped on field when it's not on cooldown for 10 seconds.\nEspecially the best when you do not need the Crit boost from 4-Pc Shadow Harmony to reach 100%~ <cr> Crit Rate with Dash Attacks.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/31400.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/31400.webp"
       }
     ],
     "two_pieces": [
       {
         "name": "Branch & Blade Song / Woodpecker Electro",
         "description": "The two best 2-Pc options for Harumasa. Always being a damage increase, but your pick will depend on if you have her signature or not.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/32700_31000.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/32700_31000.webp"
       }
     ],
     "extra_sections": [

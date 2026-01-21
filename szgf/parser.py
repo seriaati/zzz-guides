@@ -28,8 +28,8 @@ if TYPE_CHECKING:
         WeaponSection,
     )
 
-SINGLE_DISC_ICON_URL = "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/{id}.webp"
-COMBINED_DISC_ICON_URL = "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/{id1}_{id2}.webp"
+SINGLE_DISC_ICON_URL = "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/{id}.webp"
+COMBINED_DISC_ICON_URL = "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/{id1}_{id2}.webp"
 
 
 class Stat(StrEnum):

@@ -53,19 +53,19 @@
       {
         "name": "White Water Ballad",
         "description": "Custom made specifically for Ye Shunguang, provides an insane amount of CRATE% while in any <ether> Ether Veil which Ye Shunguang provides herself.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/33500.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/33500.webp"
       }
     ],
     "two_pieces": [
       {
         "name": "Branch & Blade Song",
         "description": "Better against bosses with low <def> DEF like Ye Shunguang's own boss in Deadly Assault. Main recommendation.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/single/32700.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/32700.webp"
       },
       {
         "name": "Puffer Electro / Astral Voice",
         "description": "Better against Deadly Assault bosses with higher <def> DEF and Shiyu Defense enemies. Choose which ever has better sub-stats.",
-        "icon": "https://raw.githubusercontent.com/seriaati/zzz-guides/refs/heads/main/assets/drive_discs/combined/31100_32800.webp"
+        "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/31100_32800.webp"
       }
     ],
     "extra_sections": [
