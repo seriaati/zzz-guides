@@ -62,7 +62,7 @@ STAT_KW_MATCHES = {
     Stat.DEF: ("def", "flat def", "def%"),
     Stat.CRIT_RATE: ("crit rate", "cr", "crit rate%", "cr%", "crate%"),
     Stat.CRIT_DMG: ("crit damage", "crit dmg", "cd", "crit dmg%", "cd%", "cdmg%"),
-    Stat.ENERGY_REGEN: ("energy regen", "er"),
+    Stat.ENERGY_REGEN: ("energy regen", "er", "er%"),
     Stat.IMPACT: ("impact",),
     Stat.ANOMALY_MASTERY: ("anomaly mastery", "am"),
     Stat.ANOMALY_PROFICIENCY: ("anomaly proficiency", "ap"),
