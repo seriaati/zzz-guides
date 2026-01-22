@@ -319,7 +319,7 @@ def _replace_stat_keywords(string: str) -> str:
     return result
 
 
-def _mass_replace_stat_keywords(original: OriginalGuide) -> None:  # noqa: C901, PLR0912
+def _mass_replace_stat_keywords(original: OriginalGuide) -> None:  # noqa: PLR0912
     # Guide description
     original.description = _replace_stat_keywords(original.description)
 
@@ -338,8 +338,7 @@ def _mass_replace_stat_keywords(original: OriginalGuide) -> None:  # noqa: C901,
     if original.stat is not None:
         for main_stat in original.stat.main_stats:
             main_stat.stat_priority = _replace_stat_keywords(main_stat.stat_priority)
-        for sub_stat in original.stat.sub_stats:
-            sub_stat = _replace_stat_keywords(sub_stat)  # noqa: PLW2901
+        original.stat.sub_stats = _replace_stat_keywords(original.stat.sub_stats)
         original.stat.baseline_stats = _replace_stat_keywords(original.stat.baseline_stats)
         original.stat.extra_sections = [
             Section(title=section.title, description=_replace_stat_keywords(section.description))
