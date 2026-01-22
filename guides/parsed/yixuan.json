@@ -83,7 +83,7 @@
       }
     ],
     "sub_stats": "CR% > CDMG% > HP% > ATK% > Flat HP (Note: Flat HP is only slightly worse than ATK% for Sheer Force conversion.)",
-    "baseline_stats": "<hp> HP with main engine: 18,000 <hp> HP without Main engine: 15,000 <cr> CR%: 68-88% <cd> CD%: 120-140%+ (Crit Stats dependent on Engine and Disc 5)",
+    "baseline_stats": "<hp> HP with main engine: 18,000\n<hp> HP without Main engine: 15,000\n<cr> CR%: 68-88%\n<cd> CD%: 120-140%+\n(Crit Stats dependent on Engine and Disc 5)",
     "extra_sections": []
   },
   "skill_priority": {

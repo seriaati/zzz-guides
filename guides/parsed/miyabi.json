@@ -64,7 +64,7 @@
       }
     ],
     "sub_stats": "Crit > ATK% > AP",
-    "baseline_stats": "<atk> Atk : > 2700 - 3400 (1 <atk> atk disk slot) <cr> Crit rate : 80% (<m2), 65-73 (m2+) <cd> Crit dmg : 130-150  <ap> AP : < 300",
+    "baseline_stats": "<atk> Atk: > 2700 - 3400 (1 <atk> atk disk slot)\n<cr> Crit rate: 80% (<m2), 65-73 (m2+)\n<cd> Crit dmg: 130-150\n<ap> AP: < 300",
     "extra_sections": [
       {
         "title": "Disorder gameplay",
