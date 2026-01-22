@@ -49,18 +49,18 @@ stat:
       pos: 4
     - stat_priority: ATK%
       pos: 5
-    - stat_priority: Enery Regen% / ATK%
+    - stat_priority: Energy Regen% / ATK%
       pos: 6
-  sub_stats: >-
+  sub_stats: |-
     - For Crit based usage: ATK%/Flat ATK until Passive Cap > Crit Rate = Crit DMG > PEN
-    - Fpr Anomaly based usage: ATK%/Flat ATK until Passive Cap > Anomaly Proficiency > PEN
+    - For Anomaly based usage: ATK%/Flat ATK until Passive Cap > Anomaly Proficiency > PEN
   baseline_stats: |-
     ATK: 3429+ (34925 is the ATK cap for her Core Passive)
     Energy Regen: 0%+ - 130%+ (Depends on W-Engine and Disk Main Stat choices)
   extra_sections:
     - title: Core Passive cap and Energy Regen
       description: >-
-        Astra Yao needs **atleast 3429 BASE ATK** to fulfill her <core> **Core Passive** requirement,
+        Astra Yao needs **at least 3429 BASE ATK** to fulfill her <core> **Core Passive** requirement,
         this should be your **highest priority**. After getting 3429 ATK you should focus on
         getting as much Energy Regen as possible with Min/Maxing stats, the more ER% you have,
         the more **Quick Assists** you can trigger which will make your rotations easier
