@@ -64,3 +64,20 @@ This is a long sentence that spans multiple lines in the YAML file, but will be 
 
 An empty line indicates a new paragraph.
 ```
+
+Alternatively, you can use `|-` to preserve line breaks exactly as written. Example:
+
+```yaml
+description: |-
+  This is a long sentence that
+  spans multiple lines in the YAML file,
+  and will be rendered with line breaks preserved.
+```
+
+Renders as:
+
+```txt
+This is a long sentence that
+spans multiple lines in the YAML file,
+and will be rendered with line breaks preserved.
+```
