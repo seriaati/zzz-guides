@@ -12,10 +12,13 @@
   "description": "Hoshimi Miyabi is a S rank character in Zenless Zone Zero, with Frost element and anomaly Attribute. She has been awarded the title of \"Void Hunter: Isshin Muga\"",
   "weapons": [
     {
-      "name": "Hailstorm Shine",
+      "name": "Hailstorm Shrine",
       "description": "This is the best W engine for Hoshimi Miyabi.With 24% <cr> crit rate on main stats, 50% <cd> crit dmg and 40% <ice> ice dmg can make you build her easier.",
       "title": "Best W engine and only one, no replacement",
-      "icon": null
+      "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1091.webp",
+      "id": 14109,
+      "rarity": "S",
+      "specialty": 3
     }
   ],
   "discs": {
