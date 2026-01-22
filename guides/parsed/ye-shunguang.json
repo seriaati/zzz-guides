@@ -78,19 +78,19 @@
   "stat": {
     "main_stats": [
       {
-        "stat_priority": "<atk> ATK% > CDMG%",
+        "stat_priority": "<atk> **ATK%** > CDMG%",
         "pos": 4
       },
       {
-        "stat_priority": "<atk> ATK% = PEN%",
+        "stat_priority": "<atk> **ATK%** = PEN%",
         "pos": 5
       },
       {
-        "stat_priority": "<atk> ATK%",
+        "stat_priority": "<atk> **ATK%**",
         "pos": 6
       }
     ],
-    "sub_stats": "CRATE% Until 50% in stat screen > CDMG% > <atk> ATK%",
+    "sub_stats": "CRATE% Until 50% in stat screen > CDMG% > <atk> **ATK%**",
     "baseline_stats": "<atk> ATK: 3000+\nCRATE%: 50% MAX\nCDMG% 160% - 200%+",
     "extra_sections": [
       {

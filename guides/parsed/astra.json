@@ -22,7 +22,7 @@
     },
     {
       "name": "Bashful Demon",
-      "description": "The best peforming A Rank W-Engine for Astra, providing a generous **3.2% Combat <atk> ATK% boost** that **stacks up to 4 times** at S5 while having a **ATK% Main Stat** to help out with Astra's <core> **Core Passive requirement** making it all around the best.",
+      "description": "The best peforming A Rank W-Engine for Astra, providing a generous **3.2% Combat <atk> **ATK%** boost** that **stacks up to 4 times** at S5 while having a **ATK% Main Stat** to help out with Astra's <core> **Core Passive requirement** making it all around the best.",
       "title": null,
       "icon": "https://api.hakush.in/zzz/UI/Weapon_A_1131.webp",
       "id": 13113,
@@ -55,7 +55,7 @@
       },
       {
         "name": "Hormone Punk",
-        "description": "A potential option for people running Kaboom the Cannon that need more <atk> ATK% to reach Astra's <core> **Core Passive** requirement",
+        "description": "A potential option for people running Kaboom the Cannon that need more <atk> **ATK%** to reach Astra's <core> **Core Passive** requirement",
         "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/31400.webp"
       }
     ],
@@ -64,19 +64,19 @@
   "stat": {
     "main_stats": [
       {
-        "stat_priority": "<atk> ATK%",
+        "stat_priority": "<atk> **ATK%**",
         "pos": 4
       },
       {
-        "stat_priority": "<atk> ATK%",
+        "stat_priority": "<atk> **ATK%**",
         "pos": 5
       },
       {
-        "stat_priority": "Energy Regen% / <atk> ATK%",
+        "stat_priority": "Energy Regen% / <atk> **ATK%**",
         "pos": 6
       }
     ],
-    "sub_stats": "- For Crit based usage: ATK%/Flat <atk> ATK until Passive Cap > <cr> Crit Rate = <cd> Crit DMG > <pen> PEN\n- For Anomaly based usage: ATK%/Flat <atk> ATK until Passive Cap > <ap> Anomaly Proficiency > <pen> PEN",
+    "sub_stats": "- For Crit based usage: <atk> **ATK%**/<atk> Flat ATK until Passive Cap > <cr> Crit Rate = <cd> Crit DMG > <pen> PEN\n- For Anomaly based usage: <atk> **ATK%**/<atk> Flat ATK until Passive Cap > <ap> Anomaly Proficiency > <pen> PEN",
     "baseline_stats": "<atk> ATK: 3429+ (34925 is the <atk> ATK cap for her Core Passive)\n<er> Energy Regen: 0%+ - 130%+ (Depends on W-Engine and Disk Main Stat choices)",
     "extra_sections": [
       {
