@@ -54,7 +54,7 @@ stat:
   sub_stats: >-
     - For Crit based usage: ATK%/Flat ATK until Passive Cap > Crit Rate = Crit DMG > PEN
     - Fpr Anomaly based usage: ATK%/Flat ATK until Passive Cap > Anomaly Proficiency > PEN
-  baseline_stats: >-
+  baseline_stats: |-
     ATK: 3429+ (34925 is the ATK cap for her Core Passive)
     Energy Regen: 0%+ - 130%+ (Depends on W-Engine and Disk Main Stat choices)
   extra_sections:

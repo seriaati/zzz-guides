@@ -30,7 +30,11 @@ stat:
     - stat_priority: ATK = AM (choose AM if u got <m1)
       pos: 6
   sub_stats: Crit > ATK% > AP
-  baseline_stats: "Atk : > 2700 - 3400 (1 atk disk slot) Crit rate : 80% (<m2), 65-73 (m2+) Crit dmg : 130-150  AP : < 300"
+  baseline_stats: |-
+    Atk: > 2700 - 3400 (1 atk disk slot)
+    Crit rate: 80% (<m2), 65-73 (m2+)
+    Crit dmg: 130-150
+    AP: < 300
   extra_sections:
     - title: Disorder gameplay
       description: "You can looking for Disk 4 AP if you got many atk% substats and doesnt got any AP rolls on ur build your team must be : soukaku and yuzuha to use AP on disk 4, if no just looking for atk% or crit."

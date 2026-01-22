@@ -68,7 +68,7 @@ stat:
   sub_stats: >-
     CR% > CDMG% > HP% > ATK% > Flat HP
     (Note: Flat HP is only slightly worse than ATK% for Sheer Force conversion.)
-  baseline_stats: >-
+  baseline_stats: |-
     HP with main engine: 18,000
     HP without Main engine: 15,000
     CR%: 68-88%

@@ -72,19 +72,13 @@ stat:
   sub_stats: >-
     Crit Rate% (until 75%/63%(Shadow Harmony)/48%(Shadow Harmony + Nicole)
     /28%(Shadow Harmony + Nicole + Signature W-Engine) Build Breakpoints) > Crit DMG% = ATK%
-  baseline_stats: >-
+  baseline_stats: |-
     ATK Main Engine: 2800-3300+
-
     Non ATK Main Engine: 2700-3000+
-
     Crit Rate%
-
     4-Pc Shadow Harmony: 38-63%
-
     Otherwise: 50-75%
-
     Crit DMG%: 150-200%+
-
     (Range Dependent on Team, Disc 5 and Engine)
 skill_priority:
   priorities:
