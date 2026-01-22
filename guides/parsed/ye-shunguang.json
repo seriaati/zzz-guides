@@ -90,7 +90,7 @@
         "pos": 6
       }
     ],
-    "sub_stats": "CRATE% Until 50% in stat screen > CDMG% > ATK%",
+    "sub_stats": "CRATE% Until 50% in stat screen > CDMG% > <atk> ATK%",
     "baseline_stats": "<atk> ATK: 3000+\nCRATE%: 50% MAX\nCDMG% 160% - 200%+",
     "extra_sections": [
       {

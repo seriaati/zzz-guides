@@ -71,7 +71,7 @@
         "pos": 6
       }
     ],
-    "sub_stats": "HP% or Flat HP until 27000 > CRATE% > CDMG%",
+    "sub_stats": "<hp> HP% or <hp> Flat HP until 27000 > CRATE% > CDMG%",
     "baseline_stats": "<hp> HP: 25000+\nCRATE%: 30% to 40%\nCDMG%: 50%+",
     "extra_sections": [
       {
