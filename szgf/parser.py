@@ -281,6 +281,7 @@ def _replace_stat_keywords(string: str) -> str:
                     "(",
                     "[",
                     ":",
+                    "/",
                 }
                 after_ok = end == len(lowered) or lowered[end] in {
                     " ",
@@ -291,6 +292,7 @@ def _replace_stat_keywords(string: str) -> str:
                     ")",
                     "]",
                     ":",
+                    "/",
                 }
 
                 if before_ok and after_ok:
@@ -313,7 +315,11 @@ def _replace_stat_keywords(string: str) -> str:
     # Replace each match with formatted version
     result = string
     for start, end, original_text, stat in matches:
-        formatted = f"<{stat.value}> {original_text}"
+        # Add bold formatting for percentage stats
+        if "%" in original_text:
+            formatted = f"<{stat.value}> **{original_text}**"
+        else:
+            formatted = f"<{stat.value}> {original_text}"
         result = result[:start] + formatted + result[end:]
 
     return result
