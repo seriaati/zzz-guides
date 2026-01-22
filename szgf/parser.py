@@ -60,8 +60,8 @@ STAT_KW_MATCHES = {
     Stat.HP: ("hp", "max hp", "flat hp", "hp%"),
     Stat.ATK: ("atk", "flat atk", "atk%"),
     Stat.DEF: ("def", "flat def", "def%"),
-    Stat.CRIT_RATE: ("crit rate", "cr", "crit rate%", "cr%"),
-    Stat.CRIT_DMG: ("crit damage", "crit dmg", "cd", "crit dmg%", "cd%"),
+    Stat.CRIT_RATE: ("crit rate", "cr", "crit rate%", "cr%", "crate%"),
+    Stat.CRIT_DMG: ("crit damage", "crit dmg", "cd", "crit dmg%", "cd%", "cdmg%"),
     Stat.ENERGY_REGEN: ("energy regen", "er"),
     Stat.IMPACT: ("impact",),
     Stat.ANOMALY_MASTERY: ("anomaly mastery", "am"),
@@ -315,11 +315,7 @@ def _replace_stat_keywords(string: str) -> str:
     # Replace each match with formatted version
     result = string
     for start, end, original_text, stat in matches:
-        # Add bold formatting for percentage stats
-        if "%" in original_text:
-            formatted = f"<{stat.value}> **{original_text}**"
-        else:
-            formatted = f"<{stat.value}> {original_text}"
+        formatted = f"<{stat.value}> {original_text}"
         result = result[:start] + formatted + result[end:]
 
     return result
