@@ -13,7 +13,7 @@
   "weapons": [
     {
       "name": "Cloudcleave Radiance",
-      "description": "Perfect synergy with Ye Shunguang as it provides a huge CDMG% boost on top of DMG% and Phys Res ignore.",
+      "description": "Perfect synergy with Ye Shunguang as it provides a huge <cd> CDMG% boost on top of DMG% and Phys Res ignore.",
       "title": "Best W-Engine",
       "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1431.webp",
       "id": 14143,
@@ -31,7 +31,7 @@
     },
     {
       "name": "Severed Innocence",
-      "description": "A good stat sick due to purely being CDMG% and no CRATE%.",
+      "description": "A good stat sick due to purely being <cd> CDMG% and no <cr> CRATE%.",
       "title": "Best Limited Non-Signature W-Engine",
       "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1381.webp",
       "id": 14138,
@@ -52,7 +52,7 @@
     "four_pieces": [
       {
         "name": "White Water Ballad",
-        "description": "Custom made specifically for Ye Shunguang, provides an insane amount of CRATE% while in any <ether> Ether Veil which Ye Shunguang provides herself.",
+        "description": "Custom made specifically for Ye Shunguang, provides an insane amount of <cr> CRATE% while in any <ether> Ether Veil which Ye Shunguang provides herself.",
         "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/single/33500.webp"
       }
     ],
@@ -78,24 +78,24 @@
   "stat": {
     "main_stats": [
       {
-        "stat_priority": "<atk> **ATK%** > CDMG%",
+        "stat_priority": "<atk> ATK% > <cd> CDMG%",
         "pos": 4
       },
       {
-        "stat_priority": "<atk> **ATK%** = PEN%",
+        "stat_priority": "<atk> ATK% = PEN%",
         "pos": 5
       },
       {
-        "stat_priority": "<atk> **ATK%**",
+        "stat_priority": "<atk> ATK%",
         "pos": 6
       }
     ],
-    "sub_stats": "CRATE% Until 50% in stat screen > CDMG% > <atk> **ATK%**",
-    "baseline_stats": "<atk> ATK: 3000+\nCRATE%: 50% MAX\nCDMG% 160% - 200%+",
+    "sub_stats": "<cr> CRATE% Until 50% in stat screen > <cd> CDMG% > <atk> ATK%",
+    "baseline_stats": "<atk> ATK: 3000+\n<cr> CRATE%: 50% MAX\n<cd> CDMG% 160% - 200%+",
     "extra_sections": [
       {
         "title": "Crit Rate Note",
-        "description": "Ye Shunguang only needs 50% CRATE% in the stat screen to get 100% in combat due to her 4 Piece set giving 20% and her Core Passive at max rank giving 30%. Don't overcap"
+        "description": "Ye Shunguang only needs 50% <cr> CRATE% in the stat screen to get 100% in combat due to her 4 Piece set giving 20% and her Core Passive at max rank giving 30%. Don't overcap"
       }
     ]
   },

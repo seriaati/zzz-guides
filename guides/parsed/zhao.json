@@ -31,7 +31,7 @@
     },
     {
       "name": "Original Transmorpher",
-      "description": "While not being able to compete with her Signature or Tusks of Fury it still has a decent <hp> **HP%** main stat allowing near of full DMG% of her passive.",
+      "description": "While not being able to compete with her Signature or Tusks of Fury it still has a decent <hp> HP% main stat allowing near of full DMG% of her passive.",
       "title": "Best A Rank Option",
       "icon": "https://api.hakush.in/zzz/UI/Weapon_A_Common_07.webp",
       "id": 13007,
@@ -50,7 +50,7 @@
     "two_pieces": [
       {
         "name": "Moonlight Lullaby / Yunkui Tales",
-        "description": "Go Moonlight Lullaby if you need more ER% for her buff uptime or Yukui Tales if you want more <hp> **HP%** for her passive.",
+        "description": "Go Moonlight Lullaby if you need more ER% for her buff uptime or Yukui Tales if you want more <hp> HP% for her passive.",
         "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/33400_33100.webp"
       }
     ],
@@ -59,11 +59,11 @@
   "stat": {
     "main_stats": [
       {
-        "stat_priority": "<hp> **HP%**",
+        "stat_priority": "<hp> HP%",
         "pos": 4
       },
       {
-        "stat_priority": "<hp> **HP%**",
+        "stat_priority": "<hp> HP%",
         "pos": 5
       },
       {
@@ -71,8 +71,8 @@
         "pos": 6
       }
     ],
-    "sub_stats": "<hp> **HP%** or <hp> Flat HP until 27000 > CRATE% > CDMG%",
-    "baseline_stats": "<hp> HP: 25000+\nCRATE%: 30% to 40%\nCDMG%: 50%+",
+    "sub_stats": "<hp> HP% or <hp> Flat HP until 27000 > <cr> CRATE% > <cd> CDMG%",
+    "baseline_stats": "<hp> HP: 25000+\n<cr> CRATE%: 30% to 40%\n<cd> CDMG%: 50%+",
     "extra_sections": [
       {
         "title": "HP stat note",
@@ -103,7 +103,7 @@
     },
     {
       "num": 2,
-      "description": "Whenever Zhao restores <hp> HP she increases her own <atk> **ATK%** and providing everyone a juicy 15% in-combat <atk> **ATK%** buff."
+      "description": "Whenever Zhao restores <hp> HP she increases her own <atk> ATK% and providing everyone a juicy 15% in-combat <atk> ATK% buff."
     },
     {
       "num": 4,

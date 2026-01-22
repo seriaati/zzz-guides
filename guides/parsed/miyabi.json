@@ -51,11 +51,11 @@
   "stat": {
     "main_stats": [
       {
-        "stat_priority": "<atk> **Atk%** > <cd> Crit dmg/rate",
+        "stat_priority": "<atk> Atk% > <cd> Crit dmg/rate",
         "pos": 4
       },
       {
-        "stat_priority": "Pen% (m0) > <ice> ice dmg% > <atk> **atk%**",
+        "stat_priority": "Pen% (m0) > <ice> ice dmg% > <atk> atk%",
         "pos": 5
       },
       {
@@ -63,12 +63,12 @@
         "pos": 6
       }
     ],
-    "sub_stats": "Crit > <atk> **ATK%** > <ap> AP",
+    "sub_stats": "Crit > <atk> ATK% > <ap> AP",
     "baseline_stats": "<atk> Atk: > 2700 - 3400 (1 <atk> atk disk slot)\n<cr> Crit rate: 80% (<m2), 65-73 (m2+)\n<cd> Crit dmg: 130-150\n<ap> AP: < 300",
     "extra_sections": [
       {
         "title": "Disorder gameplay",
-        "description": "You can looking for Disk 4 <ap> AP if you got many <atk> **atk%** substats and doesnt got any <ap> AP rolls on ur build your team must be : soukaku and yuzuha to use <ap> AP on disk 4, if no just looking for <atk> **atk%** or crit."
+        "description": "You can looking for Disk 4 <ap> AP if you got many <atk> atk% substats and doesnt got any <ap> AP rolls on ur build your team must be : soukaku and yuzuha to use <ap> AP on disk 4, if no just looking for <atk> atk% or crit."
       }
     ]
   },
@@ -97,7 +97,7 @@
   "mindscapes": [
     {
       "num": 1,
-      "description": "With 36% ignore <def> **Def%** can increased your Dmg and with removing frostburn state at  the slash for charge level three of Basic Attack: Shimotsuki hits can make you trigger anomaly damage easier and more often, especially on disorder team"
+      "description": "With 36% ignore <def> Def% can increased your Dmg and with removing frostburn state at  the slash for charge level three of Basic Attack: Shimotsuki hits can make you trigger anomaly damage easier and more often, especially on disorder team"
     },
     {
       "num": 2,

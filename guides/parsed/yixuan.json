@@ -70,20 +70,20 @@
   "stat": {
     "main_stats": [
       {
-        "stat_priority": "<cr> **CR%**/CDMG%",
+        "stat_priority": "<cr> CR%/<cd> CDMG%",
         "pos": 4
       },
       {
-        "stat_priority": "<ether> Ether DMG% > <hp> **HP%**",
+        "stat_priority": "<ether> Ether DMG% > <hp> HP%",
         "pos": 5
       },
       {
-        "stat_priority": "<hp> **HP%**",
+        "stat_priority": "<hp> HP%",
         "pos": 6
       }
     ],
-    "sub_stats": "<cr> **CR%** > CDMG% > <hp> **HP%** > <atk> **ATK%** > <hp> Flat HP (Note: <hp> Flat HP is only slightly worse than <atk> **ATK%** for <sf> Sheer Force conversion.)",
-    "baseline_stats": "<hp> HP with main engine: 18,000\n<hp> HP without Main engine: 15,000\n<cr> **CR%**: 68-88%\n<cd> **CD%**: 120-140%+\n(Crit Stats dependent on Engine and Disc 5)",
+    "sub_stats": "<cr> CR% > <cd> CDMG% > <hp> HP% > <atk> ATK% > <hp> Flat HP (Note: <hp> Flat HP is only slightly worse than <atk> ATK% for <sf> Sheer Force conversion.)",
+    "baseline_stats": "<hp> HP with main engine: 18,000\n<hp> HP without Main engine: 15,000\n<cr> CR%: 68-88%\n<cd> CD%: 120-140%+\n(Crit Stats dependent on Engine and Disc 5)",
     "extra_sections": []
   },
   "skill_priority": {
@@ -250,7 +250,7 @@
     "extra_sections": [
       {
         "title": "Extra Notes on Team Building",
-        "description": "**Nicole and Rina** are **not good teammates** for Yixuan as **Sheer Damage ignores all DEF** making their buffs useless. All **ATK buffers are good** for Yixuan despite her scaling off of <hp> HP as **Rupture Passive converts 30% of your <atk> ATK into Sheer Force**. For example Lucy's 600 <atk> ATK will convert to 180 <sf> Sheer Force. Nicole “could” be used for her <ether> Ether DMG%, <cr> **CR%** and W-Engine buff if you really lack options but this is not worth it or recommended at all. Since this isn't a good use of Nicole and another team would want her more."
+        "description": "**Nicole and Rina** are **not good teammates** for Yixuan as **Sheer Damage ignores all DEF** making their buffs useless. All **ATK buffers are good** for Yixuan despite her scaling off of <hp> HP as **Rupture Passive converts 30% of your <atk> ATK into Sheer Force**. For example Lucy's 600 <atk> ATK will convert to 180 <sf> Sheer Force. Nicole “could” be used for her <ether> Ether DMG%, <cr> CR% and W-Engine buff if you really lack options but this is not worth it or recommended at all. Since this isn't a good use of Nicole and another team would want her more."
       }
     ]
   },
