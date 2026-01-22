@@ -13,7 +13,7 @@
   "weapons": [
     {
       "name": "Half-Sugar Bunny",
-      "description": "A very strong W-Engine for Zhao giving a bunch of different buffs like 10% <atk> ATK and 30% CDMG while giving her extra ER% allowing her passive full uptime.",
+      "description": "A very strong W-Engine for Zhao giving a bunch of different buffs like 10% <atk> ATK and 30% CDMG while giving her extra <er> ER% allowing her passive full uptime.",
       "title": "Best W-Engine",
       "icon": "https://api.hakush.in/zzz/UI/Weapon_S_1341.webp",
       "id": 14134,
@@ -50,7 +50,7 @@
     "two_pieces": [
       {
         "name": "Moonlight Lullaby / Yunkui Tales",
-        "description": "Go Moonlight Lullaby if you need more ER% for her buff uptime or Yukui Tales if you want more <hp> HP% for her passive.",
+        "description": "Go Moonlight Lullaby if you need more <er> ER% for her buff uptime or Yukui Tales if you want more <hp> HP% for her passive.",
         "icon": "https://raw.githubusercontent.com/seriaati/szgf/refs/heads/main/assets/drive_discs/combined/33400_33100.webp"
       }
     ],
@@ -67,7 +67,7 @@
         "pos": 5
       },
       {
-        "stat_priority": "ER%",
+        "stat_priority": "<er> ER%",
         "pos": 6
       }
     ],
